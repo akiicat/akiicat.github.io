@@ -9,4 +9,16 @@
     {{ include.post.content }}
   </div>
 </article>
+<a href="https://plus.google.com/share?url={{ site.url }}{{ site.baseurl }}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Google+">Google+</a>
+
 <hr/>
+<script src="https://apis.google.com/js/plusone.js"></script>
+<div id="comments"></div>
+<script>
+gapi.comments.render('comments', {
+    href: window.location,
+    width: '720',
+    first_party_property: 'BLOGGER',
+    view_type: 'FILTERED_POSTMOD'
+});
+</script>
