@@ -1,0 +1,28 @@
+
+
+
+
+<ul class="filter-list">
+  {% for category in site.categories %}
+    <span class="collapsible-group closed">
+      <li class="collapsible-header">
+        <a href="#" class="filter-item">
+          <span class="count">{{ category[1].size }}</span>
+          <span class="indent-0">{{ category | first }}</span>
+        </a>
+      </li>
+      {% for posts in category %}
+        {% for post in posts %}
+          {% if post.url %}
+            <li class="collapsible-body">
+              <a href="{{ site.baseurl }}{{ post.url }}" class="filter-item">
+                <span class="count"></span>
+                <span class="indent-1">{{ post.title }}</span>
+              </a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    </span>
+  {% endfor %}
+</ul>

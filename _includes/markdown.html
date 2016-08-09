@@ -1,0 +1,12 @@
+<article class='markdown-body'>
+  <span class="date-wrapper">
+    {% include date.html date = include.post.date %}
+  </span>
+  <h1 class="">
+    <a href="{{ site.baseurl }}{{ post.url }}">{{ include.post.title }}</a>
+  </h1>
+  <div class="indent-1">
+    {{ include.post.content }}
+  </div>
+</article>
+<hr/>

@@ -1,0 +1,43 @@
+# # # # # # # #
+#   Akiicat   #
+# # # # # # # #
+
+# Basic
+name:               "Akiicat"
+
+# URL
+baseurl:            ""
+# baseurl:            "" #For Root Domain
+permalink:          /blog/:year/:month/:day/:title.html
+
+# Markdown
+markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "tables"]
+
+# Navigation
+nav:
+  - name:           "About"
+    href:           "//gfjaru.github.io/about"
+  - name:           "Download"
+    href:           "//github.com/gfjaru/releases"
+
+# Sass
+sass:
+  style:            :compressed
+  sass_dir:         "/stylesheets/_primer"
+
+# Scopes
+defaults:
+  -
+    scope:
+      path:         ""
+      type:         "pages"
+    values:
+      layout:       "page"
+  -
+    scope:
+      path:         ""
+      type:         "posts"
+    values:
+      layout:       "post"
