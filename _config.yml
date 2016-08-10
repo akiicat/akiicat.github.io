@@ -46,3 +46,8 @@ defaults:
       path:         "_posts/ruby_on_rails"
     values:
       category:     "Ruby on Rails"
+  -
+    scope:
+      path:         "_posts/javascript"
+    values:
+      category:     "Javascript"
