@@ -12,18 +12,7 @@
 
 <hr/>
 <div class="indent-2">
-  <!-- 在您要顯示「分享按鈕」的位置放上這個標記。 -->
-  <div class="g-plus" data-action="share" data-height="24" data-href="{{ site.domain }}{{ site.baseurl }}{{ include.post.url }}"></div>
-
-  <!-- 在最後一個「分享」標記之後放置這個標記。 -->
-  <script type="text/javascript">
-    window.___gcfg = {lang: 'zh-TW'};
-
-    (function() {
-      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-      po.src = 'https://apis.google.com/js/platform.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-    })();
-  </script>
+  <!-- google plus share button-->
+  <span class="g-plus" data-action="share" data-height="24" data-href="{{ site.domain }}{{ site.baseurl }}{{ include.post.url }}"></span>
 </div>
 <hr/>
