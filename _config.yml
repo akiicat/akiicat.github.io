@@ -6,16 +6,15 @@
 name:               "Akiicat"
 
 # URL
+# baseurl:            "" #For Root Domain
 domain:             "//akiicat.github.io"
 baseurl:            ""
-
-# baseurl:            "" #For Root Domain
-permalink:          /blogger/:year/:month/:day/:title.html
+permalink:          /blogger/:year/:month/:day/:title/
 
 # Markdown
-markdown: redcarpet
+markdown:           "redcarpet"
 redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "tables"]
+  extensions:       ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "tables"]
 
 # Navigation
 nav:
@@ -34,12 +33,17 @@ defaults:
   -
     scope:
       path:         ""
-      type:         "pages"
-    values:
-      layout:       "page"
-  -
-    scope:
-      path:         ""
       type:         "posts"
     values:
       layout:       "post"
+      comments:     "disqus"        # options: [google, disqus]
+  -
+    scope:
+      path:         "_posts/c:c++"
+    values:
+      category:     "C/C++"
+  -
+    scope:
+      path:         "_posts/ruby_on_rails"
+    values:
+      category:     "Ruby on Rails"
