@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  "C 輸入資料常見的處理方式"
-date:   2016-08-06 04:07:54 +0800
-categories: c/c++
+date:   2016-08-09 19:00:00 +0800
 ---
 ## Integer Type
 ### 給定總數

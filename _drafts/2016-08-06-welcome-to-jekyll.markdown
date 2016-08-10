@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Welcome to Jekyll1!"
 date:   2016-08-06 04:07:54 +0800
 categories: ruby-on-rails
