@@ -6,9 +6,11 @@
 name:               "Akiicat"
 
 # URL
+domain:             "//akiicat.github.io"
 baseurl:            ""
+
 # baseurl:            "" #For Root Domain
-permalink:          /blog/:year/:month/:day/:title.html
+permalink:          /blogger/:year/:month/:day/:title.html
 
 # Markdown
 markdown: redcarpet
