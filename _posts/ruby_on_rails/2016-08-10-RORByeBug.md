@@ -1,10 +1,9 @@
 ---
-title:  "Rails Debug ByeBug 使用"
+title:  "Ruby on Rails Debug ByeBug 使用"
 date:   2016-08-10 19:32:54 +0800
 ---
 
 ## 使用
-
 在程式碼中想要中斷的地方加入 `byebug`，程式執行到 `byebug` 這個位置則會停下來讓使用者 debug。而至於進入 Debug 頁面能幹麻，大致上跟 GDB Debug 差不多，一步一步的執行，然後檢查每一個參數的值。
 
 ```ruby
