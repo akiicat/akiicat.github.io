@@ -42,5 +42,17 @@
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
     })();
   </script>
+  <!-- firebase -->
+  <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBAw_BrCCqXj-3pcq_J9k4hyYwdHDewLIk",
+      authDomain: "akiicat-blogger.firebaseapp.com",
+      databaseURL: "https://akiicat-blogger.firebaseio.com",
+      storageBucket: "akiicat-blogger.appspot.com",
+    };
+    firebase.initializeApp(config);
+  </script>
 </body>
 </html>
