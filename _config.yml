@@ -2,6 +2,9 @@
 #   Akiicat   #
 # # # # # # # #
 
+# bundle
+exclude: ['Gemfile', 'Gemfile.lock', 'vendor']
+
 # Basic
 name:               "Akiicat"
 
