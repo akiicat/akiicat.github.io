@@ -16,9 +16,7 @@
 
   </head>
 <body>
-  <header>
-    {% include header.html %}
-  </header>
+  {% include header.html %}
 
   <div class="container indent-1">
     <div class="columns">
@@ -31,28 +29,6 @@
     </div>
   </div>
 
-  <script src="{{ site.baseurl }}/javascripts/collapsible.js"></script>
-  <!-- google plus share button api-->
-  <script type="text/javascript">
-    window.___gcfg = {lang: 'zh-TW'};
-
-    (function() {
-      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-      po.src = 'https://apis.google.com/js/platform.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-    })();
-  </script>
-  <!-- firebase -->
-  <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyBAw_BrCCqXj-3pcq_J9k4hyYwdHDewLIk",
-      authDomain: "akiicat-blogger.firebaseapp.com",
-      databaseURL: "https://akiicat-blogger.firebaseio.com",
-      storageBucket: "akiicat-blogger.appspot.com",
-    };
-    firebase.initializeApp(config);
-  </script>
+  {% include javascript.html %}
 </body>
 </html>
