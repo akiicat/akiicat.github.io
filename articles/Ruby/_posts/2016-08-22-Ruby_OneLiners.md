@@ -3,12 +3,10 @@ title:  "Ruby One-Liners"
 date:   2016-08-22 03:04:33 +0800
 ---
 
-[From](https://gist.github.com/KL-7/1590797#file-one-liners-md)
+[From Here](https://gist.github.com/KL-7/1590797#file-one-liners-md)
 
-### Reverse every line:
-
-Input file:
-
+### 翻轉每一行:
+輸入資料:
 
 ```sh
 $ cat foo
@@ -16,8 +14,7 @@ qwe
 123
 bar
 ```
-
-Reverse file lines:
+翻轉每一行的字:
 
 ```sh
 $ ruby -e 'File.open("foo").each_line { |l| puts l.chop.reverse }'
@@ -26,38 +23,38 @@ ewq
 rab
 ```
 
-Reverse lines from stdout:
+從 stdout 翻轉每一行的字:
 
 ```sh
 cat foo | ruby -e 'while s = gets; puts s.chop.reverse; end'
 ```
 
-Reverse both (`ARGF == $<`):
+翻轉所有 `ARGF == $<`:
 
 ```sh
 cat foo | ruby -e 'ARGF.each_line { |l| puts l.chop.reverse }'
 ruby -e 'ARGF.each_line { |l| puts l.chop.reverse }' foo
 ```
 
-Let Ruby iterate for you:
+自動使用迴圈:
 
 ```sh
 ruby -ne 'puts $_.chop.reverse' foo
 ```
 
-Let Ruby print for you (clumsy):
+每個迴圈最後自動輸出 `$_` 的內容:
 
 ```sh
 ruby -pe '$_.chop!.reverse!; $_ += "\n"' foo
 ```
 
-Let Ruby chop for you:
+自動刪除行尾的換行字元:
 
 ```sh
 ruby -lpe '$_.reverse!' foo
 ```
 
-In-place file editing:
+輸出新的檔案:
 
 ```sh
 $ cat foo
@@ -71,47 +68,43 @@ ewq
 rab
 ```
 
-### Indent every line:
-
-Just that:
+### 縮排:
+像這樣:
 
 ```sh
 cat example.rb | ruby -ne 'puts " " * 4 + $_'
 ```
-
-Or even that:
-
 ```sh
 ruby -ne 'puts " " * 4 + $_' example.rb
 ```
 
-### Line numbering (all files at once):
+### 加上行號 (所有檔案):
 
 ```sh
 ruby -ne 'puts "#$. #$_"' foo.rb bar.rb
 ```
 
-### Line numbering (per file file):
+### 加上行號 (單一檔案):
 
 ```sh
 ruby -ne '$. = 1 if $<.pos - $_.size == 0; puts "#$. #$_"' foo.rb bar.rb
 ```
 
-### Count words:
+### 字數統計:
 
 ```sh
 ruby -ane 'w = (w || 0) + $F.size; END { p w }' exmpl.txt
 ```
 
-### Delete all consecutive blank lines from file except the first one in each group:
+### 刪除空白行:
+刪除文件中的所有連續的空白行，除了每個組中的第一個
 
 ```sh
 ruby -ne 'puts $_ if /^[^\n]/../^$/'
 ```
 
-### Extract all comments:
-
-Input:
+### 取出註解:
+輸入:
 
 ```sh
 $ cat comments.txt
@@ -129,7 +122,7 @@ a bit more code
 even more code
 ```
 
-Ruby in action:
+動作:
 
 ```sh
 $ ruby -ne 'puts $_ if ($_ =~ /^\/\*/)..($_ =~ /\*\/$/)' comments.txt
@@ -142,9 +135,6 @@ $ ruby -ne 'puts $_ if ($_ =~ /^\/\*/)..($_ =~ /\*\/$/)' comments.txt
   comment three
 */
 ```
-
-Alternative:
-
 ```sh
 ruby -pe 'next unless ($_ =~ /^\/\*/)..($_ =~ /\*\/$/)' comments.txt
 ```
@@ -178,79 +168,78 @@ Try it:
 ruby flip-flop.rb comments.txt
 ```
 
-### Highlight trailing spaces:
+### 標記行末空格:
 
 ```sh
 ruby -lpe '$_.gsub! /(\s+)$/, "\e[41m\\1\e[0m"' example.rb
 ```
 
-### Remove trailing spaces:
+### 移除行末空格:
 
 ```sh
 ruby -lpe '$_.rstrip!' example.rb
 ```
 
-### For each line in the file highlights with red the part of it that goes over 50 characters:
+### 每行出過 50 字則標記顏色:
 
-Easy way:
+簡單的方法:
 
 ```sh
-ruby -ne 'puts "#{$_}\e[31m#{$_.chop!.slice!(60..-1)}\e[0m"' example.rb
+ruby -ne 'puts "#{$_}\e[31m#{$_.chop!.slice!(50..-1)}\e[0m"' example.rb
 ```
 
-Uglier, but configurable:
+難懂但好傳遞參數:
 
 ```sh
 ruby -e 'w = $*.shift; $<.each { |l| puts "#{l}\e[31m#{l.chop!.slice!(w.to_i..-1)}\e[0m" }' 50 example.rb
 ```
 
-### Simplest REPL:
-
-Straightforward one:
+### 簡單的 REPL:
+最直接的一種方法:
 
 ```sh
 ruby -e  'loop { puts eval(gets) }'
 ```
 
-Leverage -n option:
+加上 `-n` 選項:
 
 ```sh
 ruby -ne 'puts eval($_)'
 ```
 
-Prompt (but not in the 1st line):
+`>> ` 提示符號，但第一行沒有:
 
 ```sh
 ruby -ne 'print "#{eval($_).inspect}\n>> "'
 ```
 
-Fix it:
+修正:
 
 ```sh
 ruby -ne 'BEGIN{print">> "}; print "#{eval($_).inspect}\n>> "'
 ```
 
-REPL should be polite:
+REPL 結束時的回覆:
 
 ```sh
 ruby -ne 'BEGIN{print">> "}; print "#{eval($_).inspect}\n>> "; END{puts "Bye"}'
 ```
 
-Handle RuntimeError (e.g., NameError), but not SyntaxError:
+支援 RuntimeError，但不包括 SyntaxError:
 
 ```sh
 ruby -ne 'BEGIN{print">> "}; print "#{(eval($_) rescue $!).inspect}\n>> "; END{puts "Bye"}'
 ```
 
-Rescue everything - save the world:
+Rescue 所有錯誤 -- 拯救世界:
 
 ```sh
 ruby -ne 'BEGIN{print">> "}; print "#{(begin; eval($_); rescue Exception; $!; end).inspect}\n>> "; END{puts "Bye"}'
 ```
 
-# Additions
+# 額外
 
-Copyright in the beginning of every file:
+在每個檔案前加上版權:
 
 ```ruby
 # copyright.rb
@@ -267,19 +256,19 @@ __END__
 ####################################
 ```
 
-Use it:
+使用方法:
 
 ```sh
 ruby copyright.rb foo.py > foo2.py
 ```
 
-In place edit:
+取代的方法:
 
 ```sh
 ruby -i copyright.rb foo.py
 ```
 
-Alternative:
+選擇性的方法:
 
 ```ruby
 # copyright2.rb
@@ -294,7 +283,7 @@ __END__
 
 ```
 
-Use it (with backuping original file):
+取代後且備份原始檔:
 
 ```sh
 $ cat bar.py
