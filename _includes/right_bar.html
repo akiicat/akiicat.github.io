@@ -18,11 +18,14 @@
 
 <ul class="filter-list" name="link">
   {% for category in site.categories %}
+    {% if category[0] == site.post_dir %}
+      {% continue %}
+    {% endif %}
     <span class="collapsible-group closed">
       <li class="collapsible-header">
         <a href="#link" class="filter-item">
           <span class="count">{{ category[1].size }}</span>
-          <span class="indent-0">{{ category | first }}</span>
+          <span class="indent-0">{{ category[0] }}</span>
         </a>
       </li>
       {% for posts in category %}
