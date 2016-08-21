@@ -174,7 +174,7 @@ hello ruby
 在執行程式碼前執行 `require "library"`
 
 ## 其他
-### -K[kcode]: 設定 `$KCODE`
+### -K[kcode]: 設定 $KCODE
 指定編碼方式。
 
 - `-Ku`: UTF8
