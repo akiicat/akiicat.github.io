@@ -26,10 +26,8 @@ date:   2016-08-10 19:32:54 +0800
 
 - `help`: 查看所有指令
 - `list`: 列出程式碼，簡寫 `l`, `l-`, `l=`
-
 - `next`: 執行到下一個 `end` 段落，簡寫 `n`
 - `step`: 執行下一行，簡寫 `s`
 - `display <params>`: 印出參數的值，簡寫 `disp <params>`
-
 - `continue`: 退出 byebug 讓程式執行完，簡寫 `cont`
 - `quit`: 退出 byebug 且結束 rails
