@@ -7,6 +7,7 @@ exclude: ['Gemfile', 'Gemfile.lock', 'vendor']
 
 # Basic
 name:               "Akiicat"
+post_dir:           "articles"
 
 # URL
 # baseurl:          "" # For Root Domain
@@ -17,13 +18,6 @@ permalink:          /blogger/:year/:month/:day/:title/
 markdown:           "redcarpet"
 redcarpet:
   extensions:       ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "tables"]
-
-# Navigation
-nav:
-  - name:           "About"
-    href:           "//gfjaru.github.io/about"
-  - name:           "Download"
-    href:           "//github.com/gfjaru/releases"
 
 # Sass
 sass:
@@ -39,18 +33,3 @@ defaults:
     values:
       layout:       "post"
       comments:     "disqus"        # options: [google, disqus]
-  -
-    scope:
-      path:         "_posts/c:c++"
-    values:
-      category:     "C/C++"
-  -
-    scope:
-      path:         "_posts/ruby_on_rails"
-    values:
-      category:     "Ruby on Rails"
-  -
-    scope:
-      path:         "_posts/javascript"
-    values:
-      category:     "Javascript"
