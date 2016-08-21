@@ -5,14 +5,17 @@ date:   2016-08-21 22:31:47 +0800
 
 ## 偵錯、運作確認
 ### -c: 語法檢查
-檢查現在執行的 Ruby 指令稿語法是否正確。並不會實際執行程式
+...檢查現在執行的 Ruby 指令稿語法是否正確。並不會實際執行程式
 
 ### -d: 設定偵錯模式
 讓偵錯用變數 `$DEBUG` 生效。指定 `-d` 時， `$DEBUG` 的値會為 `true`。所以可以在程式裡加上這樣的敘述︰
+
 ```ruby
 print some_var if $DEBUG
 ```
+
 程式裡的這行敘述會有以下運作情形︰
+
 - 平常不會執行
 - 只有在偵錯模式下印出 some_var 的値
 
@@ -107,6 +110,7 @@ Hello World!
 
 ### -Fpattern: 設定自動切割模式的分隔樣式
 在自動切割模式 `-a` 下，指定用來 split 輸入行的 pattern。下面範例會以 `:` 來 split 檔案 `/etc/passwd` 的內容。
+
 ```shell
 $ ruby -anF: -e 'p $F' /etc/passwd
 ["nobody", "*", "-2", "-2", "Unprivileged User", "/var/empty", "/usr/bin/false\n"]
@@ -125,7 +129,7 @@ hello ruby
 ```shell
 $ ruby -i.bak -np -e '$_.sub!(/^/, "%4d " % $.)' a.txt
 ```
-```
+```shell
 # a.txt
    1 hello world
    2 hello ruby
@@ -147,6 +151,7 @@ ruby -Ilib example.rb
 
 ### -n: 迴圈執行程式碼
 將程式放在下面這個迴圈執行。
+
 ```ruby
 while gets()
   ...
