@@ -48,6 +48,7 @@ end
 - `$stderr`: 標準錯誤輸出，預設是 `STDERR`
 - `$VERBOSE`: 設定為警告模式的 flag，預設是 `nil`
 
+<!--excerpt-->
 ### $: $LOAD_PATH
 `$:` 與 `$LOAD_PATH` 相同，用來表示程式庫的路徑。也就是指定 Ruby 在尋找程式庫時，要從哪裡、以什麼順序搜尋？
 
