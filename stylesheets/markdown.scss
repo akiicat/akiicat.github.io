@@ -149,6 +149,13 @@ $margin: 16px;
   pre {
     margin-top: 0;
     margin-bottom: $margin;
+    a {
+      color: #4078c0;
+      &:hover {
+        color: #4078c0;
+        text-decoration: underline;
+      }
+    }
   }
 
   // used for chinese paragraph
