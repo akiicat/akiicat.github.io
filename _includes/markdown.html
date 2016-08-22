@@ -6,7 +6,12 @@
     <a href="{{ site.baseurl }}{{ include.post.url }}">{{ include.post.title }}</a>
   </h1>
   <div class="indent-1">
-    {{ include.post.content }}
+    {% if include.excerpt == "home_page" %}
+      {{ include.post.excerpt }}
+      <a href="{{ site.baseurl }}{{ post.url }}">繼續閱讀...</a>
+    {% else %}
+      {{ include.post.content }}
+    {% endif %}
   </div>
 </article>
 
