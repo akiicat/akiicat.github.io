@@ -49,12 +49,10 @@ a {
 
 header {
   margin: 0px 0px 18px 0px;
-  a {
+  a:hover {
     color: $link-text;
-    &:hover {
-      text-decoration: none;
-    }
   }
+
   .titlewrapper {
     padding: 62px 0px 18px 0px;
     h1 {
