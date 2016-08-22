@@ -24,6 +24,9 @@ sass:
   style:            :compressed
   sass_dir:         "/stylesheets/_primer"
 
+# Break Point
+excerpt_separator:  "<!--excerpt-->"
+
 # Scopes
 defaults:
   -
