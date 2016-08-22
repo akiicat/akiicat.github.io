@@ -6,7 +6,7 @@ layout: default
       <h2>No post found</h2>
   {% else %}
     {% for post in site.posts limit:5 %}
-      {% include markdown.html post=post %}
+      {% include markdown.html post=post excerpt="home_page" %}
     {% endfor %}
   {% endif %}
 </div>
