@@ -22,7 +22,7 @@ redcarpet:
 # Sass
 sass:
   style:            :compressed
-  sass_dir:         "/stylesheets/_primer"
+  sass_dir:         "/assets/stylesheets/_primer"
 
 # Break Point
 excerpt_separator:  "<!--excerpt-->"
