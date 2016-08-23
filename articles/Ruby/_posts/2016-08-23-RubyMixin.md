@@ -1,7 +1,33 @@
 ---
-title:  "Ruby Mix-in include 的規則"
+title:  "Ruby Mix-in Module include 的規則"
 date:   2016-08-23 17:18:32 +0800
 ---
+
+## 繼承關係
+Ruby 只能繼承唯一一個 parent 的單純繼承，但藉由 Mix-in 機制，可以在單純繼承的架構下，在多個類別之間共享一些工能。
+
+```ruby
+class Book
+  include Comparable
+end
+
+Book.ancestors      # => [Book, Comparable, Object, Kernel]
+```
+Comparable 雖然不是 parent，但是運作情形差不多
+
+```sh
+┌────────────┐                                    ┌────────────┐
+│   Object   │                                    │   Object   │
+└────────────┘                                    └────────────┘
+      ↑                                                 ↑
+      │           ┌────────────┐                  ┌────────────┐
+      │←──────────│ Comparable │                  │ Comparable │
+      │           └────────────┘                  └────────────┘
+      │                                                 ↑
+┌────────────┐                                    ┌────────────┐
+│    Book    │                                    │    Book    │
+└────────────┘                                    └────────────┘
+```
 
 ## Module include 的規則
 Ruby 在 Mix-in 時方法搜尋的順序。
@@ -25,6 +51,7 @@ c = C.new
 c.meth              # => "C meth"
 ```
 
+<!--excerpt-->
 ### 優先順序
 在一個類別裡讀入不只一個 module 時，以最後讀入的優先。
 
@@ -44,7 +71,7 @@ end
 p C.ancestors       # => [C, M2, M1, Object, Kernel, BasicObject]
 ```
 
-```ruby
+```sh
 ┌────────────┐                                    ┌────────────┐
 │   Object   │                                    │   Object   │
 └────────────┘                                    └────────────┘
@@ -85,7 +112,7 @@ end
 p C.ancestors       # => [C, M3, M2, M1, Object, Kernel, BasicObject]
 ```
 
-```ruby
+```sh
 ┌────────────┐                                    ┌────────────┐
 │   Object   │                                    │   Object   │
 └────────────┘                                    └────────────┘
