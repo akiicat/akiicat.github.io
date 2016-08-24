@@ -28,6 +28,8 @@ block = Block.new(arr)                      # 操作
 p bfs = block.bfs
 
 ```
+
+<!--excerpt-->
 ### 輸出結果
 跑過 `bfs` 這個方法後，從原點能走過的路徑都會標示距離。
 
@@ -55,7 +57,6 @@ else
 end
 ```
 
-<!--excerpt-->
 ## 內部運作
 個人比較喜歡用 `Hash` 來操作，至於每個方法在做什麼事情如下：
 
