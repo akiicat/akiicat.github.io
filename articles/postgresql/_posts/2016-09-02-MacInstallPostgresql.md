@@ -3,19 +3,19 @@ title:  "PostgreSQL 安裝"
 date:   2016-09-02 00:41:17 +0800
 ---
 
-## 更新 homebrew
+### 更新 homebrew
 
 ```sh
 brew update & brew upgrade
 ```
 
-## 安裝 PostgreSQL
+### 安裝 PostgreSQL
 
 ```sh
 brew install postgresql
 ```
 
-## 建立 PostgreSQL
+### 建立 PostgreSQL
 
 ```sh
 initdb /usr/local/var/postgres
@@ -23,19 +23,19 @@ initdb /usr/local/var/postgres
 
 <!--excerpt-->
 
-## 啟動 PostgreSQL
+### 啟動 PostgreSQL
 
 ```sh
 pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
 ```
 
-## 停止 PostgreSQL
+### 停止 PostgreSQL
 
 ```sh
 pg_ctl -D /usr/local/var/postgres stop -s -m fast
 ```
 
-## 自動啟動 PostgreSQL
+### 自動啟動 PostgreSQL
 PostgreSQL 的版本要自行更改，這裡使用的是 `9.5.1`
 
 ```sh
@@ -44,25 +44,25 @@ cp /usr/local/Cellar/postgresql/9.5.1/homebrew.mxcl.postgresql.plist ~/Library/L
 launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
 ```
 
-## 停止自動啟動 PostgreSQL
+### 停止自動啟動 PostgreSQL
 
 ```sh
 launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
 ```
 
-## 創建使用者 或 直接使用
+### 創建使用者 或 直接使用
 
 ```sh
 createuser -d -a -P postgres
 ```
 
-## 創立一個 Database
+### 創立一個 Database
 
 ```sh
 createdb test_1
 ```
 
-## 進入 PostgreSQL Console
+### 進入 PostgreSQL Console
 
 ```sh
 psql test_1
@@ -71,7 +71,7 @@ psql test_1
 SELECT version();
 ```
 
-## 連線到 PostgreSQL
+### 連線到 PostgreSQL
 
 ```sh
 postgres://username:password@host:port/dbname
