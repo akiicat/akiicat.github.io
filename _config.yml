@@ -15,9 +15,9 @@ baseurl:            ""
 permalink:          /blogger/:year/:month/:day/:title/
 
 # Markdown
-markdown:           "redcarpet"
-redcarpet:
-  extensions:       ["no_intra_emphasis", "fenced_code_blocks", "disable_indented_code_blocks", "autolink", "strikethrough", "superscript", "tables"]
+# markdown:           "redcarpet"
+# redcarpet:
+#   extensions:       ["no_intra_emphasis", "fenced_code_blocks", "disable_indented_code_blocks", "autolink", "strikethrough", "superscript", "tables"]
 
 # Sass
 sass:
