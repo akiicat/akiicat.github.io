@@ -32,6 +32,7 @@ require 'support/factory_girl'
 ```
 
 <!--excerpt-->
+
 ## 使用
 建立 FactoryGirl 的測資填寫在以下四個地方的皆可，這裡我是寫在 `spec/factories/*.rb` 這個地方當做範例。
 
