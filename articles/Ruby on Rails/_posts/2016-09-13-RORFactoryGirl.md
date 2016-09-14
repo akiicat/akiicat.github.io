@@ -9,7 +9,7 @@ date:   2016-09-13 22:48:38 +0800
 ```ruby
 # Gemfile
 group :development, :test do
-  gem 'factory_girl_rails'
+  gem 'factory_girl_rails', '~> 4.0'
 end
 ```
 
@@ -19,6 +19,8 @@ end
 ```ruby
 # RSpec
 ## spec/support/factory_girl.rb
+require 'factory_girl_rails'
+
 RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
 end
