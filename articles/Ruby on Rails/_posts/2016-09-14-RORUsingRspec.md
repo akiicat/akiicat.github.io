@@ -30,7 +30,7 @@ rails generate rspec:install
 rake spec
 
 # Run only model specs
-rake spec/models
+rake spec:models
 
 # Run only model specs
 bundle exec rspec spec/models
