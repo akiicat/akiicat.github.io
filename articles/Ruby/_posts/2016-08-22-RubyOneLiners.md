@@ -303,7 +303,6 @@ print 'hello'
 # Links
 
 * [One-liners by Josh Cheek](https://github.com/JoshCheek/Play/blob/master/ruby-one-liners/Readme.md)
-* [100 Ruby one-liners](http://www.fepus.net/ruby1line.txt)
 * [Predefined global variables in Ruby](http://www.zenspider.com/Languages/Ruby/QuickRef.html#19)
 * [ARGF doc](http://www.ruby-doc.org/core-1.9.2/ARGF.html)
 * [Obscure and Ugly Perlisms in Ruby](http://blog.nicksieger.com/articles/2007/10/06/obscure-and-ugly-perlisms-in-ruby)
