@@ -1,5 +1,5 @@
 ---
-title:  "Ruby On Rails 用 Factory Girl 自動產生 rspec 測資"
+title:  "Ruby on Rails 用 Factory Girl 自動產生 rspec 測資"
 date:   2016-09-13 22:48:38 +0800
 ---
 

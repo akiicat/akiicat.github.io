@@ -1,5 +1,5 @@
 ---
-title:  "Ruby On Rails 中使用 UUID"
+title:  "Ruby on Rails 中使用 UUID"
 date:   2016-09-02 01:17:02 +0800
 ---
 
@@ -47,7 +47,7 @@ irb(main):001:0> Book.create(:title => 'hi')
 => #<Book id: "72886b25-9463-4ecd-acb5-4315ebdd53b9", title: "hi", created_at: "2016-09-01 16:18:04", updated_at: "2016-09-01 16:18:04">
 ```
 
-## UUID Relation 
+## UUID Relation
 
 現在有一個 `author` 的 model，且一般在新增關聯會像下面這樣，但是這樣會有個問題：
 
