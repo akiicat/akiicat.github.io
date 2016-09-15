@@ -98,13 +98,12 @@ sign_out @user
 ```
 
 ## Views
-產生 devise 預設的 template。
+產生 devise 的 template。
 
 ```sh
-rails generate devise:views
+rails generate devise:views users
 ```
 
-### 自製 views
 產生 template 後，將以下的設定打開，打開的話在 render `sessions/new` 之前會先去檢查 `users/sessions/new` 如果沒有的話則會使用預設的 views。
 
 ```ruby
