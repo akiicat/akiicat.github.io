@@ -127,7 +127,7 @@ config.scoped_views = true
 
 在 layout 的地方增加註冊的連結。
 
-```ruby
+```erb
 # layouts/application.html.erb
 <%= render 'devise/menu/login_items' %>
 ```
@@ -154,7 +154,7 @@ config.sign_out_via = :get
 
 在 layout 的地方增加登出的按鈕。
 
-```ruby
+```erb
 # layouts/application.html.erb
 <%= render 'devise/menu/registration_items' %>
 ```
