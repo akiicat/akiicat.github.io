@@ -15,6 +15,7 @@ print some_var if $DEBUG
 ```
 
 <!--excerpt-->
+
 程式裡的這行敘述會有以下運作情形︰
 
 - 平常不會執行

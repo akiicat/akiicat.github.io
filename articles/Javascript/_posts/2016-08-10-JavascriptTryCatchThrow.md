@@ -19,6 +19,7 @@ final {
 ```
 
 <!--excerpt-->
+
 ## throw
 `throw` 則會把錯誤丟到外層的 `catch` 中
 

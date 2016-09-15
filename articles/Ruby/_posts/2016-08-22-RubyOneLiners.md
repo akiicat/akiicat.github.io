@@ -24,6 +24,7 @@ rab
 ```
 
 <!--excerpt-->
+
 從 stdout 翻轉每一行的字:
 
 ```sh

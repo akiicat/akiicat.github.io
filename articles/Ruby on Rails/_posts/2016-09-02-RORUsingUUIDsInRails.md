@@ -19,7 +19,9 @@ class EnableUuidExtension < ActiveRecord::Migration[5.0]
   end
 end
 ```
+
 <!--excerpt-->
+
 現在需要把 `id` 改變成 `uuid` datatype，而不是讓 Rails 自動指派。
 
 ```ruby

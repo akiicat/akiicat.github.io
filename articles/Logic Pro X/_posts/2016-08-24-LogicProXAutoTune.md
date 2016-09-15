@@ -16,6 +16,7 @@ date:   2016-08-24 04:32:25 +0800
 ![Pic1]({{ site.url }}/assets/images/Logic Pro X/2016-08-24-AutoTune-1.png)
 
 <!--excerpt-->
+
 ### Pitch Correction 調成 100
 
 1. 點選 `View` 裡面的 `Show Local Inspector`，如果已經是 `Hide Local Inspector`，可以不用點。

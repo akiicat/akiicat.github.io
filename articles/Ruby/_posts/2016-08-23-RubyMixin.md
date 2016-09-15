@@ -30,6 +30,7 @@ Comparable 雖然不是 parent，但是運作情形差不多
 ```
 
 <!--excerpt-->
+
 ## Module include 的規則
 Ruby 在 Mix-in 時方法搜尋的順序。
 ### 方法名重複
