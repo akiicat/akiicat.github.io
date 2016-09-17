@@ -32,6 +32,8 @@ layout 'user'
 <%= javascript_include_tag 'user', 'data-turbolinks-track': 'reload' %>
 ```
 
+<!--excerpt-->
+
 ### Assets
 這邊就是我們要加入其他 css js 的所在位置，admin 與 user 分別把需要使用的套件，利用 require 的方式加進來，這樣才能把東西包起來，產生我們只需要的四個檔案 `admin.css` `admin.js` `user.css` ` user.js`。
 
