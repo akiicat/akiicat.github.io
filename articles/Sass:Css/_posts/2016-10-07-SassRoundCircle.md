@@ -142,3 +142,5 @@ $colors: ( #fbffa0 #cfff76 #a2e27a #4ab9aa #2c678d #07171f );
   <div class='layer-4'></div>
   <div class='layer-5'></div>
 </div>
+
+- [JSFIDDLE](https://jsfiddle.net/AkiiCat/2shj3uw4/)
