@@ -119,6 +119,7 @@ $colors: ( #fbffa0 #cfff76 #a2e27a #4ab9aa #2c678d #07171f  );
 
 .layer {
   position: relative;
+  height: 360px;
 }
 </style>
 
