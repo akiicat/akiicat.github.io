@@ -3,7 +3,8 @@ title:  "Sass 圓形階層漸層"
 date:   2016-10-07 22:21:46 +0800
 ---
 
-### Circle Gradient
+## Circle Gradient
+### Sass
 
 ```scss
 $shift: 120px;
@@ -28,6 +29,8 @@ $colors: ( #fbffa0 #cfff76 #a2e27a #4ab9aa #2c678d #07171f  );
   }
 }
 ```
+
+### Html
 
 ```html
 <div>
