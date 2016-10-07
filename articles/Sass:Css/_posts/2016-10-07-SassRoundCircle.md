@@ -116,9 +116,13 @@ $colors: ( #fbffa0 #cfff76 #a2e27a #4ab9aa #2c678d #07171f  );
   width: 300px;
   height: 300px;
 }
+
+.layer {
+  position: relative;
+}
 </style>
 
-<div>
+<div class='layer'>
   <div class='layer-0'></div>
   <div class='layer-1'></div>
   <div class='layer-2'></div>
