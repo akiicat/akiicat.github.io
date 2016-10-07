@@ -121,8 +121,6 @@ $colors: ( #fbffa0 #cfff76 #a2e27a #4ab9aa #2c678d #07171f  );
   position: relative;
   height: 330px;
   margin: 120px 0 0 120px;
-  border-top: 2px solid black;
-  border-left: 2px solid black;
 }
 </style>
 
