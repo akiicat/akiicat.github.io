@@ -51,8 +51,8 @@ $colors: ( #fbffa0 #cfff76 #a2e27a #4ab9aa #2c678d #07171f  );
   border-radius: 30px;
   border: 30px solid #fbffa0;
   padding: 0px;
-  top: 90px;
-  left: 90px;
+  top: 150px;
+  left: 150px;
   width: 0px;
   height: 0px;
 }
@@ -63,8 +63,8 @@ $colors: ( #fbffa0 #cfff76 #a2e27a #4ab9aa #2c678d #07171f  );
   border-radius: 60px;
   border: 30px solid #cfff76;
   padding: 0px;
-  top: 60px;
-  left: 60px;
+  top: 120px;
+  left: 120px;
   width: 60px;
   height: 60px;
 }
@@ -75,8 +75,8 @@ $colors: ( #fbffa0 #cfff76 #a2e27a #4ab9aa #2c678d #07171f  );
   border-radius: 90px;
   border: 30px solid #a2e27a;
   padding: 0px;
-  top: 30px;
-  left: 30px;
+  top: 90px;
+  left: 90px;
   width: 120px;
   height: 120px;
 }
@@ -87,8 +87,8 @@ $colors: ( #fbffa0 #cfff76 #a2e27a #4ab9aa #2c678d #07171f  );
   border-radius: 120px;
   border: 30px solid #4ab9aa;
   padding: 0px;
-  top: 0px;
-  left: 0px;
+  top: 60px;
+  left: 60px;
   width: 180px;
   height: 180px;
 }
@@ -99,8 +99,8 @@ $colors: ( #fbffa0 #cfff76 #a2e27a #4ab9aa #2c678d #07171f  );
   border-radius: 150px;
   border: 30px solid #2c678d;
   padding: 0px;
-  top: -30px;
-  left: -30px;
+  top: 30px;
+  left: 30px;
   width: 240px;
   height: 240px;
 }
@@ -111,8 +111,8 @@ $colors: ( #fbffa0 #cfff76 #a2e27a #4ab9aa #2c678d #07171f  );
   border-radius: 180px;
   border: 30px solid #07171f;
   padding: 0px;
-  top: -60px;
-  left: -60px;
+  top: 0px;
+  left: 0px;
   width: 300px;
   height: 300px;
 }
