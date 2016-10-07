@@ -17,7 +17,7 @@ $step: 30px;
 $colors: ( #fbffa0 #cfff76 #a2e27a #4ab9aa #2c678d #07171f );
 
 @for $i from 0 to length($colors) {
-  $color: unquote(nth($colors, $i+1));
+  $color: unquote(nth($colors, $i + 1));
 
   .layer-#{$i} {
     position: absolute;
