@@ -63,6 +63,39 @@ $list: (
 }
 ```
 
+### Map
+
+```scss
+$icons: (
+  1: #07171f,
+  2: #2c678d,
+  3: #4ab9aa,
+  4: #a2e27a,
+  5: #cfff76,
+  6: #fbffa0
+);
+
+@each $index, $color in $icons {
+  .bg-#{$index} {
+    background-color: $color;
+  }
+}
+
+.test {
+  background-color: map-get($icons, 1);
+}
+```
+
+```css
+.bg-1 { background-color: #07171f; }
+.bg-2 { background-color: #2c678d; }
+.bg-3 { background-color: #4ab9aa; }
+.bg-4 { background-color: #a2e27a; }
+.bg-5 { background-color: #cfff76; }
+.bg-6 { background-color: #fbffa0; }
+.test { background-color: #07171f; }
+```
+
 ### Mixin
 
 混入 class 中，可以傳入參數。
