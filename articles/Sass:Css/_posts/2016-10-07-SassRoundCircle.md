@@ -40,6 +40,8 @@ $colors: ( #fbffa0 #cfff76 #a2e27a #4ab9aa #2c678d #07171f  );
 </div>
 ```
 
+<!--excerpt-->
+
 ### preview
 
 <style>
