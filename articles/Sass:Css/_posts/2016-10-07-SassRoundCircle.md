@@ -7,10 +7,14 @@ date:   2016-10-07 22:21:46 +0800
 
 ### Sass
 
+- shift: 從中心點移動多少位置，如果是 `120px` 則會從上一層的 `div` 左上角的原點，往右邊且往下個移 `120px`。
+- step: 多少 pixel 換另一個顏色。
+- colors: 每一層的顏色，由內到外排序。
+
 ```scss
 $shift: 120px;
 $step: 30px;
-$colors: ( #fbffa0 #cfff76 #a2e27a #4ab9aa #2c678d #07171f  );
+$colors: ( #fbffa0 #cfff76 #a2e27a #4ab9aa #2c678d #07171f );
 
 @for $i from 0 to length($colors) {
   $color: unquote(nth($colors, $i+1));
