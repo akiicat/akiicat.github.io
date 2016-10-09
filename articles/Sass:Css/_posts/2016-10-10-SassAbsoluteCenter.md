@@ -6,7 +6,7 @@ date:   2016-10-10 02:42:06 +0800
 
 ## 絕對置中 absolute center
 
-顧名思義就是水平置中加上垂直置中，讓內層的 `div` 會在外層的 `div` 的正中間。雖然查到很多使用 `display: table` 或是 `margin: 0 auto` 的用法，可是很容易跟其他的元素互相撞到，而且有時候還需要多加幾層 `div`，讓一整個小東西變得十分複雜。
+顧名思義就是水平置中加上垂直置中，讓內層的 `div` 會在外層的 `div` 的正中間。雖然查到很多使用 `display: table` 或是調整 `margin` `width` 的用法，可是很容易跟其他的元素互相撞到，而且有時候還需要多加幾層 `div`，讓一整個小東西變得十分複雜。
 
 ### Html
 
@@ -60,6 +60,8 @@ date:   2016-10-10 02:42:06 +0800
   background-color: rgba(0,0,0,.2);
 
   position: relative;
+
+  margin-bottom: 32px;
 }
 
 .inner {
