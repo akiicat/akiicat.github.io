@@ -87,3 +87,5 @@ img.src = 'http://i.imgur.com/ImageHere';
 ```
 
 建議第一次載入時將圖片用 `canvas.toDataURL()` 轉成 dataUrl，之後要在使用 `canvas.getImageData()` 時就不會有 SecurityError 的問題了。
+
+- [cross origin me](http://crossorigin.me/)
