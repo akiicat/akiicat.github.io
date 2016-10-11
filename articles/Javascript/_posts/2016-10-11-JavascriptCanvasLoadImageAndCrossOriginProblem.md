@@ -13,7 +13,7 @@ html canvas 簡單來說就是個 img，能操作的東西十分的多，建議�
 var canvas  = document.createElement('canvas');
 var context = canvas.getContext('2d');
 
-// 設定 canvas 的大小，就像是一張圖片的大小是 400 x 300
+// 設定 canvas 的大小，就像是一張圖片的大小是 800 x 400
 canvas.width  = 800;
 canvas.height = 300;
 
