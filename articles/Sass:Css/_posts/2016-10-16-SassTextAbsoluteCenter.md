@@ -43,6 +43,7 @@ $box-height: 100px;
   width: 100%;
   color: #FFFFFF;
   background: #333333;
+  font-size: 36px;
 
   height: 100px;
   line-height: 100px;
@@ -52,9 +53,9 @@ $box-height: 100px;
 </style>
 
 <div class='abs-text-center'>
-  <h1>
+  <span>
     Hello World!
-  </h1>
+  </span>
 </div>
 
 
