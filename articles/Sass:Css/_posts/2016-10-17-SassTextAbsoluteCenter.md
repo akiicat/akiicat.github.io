@@ -84,7 +84,9 @@ $box-height: 100px;
 
   height: 100px;
   line-height: 100px;
+}
 
+.text-center > span {
   float: right;
 }
 </style>
