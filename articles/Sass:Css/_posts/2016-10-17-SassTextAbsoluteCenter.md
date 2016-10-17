@@ -117,8 +117,13 @@ $box-height: 100px;
 .inline-text-center {
   height: $box-height;
   line-height: $box-height;
+}
 
-  text-align: center;
+.inline-text-center > h1 {
+  display: inline-block;
+}
+
+.inline-text-center > span {
   float: right;
 }
 ```
@@ -134,9 +139,17 @@ $box-height: 100px;
   height: 100px;
   line-height: 100px;
 }
+
 .inline-text-center > h1 {
+  display: inline-block;
+  line-height: 100px;
+
   font-size: 36px;
+  border-bottom: 0;
+  padding: 0;
+  margin: 0;
 }
+
 .inline-text-center > span {
   float: right;
 }
