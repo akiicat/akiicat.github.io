@@ -125,6 +125,7 @@ $box-height: 100px;
 
 <style>
 .inline-text-center {
+  marign: 0;
   width: 100%;
   color: #FFFFFF;
   background: #333333;
@@ -132,6 +133,9 @@ $box-height: 100px;
 
   height: 100px;
   line-height: 100px;
+}
+.inline-text-center > h1 {
+  font-size: 36px;
 }
 .inline-text-center > span {
   float: right;
