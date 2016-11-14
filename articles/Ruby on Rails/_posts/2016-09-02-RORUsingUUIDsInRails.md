@@ -55,9 +55,7 @@ export PG_PASSWORD=xxxxxx
 
 ```ruby
 rails g migration enable_uuid_extension
-```
 
-```ruby
 # db/migrate/xxxxxxxxxxxxxx_enable_uuid_extension.rb
 class EnableUuidExtension < ActiveRecord::Migration[5.0]
   def change
@@ -70,9 +68,7 @@ end
 
 ```ruby
 rails g model Book title:string
-```
 
-```ruby
 # db/migate/xxxxxxxxxxxxxx_book.rb
 class CreateBooks < ActiveRecord::Migration[5.0]
   def change
