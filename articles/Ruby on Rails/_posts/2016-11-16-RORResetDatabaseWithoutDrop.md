@@ -5,7 +5,7 @@ date:   2016-11-16 02:16:47 +0800
 
 ## 重設 Database 的方法
 
-### Drop DB
+### Basic
 
 在用 Ruby On Rails 難免都需要會重新設定資料庫，最基本的方法如下：
 
@@ -13,11 +13,19 @@ date:   2016-11-16 02:16:47 +0800
 rake db:drop db:create db:migrate
 ```
 
-或者是使用 reset 指令，會先 drop 後馬上 create，跟上面的指令沒什麼不同：
+### Reset
+
+reset 比較不同的地方是，他是載入 schema 而沒有去 migrate 新的資料
+
+- `db:schema:load` 依照 schema.rb 建立 table
+- `db:setup` 執行 db:create db:schema:load db:seed
+- `db:reset` 執行 db:drop db:setup
 
 ```sh
 rake db:reset db:migrate
 ```
+
+<!--excerpt-->
 
 ### Without Drop
 
@@ -27,5 +35,3 @@ rake db:reset db:migrate
 rake db:migrate VERSION=0
 rake db:migrate
 ```
-
-<!--excerpt-->
