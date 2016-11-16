@@ -15,7 +15,7 @@ rake db:drop db:create db:migrate
 
 ### Reset
 
-reset 比較不同的地方是，他是載入 schema 而沒有去 migrate 新的資料
+reset 比較不同的地方是，他是載入 schema 而沒有去 migrate 新的資料，用在測試 seed.rb 的資料有沒有正確的時候非常好用。
 
 - `db:schema:load` 依照 schema.rb 建立 table
 - `db:setup` 執行 db:create db:schema:load db:seed
