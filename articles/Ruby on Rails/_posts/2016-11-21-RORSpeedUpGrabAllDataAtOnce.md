@@ -94,7 +94,7 @@ Processing by BooksController#index as HTML
 Completed 200 OK in 216ms (Views: 202.9ms | ActiveRecord: 1.8ms)
 ```
 
-每次在 **@books.each** 有需要 **author** 的時候，都會再重新使用 SQL 指令在抓取 **author** 的內容，所以每個 **author** 的 id 也會不同。
+在 `views/book/index.html.erb` 裡面的 **@books.each**，每次有需要 **author** 的時候，都會重新使用 SQL 指令抓取 **author** 的內容，所以每個 **author** 的 id 也會不同。
 
 ```
 # localhost:3000/books
@@ -120,7 +120,7 @@ def index
 end
 ```
 
-所以重新開啟 rails server 然後載入 `localhost:3000/books` 頁面，SQL 指令會少了好幾行。
+所以重新開啟 rails server，然後載入 `localhost:3000/books` 頁面，就會發現 SQL 指令會少了好幾行。
 
 ```sql
 # rails console
@@ -138,17 +138,17 @@ Completed 200 OK in 205ms (Views: 192.0ms | ActiveRecord: 1.3ms)
 
 ```
 # localhost:3000/books
-Title	Author
-book0	#<Author:0x007fcee42c2238>	Show	Edit	Destroy
-book1	#<Author:0x007fcee42c2238>	Show	Edit	Destroy
-book2	#<Author:0x007fcee42c2238>	Show	Edit	Destroy
-book3	#<Author:0x007fcee42c2238>	Show	Edit	Destroy
-book4	#<Author:0x007fcee42c2238>	Show	Edit	Destroy
-book5	#<Author:0x007fcee42c2238>	Show	Edit	Destroy
-book6	#<Author:0x007fcee42c2238>	Show	Edit	Destroy
-book7	#<Author:0x007fcee42c2238>	Show	Edit	Destroy
-book8	#<Author:0x007fcee42c2238>	Show	Edit	Destroy
-book9	#<Author:0x007fcee42c2238>	Show	Edit	Destroy
+Title	         Author
+book0	#<Author:0x007fcee42c2238>
+book1	#<Author:0x007fcee42c2238>
+book2	#<Author:0x007fcee42c2238>
+book3	#<Author:0x007fcee42c2238>
+book4	#<Author:0x007fcee42c2238>
+book5	#<Author:0x007fcee42c2238>
+book6	#<Author:0x007fcee42c2238>
+book7	#<Author:0x007fcee42c2238>
+book8	#<Author:0x007fcee42c2238>
+book9	#<Author:0x007fcee42c2238>
 ```
 
 只有 10 比資料效能提升可能不太明顯，但是如果 **books** 有 1000 筆資料，這樣就會有明顯的差異了：
