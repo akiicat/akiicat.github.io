@@ -53,7 +53,7 @@ author = Author.create! name: "akii"
 end
 ```
 
-migration 然後開啟 rails server
+migration 後開啟 rails server
 
 ```sh
 rake db:migrate db:seed
