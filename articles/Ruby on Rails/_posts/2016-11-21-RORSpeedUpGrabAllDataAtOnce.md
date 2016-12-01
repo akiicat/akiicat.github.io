@@ -162,3 +162,14 @@ Completed 200 OK in 968ms (Views: 887.0ms | ActiveRecord: 69.6ms)
 Rendered books/index.html.erb within layouts/application (202.5ms)
 Completed 200 OK in 359ms (Views: 344.5ms | ActiveRecord: 3.3ms)
 ```
+
+## 注意
+
+如果只想要拿一筆資料 find、find_by 之類的，寫法如下：
+
+```ruby
+Book.includes(:author).find_by_name("akiicat")
+
+# Wrong
+# Book.find_by_name("akiicat").includes(:author)
+```
