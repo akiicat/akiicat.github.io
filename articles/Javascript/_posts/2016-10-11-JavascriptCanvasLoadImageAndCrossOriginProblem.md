@@ -1,5 +1,5 @@
 ---
-title:  "Javascript Canvas Load Image and Cross Origin Problem"
+title:  "Javascript Canvas Load Image with Cross Origin"
 date:   2016-10-11 04:44:11 +0800
 ---
 
@@ -15,9 +15,9 @@ var context = canvas.getContext('2d');
 
 // 設定 canvas 的大小，就像是一張圖片的大小是 800 x 400
 canvas.width  = 800;
-canvas.height = 300;
+canvas.height = 400;
 
-// css 裡的 style，用來縮放還有很多有的沒的......
+// css 裡的 style，用來縮放，還有很多有的沒的......
 canvas.style.width  = '400px';
 canvas.style.height = '300px';
 ```
@@ -51,7 +51,7 @@ img.onload = function(){
   var context = canvas.getContext('2d');
 
   canvas.width  = 800;
-  canvas.height = 300;
+  canvas.height = 400;
   canvas.style.width  = '400px';
   canvas.style.height = '300px';
 
@@ -66,13 +66,13 @@ img.src = 'http://i.imgur.com/ImageHere';
 
 ## Cross Origin Security Error
 
-如果使用 canvas 中的 `canvas.getImageData()` 獲取圖片的顏色，有可能會出現這個錯誤。
+`canvas.getImageData()` 是來獲取 canvas 圖片中一小塊的資料，像是顏色等等，但如果這時候使用這個方法來獲取圖片的顏色，有可能會出現這個錯誤。
 
 ```
 Uncaught SecurityError: Failed to execute 'getImageData' on 'CanvasRenderingContext2D': The canvas has been tainted by cross-origin data.
 ```
 
-如果圖片中 header 中允許從任何地方存取
+這時可以在 chrome developer tools -> network 看圖片載入的時的訊息，如果圖片中 header 中允許從任何地方存取，如下：
 
 ```
 Access-Control-Allow-Origin: '*'
@@ -82,10 +82,30 @@ Access-Control-Allow-Origin: '*'
 
 ```js
 var img = new Image();
+img.onload = function(){
+  // 完整載入圖片之後才會執行這一段
+};
 img.crossOrigin = 'Anonymous';
 img.src = 'http://i.imgur.com/ImageHere';
 ```
 
-建議第一次載入時將圖片用 `canvas.toDataURL()` 轉成 dataUrl，之後要在使用 `canvas.getImageData()` 時就不會有 SecurityError 的問題了。
+如果有需要用到重複的同一張圖片的話，建議第一次載入時先將圖片用 `canvas.toDataURL()` 轉成 dataUrl，之後要在使用 `canvas.getImageData()` 時就不會有 SecurityError 的問題了。
+
+```js
+var image = new Image();
+image.onload = function(){
+  var canvas = document.createElement('canvas');
+  var context = canvas.getContext('2d');
+
+  // 將 image 畫在 canvas 上
+  context.drawImage(this, 0, 0);
+
+  var imgTag = document.getElementById('myImg');
+  var dataUrl = canvas.toDataURL();
+  imgTag.src = dataURL;
+};
+image.crossOrigin = 'Anonymous';
+image.src = url;
+```
 
 - [cross origin me](http://crossorigin.me/)
