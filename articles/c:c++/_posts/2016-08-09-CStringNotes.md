@@ -3,7 +3,9 @@ title:  "C 輸入資料常見的處理方式"
 date:   2016-08-09 19:00:00 +0800
 ---
 ## Integer Type
+
 ### 給定總數
+
 第一行先給定接下來要輸入資料的個數
 
 ```c
@@ -19,9 +21,7 @@ scanf("%d", &n);
 while (n--) {                         // 需要第幾筆資料的話，也可以用 for 迴圈往上加
     scanf("%d %d", &a, &b);
 
-    ...
-    do something
-    ...
+    // ...
 }
 ```
 
@@ -44,9 +44,7 @@ while (1) {
     scanf("%d %d", &a, &b);
     if (a==0 && b==0) break;    // 若為 0 則跳出
 
-    ...
-    do something
-    ...
+    // ...
 }
 ```
 
@@ -57,9 +55,7 @@ while (1) {
 #### 方法 1
 ```c
 while (scanf("%d %d", &a, &b) != EOF) {
-    ...
-    do something
-    ...
+    // ...
 }
 ```
 
@@ -69,20 +65,22 @@ char line[256];
 while(fgets(line, 256, stdin) != NULL) {
     sscanf(line, "%d %d", &a, &b);
 
-    ...
-    do something
-    ...
+    // ...
 }
 ```
 
 ## String Type
+
 ### 讀取字串 Reading a String
+
 ```c
 char s[256];                           // 最多可以放 255 個字元
 
 scanf("%s", s);                        // 以空白鍵、tab、換行 當作中斷點
 fegts(s, 256, stdin);                  // 僅以換行當作中斷點
 ```
+
+範例
 
 ```c
 #include <stdio.h>
@@ -91,6 +89,8 @@ fegts(s, 256, stdin);                  // 僅以換行當作中斷點
 char line[256];
 while(fgets(line, 256, stdin) != NULL) {
     char* token;
+    int first;
+    char* second;
 
     token = strtok(line, " \t\n");     // the first word
     first = atoi(token);               // integer type
@@ -98,26 +98,26 @@ while(fgets(line, 256, stdin) != NULL) {
     token = strtok(NULL, " \t\n");     // the second word
     second = token                     // string type
 
-    ...
-    do something
-    ...
+    // ...
 }
 ```
 
 
 ### 常用的 string function
+
 在使用之前要都要先 `#include <string.h>`
 
 - 字串長度: `strlen`
 - 複製字串: `strcpy` `strdup`
 - 切割字串: `strtok`
-- 連接字串: `strstr`
-- 反轉字串: `reverse`
+- 找尋字串: `strstr`
+- 連接字串: `strcat`
 
 ### 字串長度 strlen
 
 ```c
-strlen("ABCDEFGHI");                   // return 9
+strlen("ABCDEFGHI");
+// return 9
 ```
 
 | A  | B  | C  | D  | E  | F  | G  | H  | I  | \0 |
@@ -159,7 +159,9 @@ free(p);
 char* p = "__AA__B__";
 char* token;
 
-token = strtok(p, "_");                // return "AA"
+token = strtok(p, "_");
+printf("%s", token);
+// "AA"
 ```
 由左往右的箭頭分別為:
 
@@ -179,7 +181,9 @@ token = strtok(p, "_");                // return "AA"
 ```c
 char* token;
 
-token = strtok(NULL, "_");             // return "B"
+token = strtok(NULL, "_");
+printf("%s", token);
+// "B"
 ```
 
 | _  | _  | A  | A  | \0 | _  | B  | _  | _  | \0 |
@@ -187,17 +191,27 @@ token = strtok(NULL, "_");             // return "B"
 | 95 | 95 | 65 | 65 | 0  | 95 | 66 | 95 | 95 | 0  |
 |    |    |    |    |    | ↑  | ↑  | ↑  |    |    |
 
-### 連接字串 strstr
-```c
-char* s;
 
-s = strstr("ABCD", "EFGH");            // return "ABCDEFGH"
+### 找尋字串: strstr
+
+返回字串首次出現的地址
+
+```c
+char *s;
+char *str = "https://www.google.com.tw/";
+char *sub = "google";
+
+s = strstr(str, sub);
+printf("%s", s);
+// "google.com.tw/"
 ```
 
-
-### 反轉字串 reverse
+### 連接字串 strcat
 ```c
-char* s;
+char *str = "https://www.google.com.tw/";
+char *sub = "google";
 
-s = reverse("ABCDEFGH");               // return "HGFEDCBA"
+strcat(str, sub);
+printf("%s", str);
+// "https://www.google.com.tw/google"
 ```
