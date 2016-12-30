@@ -62,7 +62,9 @@ div {
 }
 ```
 
-![Pic1]({{ site.url }}/assets/images/css/fit_browser_vmin.svg)
+<object data="{{ site.url }}/assets/images/css/fit_browser_vmin.svg" type="image/svg+xml">
+  <img src="yourfallback.jpg" />
+</object>
 
 如果讓 div 的寬與高都是 100vmax：
 
@@ -73,5 +75,6 @@ div {
 }
 ```
 
-![Pic1]({{ site.url }}/assets/images/css/fit_browser_vmax.svg)
-![Pic1](https://raw.githubusercontent.com/akiicat/akiicat.github.io/master/assets/images/css/fit_browser_vmax.svg)
+<object data="{{ site.url }}/assets/images/css/fit_browser_vmax.svg" type="image/svg+xml">
+  <img src="yourfallback.jpg" />
+</object>
