@@ -46,7 +46,7 @@ div {
 #two > p { height: 100vh; }
 ```
 
-<p data-height="265" data-theme-id="0" data-slug-hash="ozKYVN" data-default-tab="result" data-user="AkiiCat" data-embed-version="2" data-pen-title="viewport" class="codepen">See the Pen <a href="http://codepen.io/AkiiCat/pen/ozKYVN/">viewport</a> by AkiiCat (<a href="http://codepen.io/AkiiCat">@AkiiCat</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="250" data-theme-id="0" data-slug-hash="ozKYVN" data-default-tab="result" data-user="AkiiCat" data-embed-version="2" data-pen-title="viewport" class="codepen">See the Pen <a href="http://codepen.io/AkiiCat/pen/ozKYVN/">viewport</a> by AkiiCat (<a href="http://codepen.io/AkiiCat">@AkiiCat</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 ## vmin 與 vmax 的差別與用法
