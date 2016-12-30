@@ -64,6 +64,11 @@ div {
 
 ![Pic1]({{ site.url }}/assets/images/css/fit_browser_vmin.svg)
 
+{% capture svg %}{% include assets/images/css/fit_browser_vmin.svg %}{% endcapture %}
+{% assign svgsplit = svg | split: 'svg11.dtd">' %}
+{% assign svgpart = svgsplit[1] | escape %}
+{{ svgpart }}
+
 如果讓 div 的寬與高都是 100vmax：
 
 ```css
@@ -74,3 +79,8 @@ div {
 ```
 
 ![Pic1]({{ site.url }}/assets/images/css/fit_browser_vmax.svg)
+
+{% capture svg %}{% include assets/images/css/fit_browser_vmax.svg %}{% endcapture %}
+{% assign svgsplit = svg | split: 'svg11.dtd">' %}
+{% assign svgpart = svgsplit[1] | escape %}
+{{ svgpart }}
