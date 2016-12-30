@@ -66,6 +66,10 @@ div {
   <img src="yourfallback.jpg" />
 </object>
 
+<object data="{{ site.url }}/assets/images/css/fit_browser_vmi1n.svg" type="image/svg+xml">
+  <img src="yourfallback.jpg" />
+</object>
+
 如果讓 div 的寬與高都是 100vmax：
 
 ```css
