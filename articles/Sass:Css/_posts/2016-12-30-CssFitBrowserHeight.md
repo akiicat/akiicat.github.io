@@ -62,13 +62,7 @@ div {
 }
 ```
 
-<object data="{{ site.url }}/assets/images/css/fit_browser_vmin.svg" type="image/svg+xml">
-  <img src="yourfallback.jpg" />
-</object>
-
-<object data="{{ site.url }}/assets/images/css/fit_browser_vmi1n.svg" type="image/svg+xml">
-  <img src="yourfallback.jpg" />
-</object>
+<object data="{{ site.url }}/assets/images/css/fit_browser_vmin.svg" type="image/svg+xml"></object>
 
 如果讓 div 的寬與高都是 100vmax：
 
@@ -79,6 +73,4 @@ div {
 }
 ```
 
-<object data="{{ site.url }}/assets/images/css/fit_browser_vmax.svg" type="image/svg+xml">
-  <img src="yourfallback.jpg" />
-</object>
+<object data="{{ site.url }}/assets/images/css/fit_browser_vmax.svg" type="image/svg+xml"></object>
