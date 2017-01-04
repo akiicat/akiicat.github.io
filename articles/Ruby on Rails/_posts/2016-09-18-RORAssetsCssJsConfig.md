@@ -57,7 +57,7 @@ app
 ```ruby
 # app/assets/javascripts/user.js
 //= require jquery
-//= require something_javascript
+//= require some_javascript
 //= require_tree user_js
 //= require_self
 ```
@@ -76,7 +76,7 @@ app
 
 ### Precompile
 
-在執行 precompile 的指令時，rails 預設只會 precompile 這兩個檔案 `application.css` 和 `application.js`，所以像剛剛我們有使用 `admin.css` `admin.js` `user.css` ` user.js` 的話，就必須告知 rails 幫我們 precompile 這四個檔案。
+在執行 precompile 的指令時，rails 預設只會 precompile 這兩個檔案 `application.css` 和 `application.js`，所以像剛剛我們有使用 `admin.css` `admin.js` `user.css` `user.js` 的話，就必須告知 rails 幫我們 precompile 這四個檔案。
 
 ```ruby
 # config/initializers/assets.rb  
