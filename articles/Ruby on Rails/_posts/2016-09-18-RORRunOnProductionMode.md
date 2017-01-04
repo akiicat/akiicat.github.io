@@ -50,7 +50,7 @@ rake assets:precompile
 
 ### Config
 
-因為在 production 環境中是不處理靜態檔案的，把這個 `RAILS_SERVE_STATIC_FILES` 環境變數設為 true。
+因為在 production 環境中是不處理靜態檔案的，所以把這個 `RAILS_SERVE_STATIC_FILES` 環境變數設為 true。
 
 ```
 export RAILS_SERVE_STATIC_FILES=true
