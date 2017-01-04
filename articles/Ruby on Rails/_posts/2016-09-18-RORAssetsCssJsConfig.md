@@ -52,7 +52,7 @@ app
 
 ### Assets
 
-現在 layout 的頁面只會分別載入一個 css js，那如果想要使用別人寫好的套件該怎麼辦？這時候就把套件用 `require` 的方式寫在 `admin.css` `admin.js` `user.css` ` user.js` 這四個檔案裡面。
+現在 layout 的頁面只會分別載入一個 css js，那如果想要使用別人寫好的套件該怎麼辦？這時候就把套件用 `require` 的方式寫在 `admin.css` `admin.js` `user.css` `user.js` 這四個檔案裡面。
 
 ```ruby
 # app/assets/javascripts/user.js
