@@ -1,5 +1,5 @@
 ---
-title:  "Ruby on Rails 在 production mode 下跑 rails 5 專案"
+title:  "Ruby on Rails 在 production 環境下跑 rails 5 專案"
 date:   2016-09-18 02:07:19 +0800
 ---
 
@@ -7,11 +7,23 @@ date:   2016-09-18 02:07:19 +0800
 
 ### 資料庫 Migrate
 
+migrate production 環境下的資料庫，至於設定檔就不在這邊多說了。
+
 ```shell
 RAILS_ENV=production rake db:migrate
 ```
 
 ### 產生 Secret Key
+
+在 `config/secret.yml` 這個檔案裡面需要 production 環境的 secret key。
+
+```yml
+# config/secret.yml
+production:
+  secret_key_base: <%= ENV["SECRET_KEY_BASE"] %>
+```
+
+用終端機產生 secret key，然後放置環境變數中。
 
 ```shell
 # 產生 secret key
@@ -24,27 +36,32 @@ export SECRET_KEY_BASE=$(rake secret)
 <!--excerpt-->
 
 ### Asset Precompile
-加入需要使用的 assets 路徑。
+
+如果不太清楚的話，可以先看[這篇](/blogger/2016/09/17/RORAssetsCssJsConfig/)，加入需要使用的 assets 路徑。
 
 ```ruby
 # config/initializers/assets.rb  
 Rails.application.config.assets.precompile += %w( admin.css )
 ```
 
-在 production 下 asset precompile。
-
-```
-RAILS_ENV=production rake assets:precompile
+```shell
+rake assets:precompile
 ```
 
 ### Config
 
-將以下的改成 true，預設為 false。
+因為在 production 環境中是不處理靜態檔案的，把這個 `RAILS_SERVE_STATIC_FILES` 環境變數設為 true。
+
+```
+export RAILS_SERVE_STATIC_FILES=true
+```
+
+或是直接到設定檔 `config/environments/production.rb` 把 `config.public_file_server.enabled` 改為 true。
 
 ```ruby
 # config/environments/production.rb
 # rails 5
-config.assets.compile = true
+config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
 # rails 4
 config.serve_static_assets = true
