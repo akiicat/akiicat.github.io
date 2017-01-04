@@ -56,7 +56,7 @@ rake assets:precompile
 export RAILS_SERVE_STATIC_FILES=true
 ```
 
-或是直接到設定檔 `config/environments/production.rb` 把 `config.public_file_server.enabled` 改為 true。
+或是直接到 production 的設定檔 `config/environments/production.rb` 把 `config.public_file_server.enabled` 改為 true。
 
 ```ruby
 # config/environments/production.rb
