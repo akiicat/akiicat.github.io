@@ -51,7 +51,10 @@ div {
 
 ## vmin 與 vmax 的差別與用法
 
-1vmin 的定義是 1vh 和 1vw 中最小的值，假設現在瀏覽器的高是 1100px 寬是 700px，這樣 1vh 1vw 就會是 11px 7px，所以 1vmin 就會是 7px。相反的 vmax 則會挑選最大的值。
+假設現在瀏覽器的高是 1100px 寬是 700px，這樣 1vh 1vw 就會是 11px 7px。
+
+- 1vmin 的定義是 1vh 和 1vw 中最小的值，所以 1vmin 就會是 7px。
+- 1vmax 的定義是 1vh 和 1vw 中最大的值，所以 1vmax 就會是 11px。
 
 如果讓 div 的寬與高都是 100vmin：
 
