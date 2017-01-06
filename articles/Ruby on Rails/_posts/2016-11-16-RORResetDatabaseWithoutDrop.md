@@ -24,9 +24,8 @@ database: dev
 
 在重新設置資料庫時，最簡單的方法就是先把資料庫刪除，然後重新建一個，最後在 migrate：
 
-- `db:migrate:reset` 執行 `db:drop` `db:create` `db:migrate`
-
 ```sh
+db:drop db:create db:migrate
 rake db:migrate:reset
 ```
 
