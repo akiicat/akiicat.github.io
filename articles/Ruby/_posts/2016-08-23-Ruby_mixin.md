@@ -4,6 +4,7 @@ date:   2016-08-23 17:18:32 +0800
 ---
 
 ## 繼承關係
+
 Ruby 只能繼承唯一一個 parent 的單純繼承，但藉由 Mix-in 機制，可以在單純繼承的架構下，在多個類別之間共享一些工能。
 
 ```ruby
@@ -32,8 +33,11 @@ Comparable 雖然不是 parent，但是運作情形差不多
 <!--excerpt-->
 
 ## Module include 的規則
+
 Ruby 在 Mix-in 時方法搜尋的順序。
+
 ### 方法名重複
+
 與繼承關係相同，當類別本身定義有同名的方法時，以類別本身的為主。
 
 ```ruby
@@ -54,6 +58,7 @@ c.meth              # => "C meth"
 ```
 
 ### 優先順序
+
 在一個類別裡讀入不只一個 module 時，以最後讀入的優先。
 
 ```ruby
@@ -92,6 +97,7 @@ p C.ancestors       # => [C, M2, M1, Object, Kernel, BasicObject]
 
 
 #### 多層 Module
+
 當讀入有多層現象時，搜尋順序拉成現狀。
 
 ```ruby
@@ -136,6 +142,7 @@ p C.ancestors       # => [C, M3, M2, M1, Object, Kernel, BasicObject]
 ```
 
 #### Module 重複忽略
+
 讀入相同的模組兩次以上時，第二次會被忽略。
 
 ```ruby

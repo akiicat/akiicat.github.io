@@ -36,6 +36,7 @@ pg_ctl -D /usr/local/var/postgres stop -s -m fast
 ```
 
 ### 自動啟動 PostgreSQL
+
 PostgreSQL 的版本要自行更改，這裡使用的是 `9.5.1`
 
 ```sh

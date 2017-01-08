@@ -4,6 +4,7 @@ date:   2016-09-13 22:48:38 +0800
 ---
 
 ## 安裝
+
 在 `Gemfile` 加上以下的部分，然後執行 `bundle`。
 
 ```ruby
@@ -14,6 +15,7 @@ end
 ```
 
 ## 設定
+
 在 `spec/support/factory_girl.rb` 新增一個檔案，且加入以下的東西。
 
 ```ruby
@@ -36,6 +38,7 @@ require 'support/factory_girl'
 <!--excerpt-->
 
 ## 使用
+
 建立 FactoryGirl 的測資填寫在以下四個地方的皆可，這裡我是寫在 `spec/factories/*.rb` 這個地方當做範例。
 
 ```
@@ -46,6 +49,7 @@ spec/factories/*.rb
 ```
 
 ### 不重複
+
 假設 user 有兩個欄位 name 和 email。
 
 ```ruby
@@ -87,6 +91,7 @@ user = create(:user)
 ```
 
 ### 關聯
+
 假設現在使用者 User 有很多文章 Post。
 
 ```ruby
@@ -102,6 +107,7 @@ end
 ```
 
 #### 單一關係
+
 雖然 User 跟 Post 是一對多的關係，但是在新增 Post 的時候會再新增一個 User
 來關聯，所以最後每一篇 Post 只會有一個 User，而且每篇 Post 的 User 都是不同的人。
 
@@ -131,6 +137,7 @@ post = create(:post)      ## post.user.id != user.id
 ```
 
 #### 一對多
+
 若想要讓一個使用者能新增多篇文章。
 
 ```ruby
@@ -173,6 +180,7 @@ user.posts.count        # => 5
 ```
 
 ### 不同類別
+
 下面的範例是 post 預設的 status 是 `public`，而使用 trait 可以產生不同的 status。
 
 ```ruby

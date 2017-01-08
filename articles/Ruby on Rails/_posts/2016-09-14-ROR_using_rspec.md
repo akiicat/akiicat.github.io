@@ -14,6 +14,7 @@ end
 然後執行 `bundle`
 
 ## Initialize
+
 建立新的 rspec 檔
 
 ```sh
@@ -23,6 +24,7 @@ rails generate rspec:install
 <!--excerpt-->
 
 ## Run
+
 執行測試檔
 
 ```sh

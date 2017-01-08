@@ -53,6 +53,7 @@ while (1) {
 沒有任何能判定資料長度的資料，只能用是否為文件末端 `EOF` 來判定
 
 #### 方法 1
+
 ```c
 while (scanf("%d %d", &a, &b) != EOF) {
     // ...
@@ -132,12 +133,14 @@ strlen("ABCDEFGHI");
 - `strdup` 則會自己幫你 alloc 一塊記憶體，但之後要自己 free 掉
 
 #### strcpy
+
 ```c
 char p[256];
 strcpy(p, "__AA__B__");
 ```
 
 #### strdup
+
 ```c
 char* p;
 p = strdup("__AA__B__");
@@ -207,6 +210,7 @@ printf("%s", s);
 ```
 
 ### 連接字串 strcat
+
 ```c
 char *str = "https://www.google.com.tw/";
 char *sub = "google";

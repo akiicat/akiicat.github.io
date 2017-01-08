@@ -5,7 +5,8 @@ date:   2016-08-22 03:04:33 +0800
 
 [From Here](https://gist.github.com/KL-7/1590797#file-one-liners-md)
 
-### 翻轉每一行:
+### 翻轉每一行
+
 輸入資料:
 
 ```sh
@@ -70,7 +71,8 @@ ewq
 rab
 ```
 
-### 縮排:
+### 縮排
+
 像這樣:
 
 ```sh
@@ -80,32 +82,34 @@ cat example.rb | ruby -ne 'puts " " * 4 + $_'
 ruby -ne 'puts " " * 4 + $_' example.rb
 ```
 
-### 加上行號 (所有檔案):
+### 加上行號 (所有檔案)
 
 ```sh
 ruby -ne 'puts "#$. #$_"' foo.rb bar.rb
 ```
 
-### 加上行號 (單一檔案):
+### 加上行號 (單一檔案)
 
 ```sh
 ruby -ne '$. = 1 if $<.pos - $_.size == 0; puts "#$. #$_"' foo.rb bar.rb
 ```
 
-### 字數統計:
+### 字數統計
 
 ```sh
 ruby -ane 'w = (w || 0) + $F.size; END { p w }' exmpl.txt
 ```
 
-### 刪除空白行:
+### 刪除空白行
+
 刪除文件中的所有連續的空白行，除了每個組中的第一個
 
 ```sh
 ruby -ne 'puts $_ if /^[^\n]/../^$/'
 ```
 
-### 取出註解:
+### 取出註解
+
 輸入:
 
 ```sh
@@ -170,19 +174,19 @@ Try it:
 ruby flip-flop.rb comments.txt
 ```
 
-### 標記行末空格:
+### 標記行末空格
 
 ```sh
 ruby -lpe '$_.gsub! /(\s+)$/, "\e[41m\\1\e[0m"' example.rb
 ```
 
-### 移除行末空格:
+### 移除行末空格
 
 ```sh
 ruby -lpe '$_.rstrip!' example.rb
 ```
 
-### 每行出過 50 字則標記顏色:
+### 每行出過 50 字則標記顏色
 
 簡單的方法:
 
@@ -196,7 +200,8 @@ ruby -ne 'puts "#{$_}\e[31m#{$_.chop!.slice!(50..-1)}\e[0m"' example.rb
 ruby -e 'w = $*.shift; $<.each { |l| puts "#{l}\e[31m#{l.chop!.slice!(w.to_i..-1)}\e[0m" }' 50 example.rb
 ```
 
-### 簡單的 REPL:
+### 簡單的 REPL
+
 最直接的一種方法:
 
 ```sh

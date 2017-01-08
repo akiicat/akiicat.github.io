@@ -4,6 +4,7 @@ date:   2016-09-16 01:42:19 +0800
 ---
 
 ## Gemfile
+
 測試環境為 rails 5
 
 ```ruby
@@ -13,6 +14,7 @@ gem 'devise'
 然後執行 `bundle`
 
 ## Configuration
+
 安裝 devise 的設定檔
 
 ```sh
@@ -30,6 +32,7 @@ config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 <!--excerpt-->
 
 ## Model
+
 這裡的 model 是使用 `User` 當作範例
 
 ```sh
@@ -76,6 +79,7 @@ before_action :authenticate_user!
 Rails 5 在使用的時候需要注意，需要將 `authenticate_user` 放在 `protect_from_forgery` 之後，不然無法驗證 CSRF，要解決這個問題可以更改它的順序或是使用 `protect_from_forgery prepend: true`。
 
 ### 取得資料
+
 在 controller 中可以取得登入的使用者資料。
 
 ```ruby
@@ -90,6 +94,7 @@ user_session
 ```
 
 ### 登入/登出
+
 在 controller 中操作只用者的登入與登出。
 
 ```ruby
@@ -98,6 +103,7 @@ sign_out @user
 ```
 
 ## Views
+
 產生 devise 的 template。
 
 ```sh
@@ -132,6 +138,7 @@ config.scoped_views = true
 ```
 
 ### sign_out
+
 在需要登出的地方加上以下片段，注意登出的 method 為 `:delete`。
 
 ```erb
