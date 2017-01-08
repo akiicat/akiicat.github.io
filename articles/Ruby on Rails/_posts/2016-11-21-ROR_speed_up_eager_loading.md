@@ -1,5 +1,5 @@
 ---
-title:  "Ruby on Rails 加速：一次拿取所以資料"
+title:  "Ruby on Rails Eager Loading 加速：一次拿取所以資料"
 date:   2016-11-21 14:25:11 +0800
 ---
 
