@@ -48,8 +48,12 @@ class Book
   end
 end
 
-a     , b     , c      = [Book.new, Book.new, Book.new]
-a.name, b.name, c.name = ['akii'  , 'books' , 'cat'   ]
+a = Book.new
+b = Book.new
+c = Book.new
+a.name = 'akii'
+b.name = 'books'
+c.name = 'cat'
 
 a < b                  # => true
 b.between?(a, c)       # => true
