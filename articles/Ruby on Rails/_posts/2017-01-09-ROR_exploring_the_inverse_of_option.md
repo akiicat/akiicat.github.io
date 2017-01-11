@@ -3,6 +3,8 @@ title:  "Ruby on Rails 探索 inverse_of"
 date:   2017-01-09 02:55:10 +0800
 ---
 
+[1]: /blogger/2017/01/11/ROR_belongs_to_association_required_by_default/        "belongs_to association required by default"
+
 ## inverse_of
 
 主要功能會去通知對方自己的狀態，可以解決物件不同步的問題。
@@ -122,14 +124,7 @@ a.errors.messages # => {:"books.author"=>["must exist", "can't be blank"]}
 a.valid? # => false
 ```
 
-當 rails 試著把 books 存入資料庫時，author 還沒有被 commit 到資料庫中，因此缺少一個 id，`presence: true` 的驗證失敗產生 `can't be blank` 的錯誤。
-
-`must exist` 的錯誤可以選擇關掉，不用 foreign key 就能將資料存入。
-
-```ruby
-# config/initializers/new_framework_defaults.rb
-Rails.application.config.active_record.belongs_to_required_by_default = false
-```
+當 rails 試著把 books 存入資料庫時，author 還沒有被 commit 到資料庫中，因此缺少一個 id，`presence: true` 的驗證失敗產生 `can't be blank` 的錯誤。`must exist` 的錯誤可以[選擇關掉][1]，不用 foreign key 就能將資料存入。
 
 為了讓他能運作，需要在 Author 裡的 `has_many :books` 加上 `inverse_of: :author`，讓它能通知正在新增的 book。
 
