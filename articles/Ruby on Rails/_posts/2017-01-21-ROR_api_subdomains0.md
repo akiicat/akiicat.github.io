@@ -93,3 +93,4 @@ edit_v1_book GET    /v1/books/:id/edit(.:format) api/v1/books#edit {:subdomain=>
 ```
 
 - [Subdomaining Localhost with Rails 5](https://gist.github.com/indiesquidge/b836647f851179589765)
+- [Rails request API](http://api.rubyonrails.org/classes/ActionDispatch/Request.html)
