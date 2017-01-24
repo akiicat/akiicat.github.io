@@ -5,6 +5,10 @@
 # bundle
 exclude: ['Gemfile', 'Gemfile.lock', 'vendor']
 
+# gem
+gems:
+  - jekyll-sitemap
+
 # Basic
 name:               "Akiicat"
 post_dir:           "articles"
