@@ -26,3 +26,7 @@ gem 'github-pages'
 
 # test view and link
 gem 'html-proofer'
+
+# sidemaps for github pages:
+# https://help.github.com/articles/sitemaps-for-github-pages/
+gem 'jekyll-sitemap'
