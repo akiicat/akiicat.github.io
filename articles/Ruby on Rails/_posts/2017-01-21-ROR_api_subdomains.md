@@ -12,7 +12,7 @@ rake db:migrate
 
 修改 router 把想要使用子網域的路徑用 `constraints subdomain: 'api'` 包起來。
 
-然後把 `/api/v1/books` 中的 `api` 從 router 中移除變成 `/v1/books`，只需要將 `namespace :api` 改成 `namespace :api, path: ''`，或是要改成 `scope module: :api` 也可以，但是要做更多的修改。
+然後把 `/api/v1/books` 中的 `api` 從 router 中移除變成 `/v1/books`，只需要將 `namespace :api` 改成 `namespace :api, path: ''`，或是改成 `scope as: :api, module: :api` 也可以。
 
 ```ruby
 # config/routes.rb
