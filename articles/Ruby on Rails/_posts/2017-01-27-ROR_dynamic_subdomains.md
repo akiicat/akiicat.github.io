@@ -14,7 +14,7 @@ rails g scaffold user name subdomain
 rake db:migrate
 ```
 
-修改 `routes.rb`，加上首頁，然後把 show 的頁面加上 subdomain 的限制。
+修改 `routes.rb`，加上首頁，然後把 show 的頁面加上 subdomains 的限制。
 
 ```ruby
 # config/routes.rb
