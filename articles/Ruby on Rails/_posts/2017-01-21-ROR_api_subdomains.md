@@ -5,7 +5,7 @@ date:   2017-01-22 13:13:27 +0800
 
 為了要 demo api subdomain 的頁面是否能夠運作，這邊用鷹架隨便建立個東西。
 
-```ruby
+```sh
 rails g scaffold api::v1::books title
 rake db:migrate
 ```
