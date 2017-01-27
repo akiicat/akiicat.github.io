@@ -47,7 +47,7 @@ end
 
 ## includes
 
-這個有沒有加上不會影響程式執行的結果，但是會你在執行 SQL 時會[一次抓完所有的東西](/blogger/2016/11/21/ROR_speed_up_grab_all_data_at_once/)，避免 N+1 queries 的問題。
+這個有沒有加上不會影響程式執行的結果，但是會你在執行 SQL 時會[一次抓完所有的東西](/blogger/2016/11/21/ROR_speed_up_eager_loading/)，避免 N+1 queries 的問題。
 
 ```ruby
 class Song < ApplicationRecord
