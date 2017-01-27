@@ -52,11 +52,19 @@ def set_user_subdomain
 end
 ```
 
-在 view 則把所有 show 的連結連到 `root_url(subdomain: @user.subdomain)`
+然後把所有 show 的 redirect_to 和 link_to 的連結指到 `root_url(subdomain: @user.subdomain)` 就完成拉。
 
 ```ruby
 # app/views/users/index.html.erb
 link_to 'Show', root_url(subdomain: user.subdomain)
+```
+
+剩下的是略過特殊的 subdomains 像是 `www` `api`，傳入的參數會是 array 的型態，包含所有的 subdomains。假設網址是 `akii.cat.localhost`，top level domain `config.action_dispatch.tld_length` 是 0，傳入的參數就會是 `['akii', 'cat']`。
+
+```ruby
+constraints subdomains: lambda { |s| s.present? && ['www', 'api'].exclude?(s.last) } do
+  ...
+end
 ```
 
 - [Railscasts Subdomains](https://www.youtube.com/watch?v=O2bBcTPj0sI)
