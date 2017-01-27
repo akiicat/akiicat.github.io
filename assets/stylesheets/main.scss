@@ -96,6 +96,12 @@ header {
 @for $i from 0 through 4 {
   .indent-#{$i} {
     padding-left: #{ $i * $grid-gutter};
+
+    // used for chinese paragraph
+    // indent first line
+    & > p {
+      text-indent: 2em;
+    }
   }
 }
 

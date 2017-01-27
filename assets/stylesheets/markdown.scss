@@ -158,12 +158,6 @@ $margin: 16px;
     }
   }
 
-  // used for chinese paragraph
-  // indent first line
-  & > p {
-    text-indent: 2em;
-  }
-
   div > {
     ul, ol {
       margin-left: 2em;
