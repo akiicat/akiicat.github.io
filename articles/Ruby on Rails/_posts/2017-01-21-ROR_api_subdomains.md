@@ -3,16 +3,16 @@ title:  "Ruby on Rails api subdomain in rails 5"
 date:   2017-01-22 13:13:27 +0800
 ---
 
-為了要 demo api subdomain 的頁面是否能夠運作，這邊用鷹架來建立隨便建立個東西。
+為了要 demo api subdomain 的頁面是否能夠運作，這邊用鷹架隨便建立個東西。
 
 ```ruby
 rails g scaffold api::v1::books title
 rake db:migrate
 ```
 
-修改 router 把想要使用子網域的路徑用 `constraints subdomain: 'api'` 包起來。
+修改 router 把想要使用的子網域，用 `constraints subdomain: 'api'` 包起來。
 
-然後把 `/api/v1/books` 中的 `api` 從 router 中移除變成 `/v1/books`，只需要將 `namespace :api` 改成 `namespace :api, path: ''`，或是改成 `scope as: :api, module: :api` 也可以。
+然後不想再路徑上顯示 api，所以把 `namespace :api` 改成 `namespace :api, path: ''`，或是改成 `scope as: :api, module: :api` 也可以。
 
 ```ruby
 # config/routes.rb
