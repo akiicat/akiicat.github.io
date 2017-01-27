@@ -1,5 +1,5 @@
 ---
-title:  "Ruby on Rails api subdomain"
+title:  "Ruby on Rails 5 api subdomain"
 date:   2017-01-22 13:13:27 +0800
 ---
 

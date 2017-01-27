@@ -1,5 +1,5 @@
 ---
-title:  "Ruby on Rails dynamic subdomains"
+title:  "Ruby on Rails 5 dynamic subdomains"
 date:   2017-01-27 17:25:12 +0800
 ---
 
@@ -59,7 +59,9 @@ end
 link_to 'Show', root_url(subdomain: user.subdomain)
 ```
 
-剩下的是略過特殊的 subdomains 像是 `www` `api`，傳入的參數會是 array 的型態，包含所有的 subdomains。假設網址是 `akii.cat.localhost`，top level domain `config.action_dispatch.tld_length` 是 0，傳入的參數就會是 `['akii', 'cat']`。
+剩下的是略過特殊的 subdomains 像是 `www` `api`，傳入的參數會是 array 的型態，包含所有的 subdomains。
+
+假設網址是 `akii.cat.localhost`，top level domain 的長度 `config.action_dispatch.tld_length` 為 0，傳入的參數就會是 `['akii', 'cat']`。
 
 ```ruby
 constraints subdomains: lambda { |s| s.present? && ['www', 'api'].exclude?(s.last) } do
