@@ -37,7 +37,7 @@ export SECRET_KEY_BASE=$(rake secret)
 
 ### Asset Precompile
 
-如果不太清楚的話，可以先看[這篇](/blogger/2016/09/17/RORAssetsCssJsConfig/)，加入需要使用的 assets 路徑。
+如果不太清楚的話，可以先看[這篇](/blogger/2016/09/17/ROR_assets_css_js_config/)，加入需要使用的 assets 路徑。
 
 ```ruby
 # config/initializers/assets.rb  
