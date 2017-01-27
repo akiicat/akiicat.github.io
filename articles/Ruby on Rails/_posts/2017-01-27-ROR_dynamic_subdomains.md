@@ -5,7 +5,7 @@ date:   2017-01-27 17:25:12 +0800
 
 一個使用者有名字 name 還有自己網頁的子網域 subdomain，我們想要的結果是讓每一位使用者有自己的子網域，而且還可以隨時更改。
 
-假設現在有個使用者是 `User.create(name: "akii", subdomain: "akiicat")`，在 rails 預設 show 頁面會是 `http://localhost:3000/books/1`，但我們想把網址變成個人的子網域 `http://akiicat.localhost:3000`。
+假設現在有個使用者是 `User.create(name: "akii", subdomain: "akiicat")`，在 rails 預設 show 頁面會是 `http://localhost:3000/users/1`，但我們想把網址變成個人的子網域 `http://akiicat.localhost:3000`。
 
 接下來會用鷹架建立使用者來做示範：
 
