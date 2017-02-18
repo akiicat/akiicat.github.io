@@ -94,42 +94,17 @@ irb(main):001:0> Book.create(:title => 'hi')
 
 ## UUID Relation
 
-現在有一個 `author` 的 model，且一般在新增關聯會像下面這樣，但是這樣會有個問題：
+假設現在要將 `author_id` 添加到 Book model 上，如果使用 add_references 的話，預設的型態會是 `Integer`，可是在資料庫 id 的型態是 `uuid`，所以在新增 `author_id` 這個外來鍵的時候型態要主動換成 `uuid` 的型態。
 
 ```ruby
-rails g model authors name:string
-rails g migration AddAuthorRefToBook
-
-# db/migrate/xxxxxxxxxxxxxx_add_author_ref_to_book.rb
-class AddAuthorRefToBook < ActiveRecord::Migration[5.0]
-  def change
-    add_reference :books, :author, index: true
-  end
-end
+rails g migration add_author_id_to_books author_id:uuid:books
 ```
 
 ```ruby
-# app/models/book.rb
-class Book < ApplicationRecord
-  belongs_to :author
-end
-
-# app/models/author.rb
-class Author < ApplicationRecord
-  has_many :books
-end
-```
-
-Rails 中 add_reference 的型態 (datatype) 為 `Integer`，可是在資料庫 id 的型態是 `uuid`
-，所以在新增 `author_id` 這個外來鍵的時候型態要主動換成 `uuid` 的型態：
-
-```ruby
-# create_table 時，先指定好 author_id datatype
-rails g model authors name:string author_id:uuid
-
-# add_column 時新增欄位，而非 add_reference
-class AddAuthorRefToBook < ActiveRecord::Migration[5.0]
+class AddAuthorIdToBooks < ActiveRecord::Migration[5.0]
   def change
+    # errors
+    # add_reference :books, :author, index: true
     add_column :books, :author_id, :uuid
   end
 end
