@@ -1,5 +1,5 @@
 ---
-title:  "Ruby on Rails 中使用 UUID"
+title:  "Ruby on Rails 中使用 UUID primary key"
 date:   2016-09-02 01:17:02 +0800
 ---
 
