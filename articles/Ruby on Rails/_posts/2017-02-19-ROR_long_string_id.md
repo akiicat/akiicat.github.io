@@ -1,6 +1,6 @@
 ---
 title:  "Ruby on Rails long string id"
-date:   2016-09-02 01:17:02 +0800
+date:   2017-02-19 22:48:09 +0800
 ---
 
 之前有講到使用 [UUID](/blogger/2016/09/01/ROR_using_uuid_in_rails) 當作 primary key 的方法，因為 postgresql 有提供 uuid，可以直接拿來使用。
