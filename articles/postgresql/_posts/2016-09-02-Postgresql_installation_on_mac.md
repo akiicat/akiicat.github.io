@@ -37,11 +37,11 @@ pg_ctl -D /usr/local/var/postgres stop -s -m fast
 
 ### 自動啟動 PostgreSQL
 
-PostgreSQL 的版本要自行更改，這裡使用的是 `9.5.1`
+PostgreSQL 的版本要自行更改，這裡使用的是 `9.6.2`
 
 ```sh
 mkdir -p ~/Library/LaunchAgents
-cp /usr/local/Cellar/postgresql/9.5.1/homebrew.mxcl.postgresql.plist ~/Library/LaunchAgents/
+cp /usr/local/Cellar/postgresql/9.6.2/homebrew.mxcl.postgresql.plist ~/Library/LaunchAgents/
 launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
 ```
 
