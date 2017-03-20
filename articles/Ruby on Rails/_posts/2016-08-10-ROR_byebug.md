@@ -34,3 +34,12 @@ date:   2016-08-10 19:32:54 +0800
 - `display <params>`: 印出參數的值，簡寫 `disp <params>`
 - `continue`: 退出 byebug 讓程式執行完，簡寫 `cont`
 - `quit`: 退出 byebug 且結束 rails
+
+## Rails View Console
+
+在 development 錯誤頁面的時候，下面都會有一個 console 給你輸入，覺得不錯用的話可以在 view 的任何一個地方加上這行：
+
+```erb
+# app/views/layouts/application.html.erb
+<% console %>
+```
