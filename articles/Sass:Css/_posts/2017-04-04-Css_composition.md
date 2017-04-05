@@ -46,24 +46,26 @@ div {
 }
 ```
 
+<style>
+  div {
+    display: inline-block;
+    background: #ccc;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+  }
+
+  .center {
+    position: relative;
+    left: 50%;
+    margin-left: -50px;
+  }
+</style>
+
 <div class="float-problem">
   <div class="center"></div>
 </div>
-
-div {
-  display: inline-block;
-  background: #ccc;
-  width: 100px;
-  height: 50px;
-  text-align: center;
-  line-height: 50px;
-}
-
-.center {
-  position: relative;
-  left: 50%;
-  margin-left: -50px;
-}
 
 這麼做雖然可以置中，但是只要改變了一下寬度或是加個 padding，版面一下子就跑掉，要這麼做不如使用 [absolute] 這種強大的定位方式。
 
