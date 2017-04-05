@@ -47,7 +47,8 @@ div {
 ```
 
 <style>
-  div {
+
+  .float-problem {
     display: inline-block;
     background: #ccc;
     width: 100px;
@@ -56,7 +57,7 @@ div {
     line-height: 50px;
   }
 
-  .center {
+  .float-problem .center {
     position: relative;
     left: 50%;
     margin-left: -50px;
