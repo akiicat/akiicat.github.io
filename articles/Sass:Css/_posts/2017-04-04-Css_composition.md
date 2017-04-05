@@ -49,15 +49,17 @@ div {
 <style>
 
   .float-problem {
+    width: 100%;
+  }
+
+  .float-problem .center {
     display: inline-block;
     background: #ccc;
     width: 100px;
     height: 50px;
     text-align: center;
     line-height: 50px;
-  }
 
-  .float-problem .center {
     position: relative;
     left: 50%;
     margin-left: -50px;
