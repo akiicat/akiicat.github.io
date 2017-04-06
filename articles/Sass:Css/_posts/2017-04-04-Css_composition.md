@@ -53,12 +53,13 @@ div {
 <style>
   .float-problem {
     width: 100%;
-    border: 1px solid black;
+    background: #ccc;
+    margin: 20px 0;
   }
 
   .float-problem .center {
     display: inline-block;
-    background: #ccc;
+    background: #aaa;
     width: 100px;
     height: 50px;
     text-align: center;
@@ -97,6 +98,10 @@ li {
 ```
 
 <style>
+  .inline-block-problem ul {
+    margin-left: 0;
+    padding-left: 0;
+  }
   .inline-block-problem li {
     display: inline-block;
     background: #ccc;
@@ -156,11 +161,11 @@ li {
   </div>
 </div>
 
-但仔細想一下，為什麼要在排版的時候修改文字的大小啊，雖然問題是解決了，可是這根本是降低程式碼維護的東西啊，而且如果那天想要修改文字大小......就到時候再說。
+但仔細想一下，為什麼要在排版的時候修改文字的大小啊，雖然問題是解決了，可是這根本是降低程式碼的維護，而且如果那天想要修改文字大小......就到時候再說。
 
 ## Summary
 
-之後就來做一些些的 block, inline, inline-block 小整理：
+之後就來做一些 block, inline, inline-block 的小整理：
 
 - float 問題： 水平置中困難，需要精算推擠的距離
 - inline 問題： 垂直高度不會推擠到，可能會吃到下面的文字
