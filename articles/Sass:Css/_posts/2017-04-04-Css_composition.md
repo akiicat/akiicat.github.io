@@ -9,6 +9,8 @@ date:   2017-04-04 18:58:02 +0800
 
 ![5xruby]({{ site.url }}/assets/images/5xruby/5xruby.jpg)
 
+<!--excerpt-->
+
 ## 排版歷史
 
 在 css 的戰國時代裡，大部分在網路上找到的排版方法，大多是 float 跟 inline-block 這兩種，沒聽課的話還真的不知道排版的歷史：
@@ -20,8 +22,6 @@ date:   2017-04-04 18:58:02 +0800
 - grid
 
 之後會想來玩玩看 flex 跟 grid，反正是自己的部落格，IE8 以下的用戶就不好意思了。用 table 排版已經太舊太久遠就先不管。然而現在最常用的兩種排版方法 float 跟 inline-block ，還是會有一些問題存在：
-
-<!--excerpt-->
 
 ### float 問題
 
