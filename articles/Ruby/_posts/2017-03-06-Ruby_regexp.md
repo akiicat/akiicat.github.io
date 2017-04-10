@@ -72,3 +72,10 @@ if m = /akii(.+)$/.match('hiakiicat')
   puts m[1]
 end
 ```
+
+或是使用 safe navigation operator `&.` 的寫法，如果是 nil 則不會繼續往下執行之後的動作。
+
+```
+/akii(.+)$/.match('hiakiicat')&.[](1)      # => "cat"
+/akii(.+)$/.match('xxxxxxxxx')&.[](1)      # => nil
+```
