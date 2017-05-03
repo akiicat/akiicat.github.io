@@ -6,10 +6,11 @@ date:   2016-10-11 04:44:11 +0800
 
 ## Canvas Usage
 
-html canvas 簡單來說就是個 img，能操作的東西十分的多，建議使用 Javascript，如果用 jquery 操作會十分麻煩而且不易使用。
+html canvas 簡單來說就是個 image，只是它可以使用 Javascript 來 render 你所想要的樣子，所以能操作的東西十分的多，可以拿來做動畫或是遊戲等等的，有其他的套件輔助會比較方便。
 
 ```js
-// 建立 canvas，context 暫時沒有用到
+// 建立 canvas
+// context 暫時沒有用到
 var canvas  = document.createElement('canvas');
 var context = canvas.getContext('2d');
 
@@ -58,11 +59,10 @@ img.onload = function(){
   // 將 image 畫在 canvas 上
   context.drawImage(this, 0, 0);
 
-  $('#myCanvas').html(canvas);
+  document.getElementById('myCanvas').innerHTML = canvas;
 };
-img.src = 'http://i.imgur.com/ImageHere';
+img.src = 'http://i.imgur.com/tTaJT8F';
 ```
-
 
 ## Cross Origin Security Error
 
@@ -81,15 +81,10 @@ Access-Control-Allow-Origin: '*'
 可以加上 `crossOrigin` 這個參數來抓取圖片的資訊。
 
 ```js
-var img = new Image();
-img.onload = function(){
-  // 完整載入圖片之後才會執行這一段
-};
 img.crossOrigin = 'Anonymous';
-img.src = 'http://i.imgur.com/ImageHere';
 ```
 
-如果有需要用到重複的同一張圖片的話，建議第一次載入時先將圖片用 `canvas.toDataURL()` 轉成 dataUrl，之後要在使用 `canvas.getImageData()` 時就不會有 SecurityError 的問題了。
+如果有需要用到重複的同一張圖片的話，建議第一次載入時先將圖片用 `canvas.toDataURL()` 轉成 dataUrl，之後就不需要再使用 `canvas.getImageData()` 這樣也不會有 SecurityError 的問題了。
 
 ```js
 var image = new Image();
