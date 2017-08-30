@@ -10,16 +10,18 @@ rails g scaffold api::v1::books title
 rake db:migrate
 ```
 
-使用 constraints 限制 subdomain：`constraints: { subdomain: 'api' }`。
+使用 constraints 限制 `subdomain: 'api'`。
 
-然後不想再路徑上顯示 api，所以把 `namespace :api` 改成 `namespace :api, path: '/'`，或是改成 `scope as: :api, module: :api` 也可以。
+然後用 `scope module: 'api'` 加上 app/controllers/api 這個資料夾。
 
 ```ruby
 # config/routes.rb
 Rails.application.routes.draw do
-  namespace :api, path: '/', constraints: { subdomain: 'api' } do
-    namespace :v1 do
-      resources :books
+  constraints subdomain: 'api' do
+    scope module: 'api' do
+      namespace :v1 do
+        resources :books
+      end
     end
   end
 end
