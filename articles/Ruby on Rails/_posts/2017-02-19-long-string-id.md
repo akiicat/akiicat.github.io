@@ -3,7 +3,7 @@ title:  "Ruby on Rails long string id"
 date:   2017-02-19 22:48:09 +0800
 ---
 
-之前有講到使用 [UUID](/blogger/2016/09/01/ROR_using_uuid_in_rails) 當作 primary key 的方法，因為 postgresql 有提供 uuid，可以直接拿來使用。
+之前有講到使用 [UUID](/blogger/2016/09/01/using-uuid-in-rails) 當作 primary key 的方法，因為 postgresql 有提供 uuid，可以直接拿來使用。
 
 接下來的這個方法適用於所有的資料庫，在物件儲存之前先給定它的 id，如此一來就能定義我們所想要的內容了。
 

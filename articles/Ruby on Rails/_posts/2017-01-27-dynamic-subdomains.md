@@ -29,7 +29,7 @@ end
 
 <!--excerpt-->
 
-調整 development 的 top level domain 或是直接使用 `lvh.me` 當作 localhost 也可以，不清楚的話可以看[這篇](/blogger/2017/01/22/ROR_api_subdomains/)。
+調整 development 的 top level domain 或是直接使用 `lvh.me` 當作 localhost 也可以，不清楚的話可以看[這篇](/blogger/2017/01/22/api-subdomains/)。
 
 ```ruby
 # config/environments/development.rb

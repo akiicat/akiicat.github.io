@@ -3,7 +3,7 @@ title:  "Ruby on Rails 探索 inverse_of"
 date:   2017-01-09 02:55:10 +0800
 ---
 
-[1]: /blogger/2017/01/11/ROR_belongs_to_association_required_by_default/        "belongs_to association required by default"
+[1]: /blogger/2017/01/11/belongs-to-association-required-by-default/        "belongs-to association required by default"
 
 ## inverse_of
 
