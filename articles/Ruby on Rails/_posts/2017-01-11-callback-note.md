@@ -111,8 +111,8 @@ callback 和 validate 一樣，也可以在滿足給定條件時才執行。條�
 ```ruby
 class Comment < ActiveRecord::Base
   after_create :send_email_to_author, if: :author_wants_emails?,
-      unless: Proc.new { |comment| comment.article.ignore_comments? }
+  unless: Proc.new { |comment| comment.article.ignore_comments? }
 end
 ```
 
-- [Active Record Callback](http://rails.ruby.tw/active_record_callbacks.html)
+- [Active Record Callback](https://rails.ruby.tw/active_record_callbacks.html)

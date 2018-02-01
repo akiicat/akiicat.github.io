@@ -103,4 +103,3 @@ image.crossOrigin = 'Anonymous';
 image.src = url;
 ```
 
-- [cross origin me](http://crossorigin.me/)
