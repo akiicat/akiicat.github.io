@@ -8,6 +8,7 @@ script:
   - hexo g
 deploy:
   - provider: script
+    skip_cleanup: true
     script:
       - hexo d
     on:
