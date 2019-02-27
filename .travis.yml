@@ -1,11 +1,8 @@
 language: node_js
 node_js: "--lts"
 before_script:
-- echo $USER
 - echo $TRAVIS_BRANCH
 - echo $TRAVIS_REPO_SLUG
-- echo $TRAVIS_SECURE_ENV_VARS
-- echo $MY_SECRET_ENV
 - git config user.name Akiicat
 - git config user.email aaaa1379@gmail.com
 - sed -i'' "s~git@github.com:akiicat/akiicat.github.io.git~https://${GITHUB_ACCESS_TOKEN}@github.com/akiicat/akiicat.github.io.git~" _config.yml
@@ -13,5 +10,5 @@ script:
 - hexo g
 - hexo d
 env:
-  matrix:
-    secure: A3htHVaiFe6yKVu8KaduT6vwdZWjGO3UwcnYkQcRr/rjSegAJChAKLCBKOiiN/S+awNBtXEjzLDzBkBo/9FWiiXaeIJlzrrXgWfiJEDojtKvFD2u53FiTqArYInQNFRzkibdJeTIVcgjgWZdJyEUjoBdvFIEvtUFGVNc+ujhVO8Dt5XPLzPCLRAeribad21nDuRh5D4sLddY1YRq7DeGzoTu3OkBCHFGCDs4UjN6tSrrkVbkrpGOUXRYTsHRnP9Ym5MidTVCElhDBNHetAdP6HzXZ7zX1QJOPQbBJHnPxgJQMbzCR/aGnb2+OQ3Bq49bKJIVoNSFAIQkH3tOGB3cyJb9AjGOWpGeqbVySLO1VhM6yutwykWxaQf80oKc4KLiDKXfbrzFtAHx2jTjiUM3ZbAD2P7t7mBICGYc6WrjGytbmzqYQoz0tjrDIFkkY4uTPFaKUGBuhwaO7Webv2KIpnDyCCjWimTnWCATSIfGXDBNtc+uMkOHoXEaotBWhbPjrUAOykbYvHBaZpVk1zISuMMtiiiH18toMCmkFyZSi3DFwOYRX9xWA9m+sPH1fPD6UEBo5IWYEAm0oRzbDqqCKJYtk+pKSRKF4+l3LC5JadWBWHnADMLpUz1m8aiuEPwbIS1Sq2M0tB8AV885unOhw3PNJBlSfbHbEXgHMSmK090=
+  global:
+    secure: TRIvu+a/knrZpEKUmgbT4Xm0678pE2fqSU2LIKRsrlihT5IaNUaH0laLKipSAajVorG+h25gKhGB5reRjdjbW9Fe4sEbcbs9j7I1lgVBr0QRjsPQ+GpkjwEZWt53KBLcc04OjdIFd4qFC1Rm38JOVxKxcfHPuepT30jl7HTSXbL8bSAbQbyefHqnf629VWBaS5LM6jPU9mUox3mTf2XEHtJ5ZILUtXs8GZIl+PPgEb7f082pwL9N9UBDnakv1px7H9IskDkNXXUqntFsQpes50wYlD4BTmha0hFOp1o4kKBob9IX6N00B/DHjmwfFh/5JE5HraULymI818wMDFQK41/GHpIYaTUrPEUFtIPkAmUbLQpVaDWP+UgZB+lJnVVMERN2Fqt5KrnBIxY8eqw45hFYd54JvCREsHiLa/CkZR31qd6vbwBTcExblAHbYoG0vQpMWiIGFHNVW9fOIqJru0SkgsN8w44/6bGKUTdvEZ5HIzwqbcxE9WDXIS5bR7clAo51gC5hg9caTQjvK4eEymllGViPoTtgrBWr+dRJnGN8aJe59WQyY18XLf1fIDkO8ZY1aLt0jxhjS+tv6/kLe75qxl43w/M1nBHEc6vkHbp7wtBDSDR7Oxme/s96ASP3qhkaUQKOnR7TX2p4UC3qlx9fY6hA1OY19vljIDtM+ac=
