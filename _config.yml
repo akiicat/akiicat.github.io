@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Akiicat
+title: Akiicat 學習筆記
 subtitle:
 description:
 keywords:
@@ -13,7 +13,7 @@ timezone: Asia/Taipei
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://www.akiicat.com
+url: https://www.akiicat.com
 root: /
 permalink: :year/:month/:day/:category/:title/
 permalink_defaults:
