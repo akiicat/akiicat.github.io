@@ -90,4 +90,4 @@ theme: chan
 deploy: 
   type: git
   repo: git@github.com:akiicat/akiicat.github.io.git
-  branch: gh-pages
+  branch: master
