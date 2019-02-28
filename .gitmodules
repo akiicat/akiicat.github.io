@@ -1,3 +1,8 @@
 [submodule "themes/chan"]
-	path = themes/chan
-	url = https://github.com/akiicat/hexo-theme-chan.git
+  path = themes/chan
+  url = https://github.com/akiicat/hexo-theme-chan.git
+  branch = master
+
+# execute the following commands after update this file
+# git submodule sync
+# git submodule update --init --recursive --remote
