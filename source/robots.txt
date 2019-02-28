@@ -11,5 +11,4 @@ Disallow: /perfect-scrollbar/
 Disallow: /PhotoSwipe/
 
 Sitemap: https://www.akiicat.com/sitemap.xml
-Sitemap: https://www.akiicat.com/baidusitemap.xml
 
