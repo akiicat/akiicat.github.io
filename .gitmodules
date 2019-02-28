@@ -1,6 +1,6 @@
 [submodule "themes/chan"]
   path = themes/chan
-  url = git@github.com:akiicat/hexo-theme-chan.git
+  url = https://github.com/akiicat/hexo-theme-chan.git
   branch = master
 
 # execute the following commands after update this file
