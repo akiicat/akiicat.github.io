@@ -2,4 +2,4 @@
 
 # Blogger
 
-[https://akiicat.github.io](https://akiicat.github.io)
+[https://www.akiicat.com](https://www.akiicat.com)
