@@ -48,7 +48,7 @@ Volume Ubuntu1804 on disk2s1 unmounted
 sudo dd if=[imagePath] of=/dev/r[diskID] bs=1m
 ```
 
-- `if`：Input from，不是 Stan
+- `if`：Input from，並非 Standard Input
 - `of`：Output from
 
 ```shell
