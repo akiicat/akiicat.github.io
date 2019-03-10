@@ -68,7 +68,7 @@ sudo vim /etc/exports
 # /etc/exports
 # 格式：
 # 在 ubuntu 上想要分享的檔案         這個 IP 連進來的可以存取這個檔案(選項)
-/var/nfs 192.168.0.20/8(rw,sync,no_subtree_check)
+/var/nfs 192.168.0.0/24(rw,sync,no_subtree_check,all_squash)
 ```
 
 至於選項是選擇性填寫的，有很多參數可以選：
@@ -76,8 +76,17 @@ sudo vim /etc/exports
 - `ro`：read only
 - `rw`：read and write
 - `async`：此選項允許 NFS Server 違反 NFS protocol，允許檔案尚未存回磁碟之前回覆請求。這個選項可以提高性能，但是有可能會讓 server 崩潰，可能會需要重新啟動 server. 或檔案遺失。
-- `sync`：只會儲存檔案會磁碟之後才會回覆請求
+- `sync`：只會儲存檔案會磁碟之後才會回覆請求。
 - `no_subtree_check`：禁用子樹檢查，會有些微的不安全，但在某些情況下可以提高可靠性。
+- `secure`：請求的 port 必須小於 1024，這個選項是預設的。
+- `insecure`：請求的 port 不一定要小於 1024。
+
+User ID Mapping 參數：
+
+- `root_squash`：將 uid 0 的使用者映射到 nobody 匿名使用者，這個選項是預設的。
+- `no_root_squash`：關掉 root squash 的選項，這個選項可以使用 root 身份來控制 NFS Server 的檔案。
+- `all_squash`：所有登入 NFS 的使用者身份都會被壓縮成為 nobody。
+- `anonuid and anongid`：調整匿名使用者的權限，可以讓所有透過 NFS 修改文件，都看起來是同一個使用者。
 
 更多參數的選項可以參考 [LInux exports](https://linux.die.net/man/5/exports)
 
@@ -110,6 +119,12 @@ mkdir -p ~/share
 sudo mount -t nfs -o rw,resvport 192.168.0.10:/var/nfs ~/share
 ```
 
+ 注意在 mac 上必須加上 `-o resvport` 的參數，否則會出現 `Operation not permitted` 的錯誤。
+
+```shell
+sudo mount -t nfs -o soft,intr,rsize=8192,wsize=8192,timeo=900,retrans=3,proto=tcp 192.168.0.10:/var/nfs ~/share
+```
+
 #### 檢查
 
 輸入以下指令檢查是否掛載成功：
@@ -128,10 +143,12 @@ $ mount
 echo "Hello World" > /tmp/test
 ```
 
+是否能成功建立
+
 #### Unmount
 
 ```shell
-sudo umount 192.168.0.10:/var/nfs
+sudo umount -f 192.168.0.10:/var/nfs
 ```
 
 
