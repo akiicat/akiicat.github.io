@@ -20,7 +20,7 @@ tags:
 ## 安裝 NFS Server
 
 ```shell
-sudo apt install nfs-kernel-server
+sudo apt install -y nfs-kernel-server
 ```
 
 安裝好之後，會在 `/etc` 底下會多一個 `exports` 的檔案，待會我們可以修改這個檔案，來調整想要分享的檔案。
@@ -67,8 +67,11 @@ sudo vim /etc/exports
 ```shell
 # /etc/exports
 # 格式：
-# 在 ubuntu 上想要分享的檔案         這個 IP 連進來的可以存取這個檔案(選項)
-/var/nfs 192.168.0.0/24(rw,sync,no_subtree_check,all_squash)
+# 在 ubuntu 上想要分享的資料夾    這個 IP 連進來的可以存取這個檔案(選項)
+/var/nfs                       192.168.0.0/24(rw,sync,no_subtree_check,all_squash)
+
+#                              * 代表任何人都可以連進來
+/tmp                           *(rw,sync,no_subtree_check,all_squash)
 ```
 
 至於選項是選擇性填寫的，有很多參數可以選：
@@ -106,6 +109,13 @@ $ sudo exportfs
 		192.168.0.20/8
 ```
 
+目前 showmount 的指令會是空的，因為還沒有 NFS Client 連上，如果連上的話，NFS Server 這邊可以使用 showmount 指令查看哪個 Client IP 連過來的：
+
+```shell
+$ showmount
+x.x.x.x
+```
+
 ## 安裝 NFS Client
 
 ### Mac OS X
@@ -120,10 +130,6 @@ sudo mount -t nfs -o rw,resvport 192.168.0.10:/var/nfs ~/share
 ```
 
  注意在 mac 上必須加上 `-o resvport` 的參數，否則會出現 `Operation not permitted` 的錯誤。
-
-```shell
-sudo mount -t nfs -o soft,intr,rsize=8192,wsize=8192,timeo=900,retrans=3,proto=tcp 192.168.0.10:/var/nfs ~/share
-```
 
 #### 檢查
 
@@ -151,5 +157,36 @@ echo "Hello World" > /tmp/test
 sudo umount -f 192.168.0.10:/var/nfs
 ```
 
+### Ubuntu
 
+這台 Ubuntu 的 IP 是 192.168.0.30
+
+#### 安裝
+
+```shell
+sudo apt install -y nfs-common
+```
+
+#### Mount
+
+```shell
+mkdir -p ~/share
+sudo mount -t nfs -o rw,resvport 192.168.0.10:/var/nfs ~/share
+```
+
+#### 檢查
+
+輸入以下指令檢查是否掛載成功：
+
+```shell
+$ df -h
+...
+140.113.213.39:/home/akiicat/share  458G  8.3G  426G   2% /home/akiicat/share
+```
+
+#### Unmount
+
+```shell
+sudo umount -f 192.168.0.10:/var/nfs
+```
 
