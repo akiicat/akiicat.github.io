@@ -2,9 +2,10 @@
 title: 使用指令分割磁碟 on Mac
 date: 2019-02-28 23:31:08
 categories:
-  - Terminal
+  - Mac OS X
 tags:
-  - Mac Osx
+  - Mac OS X
+  - Terminal
   - Diskutil
   - Disk Partition
 ---

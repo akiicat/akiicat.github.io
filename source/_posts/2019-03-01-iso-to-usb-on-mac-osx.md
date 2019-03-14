@@ -2,9 +2,10 @@
 title: Mac 將 iso 轉 usb、dmg 轉 usb、iso 轉 dmg
 date: 2019-03-01 00:08:05
 categories:
-  - Terminal
+  - Mac OS X
 tags:
-  - Mac Osx
+  - Mac OS X
+  - Terminal
   - Diskutil
   - ISO
   - DMG
