@@ -32,6 +32,8 @@ $ diskutil list external
    4:               Windows_NTFS Data                    50.0 GB    disk2s5
 ```
 
+<!-- more -->
+
 ### unmount 磁碟
 
 ```shell
