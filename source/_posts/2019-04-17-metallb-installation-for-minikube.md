@@ -1,5 +1,5 @@
 ---
-title: metallb-installation-for-minikube
+title: Metallb Installation For Minikube
 date: 2019-04-17 12:15:50
 tags:
   - Kubernetes
