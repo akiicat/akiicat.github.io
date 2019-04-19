@@ -1,5 +1,5 @@
 ---
-title: 在 ubuntu 上架設 NFS server
+title: 在 Ubuntu 上架設 NFS server
 date: 2019-03-10 01:54:10
 categories:
   - DevOps

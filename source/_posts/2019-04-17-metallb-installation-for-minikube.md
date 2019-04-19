@@ -1,17 +1,17 @@
 ---
-title: Metallb Installation For Minikube
+title: 在 Kubernetes Minikube 上安裝 Load Balancer MetalLB
 date: 2019-04-17 12:15:50
 tags:
   - Kubernetes
   - Minikube
-  - Metallb
+  - MetalLB
   - Load Balance
 categories:
   - Kubernetes
 ---
 
 
-## Metallb
+## MetalLB
 
 MetalLB 是 Bare metal Kubernetes 的 load balancer，如果原先你使用 `--type=LoadBalancer` 來暴露你的 port 的話，service 裡的 `EXTERNAL-IP` 會一直是 pending 的狀態：
 
@@ -26,7 +26,7 @@ hello-world  LoadBalancer   10.102.80.194   <pending>      3000:31118/TCP   17m
 
 但是我們只需要 Kubernetes 的功能，卻要把整個 OpenStack 安裝好，然後只用其中的 Load Balancer 的話，這個作法實在有點殺雞焉用牛刀。
 
-如同 GitHub 上這篇 [issue](https://github.com/kubernetes/kubernetes/issues/36220) 所說的，為何不單把 Load Balancer 的服務抽出來安裝就好呢，於是 [metallb](https://github.com/google/metallb) 就這樣誕生了
+如同 GitHub 上這篇 [issue](https://github.com/kubernetes/kubernetes/issues/36220) 所說的，為何不單把 Load Balancer 的服務抽出來安裝就好呢，於是 [MetalLB](https://github.com/google/metallb) 就這樣誕生了
 
 ## Installation
 
@@ -46,7 +46,7 @@ kubectl apply -f https://raw.githubusercontent.com/google/metallb/v0.7.3/manifes
 minikube service -n metallb-system test-bgp-router-ui
 ```
 
-### Metallb
+### MetalLB
 
 安裝最重要的 Metallb，他會在 `metallb-system` namespace 底下產生 daemonset `speaker` 跟 deployment `controller`。
 
@@ -58,7 +58,7 @@ kubectl apply -f https://raw.githubusercontent.com/google/metallb/v0.7.3/manifes
 
 ### ConfigMap
 
-Metallb 的設定檔是透過 Kubernetes 裡面的 config map 下去做設定的，你必須跟他講他能夠分配的 IP 池，跟一些相關設定。
+MetalLB 的設定檔是透過 Kubernetes 裡面的 config map 下去做設定的，你必須跟他講他能夠分配的 IP 池，跟一些相關設定。
 
 ```yaml
 apiVersion: v1
@@ -103,7 +103,7 @@ kubectl run hello-world --image=k8s.gcr.io/echoserver:1.10 --port=8080
 kubectl expose deployment hello-world --type=LoadBalancer
 ```
 
-使用 `kubectl get service` 指令查看現在 service 的狀態，可能需要等個幾秒鐘，`EXTERNAL-IP` 這個欄位就會是 metallb 從 IP 池分配給我們的 IP：
+使用 `kubectl get service` 指令查看現在 service 的狀態，可能需要等個幾秒鐘，`EXTERNAL-IP` 這個欄位就會是 MetalLB 從 IP 池分配給我們的 IP：
 
 ```shell
 $ kubectl get service

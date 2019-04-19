@@ -1,10 +1,11 @@
 ---
-title: Kubernetes Installation on Ubuntu
+title: Bare Metal 在 Ubuntu 上安裝 Kubernetes
 tags:
   - Kubernetes
   - Docker
   - Installation
   - Ubuntu
+  - Bare Metal
 categories:
   - Kubernetes
 date: 2019-04-18 11:55:59
