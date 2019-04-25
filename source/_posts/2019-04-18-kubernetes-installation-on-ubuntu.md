@@ -92,12 +92,18 @@ exit
 **[Master]** 回到使用者模式後執行：
 
 ```shell
-sudo cp /etc/kubernetes/admin.conf $HOME/
-sudo chown $(id -u):$(id -g) $HOME/admin.conf
-export KUBECONFIG=$HOME/admin.conf
+mkdir -p $HOME/.kube
+sudo cp -f /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 
-每次開啟 Terminal 都要執行上面幾行，除非把 `export KUBECONFIG` 加入到 bash file。
+將 `admin.conf` 放置到 `~/.kube/config` 就會自動抓取設定檔。
+
+**[Master]** 安裝 flannel，相關[文件](https://coreos.com/flannel/docs/latest/kubernetes.html)在 CoreOS 上：
+
+```shell
+kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/k8s-manifests/kube-flannel-legacy.yml
+```
 
 **[Master]** 查看目前節點：
 
@@ -106,12 +112,6 @@ $ kubectl get nodes
 NAME            STATUS   ROLES    AGE   VERSION
 akiicat         Ready    master   77m   v1.14.1
 akiicat-node2   Ready    <none>   51s   v1.14.1
-```
-
-**[Master]** 安裝 flannel，相關[文件](https://coreos.com/flannel/docs/latest/kubernetes.html)在 CoreOS 上：
-
-```shell
-kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/k8s-manifests/kube-flannel-rbac.yml
 ```
 
 ## 測試
@@ -189,7 +189,14 @@ error execution phase preflight: [preflight] Some fatal errors occurred:
 swapoff -a
 ```
 
-相關討論在 Github 的 [issue](https://github.com/kubernetes/kubeadm/issues/610) 上
+相關討論在 Github 的 [issue](https://github.com/kubernetes/kubeadm/issues/610) 上。
+
+上面的設定在重新開機之後就會失效 swap，要將 swap 完全關掉的話，需編輯 **/etc/fstab**  這個檔案，將 mount point 在 / 的項目註解掉：
+
+```shell
+# /etc/fstab
+# UUID=10e56f7b-7b40-4b10-8029-642badc59ce9  /    ext4    errors=remount-ro 0       1
+```
 
 ### exec format error
 
@@ -213,3 +220,4 @@ Stackoverflow 上的[討論](https://stackoverflow.com/a/52793714/4777620)
 - [CoreOS Flannel](https://coreos.com/flannel/docs/latest/kubernetes.html)
 - [Error Swap: running with swap on is not supported. Please disable swap](https://github.com/kubernetes/kubeadm/issues/610)
 - [Error exec user process caused exec format error](https://stackoverflow.com/a/52793714/4777620)
+- [How to safely turn off swap permanently and reclaim the space?](https://unix.stackexchange.com/a/224348)
