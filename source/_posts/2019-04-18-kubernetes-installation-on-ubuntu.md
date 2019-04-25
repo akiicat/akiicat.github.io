@@ -102,7 +102,7 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 **[Master]** 安裝 flannel，相關[文件](https://coreos.com/flannel/docs/latest/kubernetes.html)在 CoreOS 上：
 
 ```shell
-kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/k8s-manifests/kube-flannel-legacy.yml
+kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/bc79dd1505b0c8681ece4de4c0d86c5cd2643275/Documentation/kube-flannel.yml
 ```
 
 **[Master]** 查看目前節點：
