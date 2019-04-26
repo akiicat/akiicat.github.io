@@ -119,30 +119,30 @@ akiicat-node2   Ready    <none>   51s   v1.14.1
 執行一些簡單的容器：
 
 ```shell
-kubectl run hello-world --image=k8s.gcr.io/echoserver:1.10 --port=8080 --replicas=3
+kubectl run kuard --image=gcr.io/kuar-demo/kuard-amd64:blue --replicas=3
 ```
 
 查看 pods 是否有在運行
 
 ```shell
 $ kubectl get pods
-NAME                                 READY   STATUS             RESTARTS   AGE
-pod/hello-world-6cdb64fdcd-7bfgq   1/1     Running            0          17s
-pod/hello-world-6cdb64fdcd-82mtv   1/1     Running            0          17s
-pod/hello-world-6cdb64fdcd-rhxp2   1/1     Running            0          17s
+NAME                         READY   STATUS             RESTARTS   AGE
+kuard-6cdb64fdcd-7bfgq       1/1     Running            0          17s
+kuard-6cdb64fdcd-82mtv       1/1     Running            0          17s
+kuard-6cdb64fdcd-rhxp2       1/1     Running            0          17s
 ```
 
 使用 LoadBalancer 暴露它：
 
 ```shell
-kubectl expose deployment hello-world --type=LoadBalancer
+kubectl expose deployment kuard --type=LoadBalancer --port=80 --target-port=8080
 ```
 
 查看 Service
 
 ```shell
-$ kubectl describe service/hello-world
-Name:                     hello-world
+$ kubectl describe service/kuard
+Name:                     kuard
 ...
 Type:                     LoadBalancer
 IP:                       10.109.141.84
@@ -159,7 +159,7 @@ Events:                   <none>
 
 ```shell
 $ curl 10.244.1.5:8080
-Hostname: hello-world-1-6cdb64fdcd-7bfgq
+Hostname: kuard-1-6cdb64fdcd-7bfgq
 ...
 ```
 
@@ -205,7 +205,7 @@ swapoff -a
 所以當你使用 `kubectl logs` 查看某個 pod 出現如下的錯誤時：
 
 ```shell
-$ kubectl logs pod/hello-world-777c5775cd-lg7kc
+$ kubectl logs pod/kuard-777c5775cd-lg7kc
 standard_init_linux.go:207: exec user process caused "exec format error"
 ```
 
