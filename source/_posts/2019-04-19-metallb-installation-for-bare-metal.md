@@ -80,6 +80,8 @@ data:
 
 >如果想要使用外網的話，直接把網段的範圍改成外網即可
 
+MetalLB 提供了 **layer2** 跟 **bgp** 兩種 protocol，這裡使用 layer2，如果使用 bgp 的話還需要另外做設定，可以參考[官方文件](https://metallb.universe.tf/configuration/#bgp-configuration)。
+
 套用上面的 ConfigMap：
 
 ```shell

@@ -17,6 +17,8 @@ date: 2019-04-22 15:37:56
 - [Kubernetes 1.9](https://kubernetes.io/docs/setup/independent/install-kubeadm/#installing-kubeadm-kubelet-and-kubectl) 版以上，以及可以使用 **kubeadm**、**kubectl** 、**kubelet** 指令
 - [MetalLB](https://metallb.universe.tf/tutorial/layer2/) Layer2 Load Balancer
 
+由於我們會使用 **bgp** 的 protocol，可以直接在 minikube 上使用，如果你是在 bare metal 上操作的話，必須做額外的設定，可以參考[官方文件](https://metallb.universe.tf/configuration/#bgp-configuration)。
+
 ## Configure Load Balancer
 
 MetalLB 設定 Load Balancer 需要提供 ConfigMap 裡面包涵我們給定的網段範圍
@@ -48,6 +50,8 @@ data:
       addresses:
       - 192.168.144.0/20
 ```
+
+
 
 |      | address pool 1          | address pool 2   |
 | ---- | ----------------------- | ---------------- |
