@@ -11,27 +11,11 @@ categories:
 date: 2019-04-18 11:55:59
 ---
 
-
 ## Docker
 
-在安裝 Kubernetes 前，需要先安裝 Docker
+在安裝 Kubernetes 前要先安裝好 Docker，可以參考這篇：
 
-```shell
-sudo apt install -y docker.io
-```
-
-啟用 Docker
-
-```shell
-sudo systemctl start docker.service
-sudo systemctl enable docker.service
-```
-
-安裝完成
-
-```shell
-docker --version
-```
+{% post_link docker-ce-installation %}
 
 ## Kubeadm
 
