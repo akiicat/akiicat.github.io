@@ -40,6 +40,8 @@ apt update
 apt install -y kubeadm
 ```
 
+apt 安裝 kubeadm 完後會連同 kubelet 跟 kubectl 一起安裝。
+
 **[Master]** 在 **Master** 節點上初始化 Kubernetes：
 
 ```shell
