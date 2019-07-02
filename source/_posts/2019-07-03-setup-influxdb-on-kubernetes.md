@@ -17,7 +17,7 @@ date: 2019-07-03 01:32:39
 
 ## 建立 Secret
 
-[Kubernetes secrets](https://kubernetes.io/docs/concepts/configuration/secret/) 可以存放重要訊息，像是使用者密碼之類，不適合暴露在外。
+[Kubernetes secret](https://kubernetes.io/docs/concepts/configuration/secret/) 可以存放重要訊息，像是使用者密碼之類，不適合暴露在外。
 
 設定以下參數，稍後提供給 influxdb 使用：
 
@@ -101,7 +101,7 @@ kubectl edit deployment influxdb
 
 在 **spec.template.spec.containers** 位置加入 kubernetes secret：
 
-```shell
+```yaml
 spec:
   template:
     spec:
@@ -146,7 +146,7 @@ spec:
 
 最後整份文件的結果會長得如下：
 
-```
+```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
