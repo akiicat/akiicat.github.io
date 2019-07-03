@@ -5,7 +5,7 @@ categories:
   - Kubernetes
 tags:
   - Kubernetes
-  - Metallb
+  - MetalLB
   - Load Balance
   - Bare Metal
 ---
