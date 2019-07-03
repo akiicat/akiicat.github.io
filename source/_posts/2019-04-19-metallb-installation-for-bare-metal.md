@@ -1,5 +1,5 @@
 ---
-title: 在 Kubernetes Bare Metal 上安裝 Load Balancer MetalLB
+title: MetalLB 在 Kubernetes Bare Metal 上安裝 Layer 2 Load Balancer
 date: 2019-04-19 10:58:46
 categories:
   - Kubernetes
