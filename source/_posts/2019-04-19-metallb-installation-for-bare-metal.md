@@ -1,5 +1,5 @@
 ---
-Mtitle: 在 Kubernetes Bare Metal 上安裝 Load Balancer MetalLB
+title: 在 Kubernetes Bare Metal 上安裝 Load Balancer MetalLB
 date: 2019-04-19 10:58:46
 categories:
   - Kubernetes
