@@ -2,7 +2,7 @@
 title: Kubernetes MetalLB Load Balancer 設定多個 address pool
 tags:
   - Kubernetes
-  - Metallb
+  - MetalLB
   - Load Balance
 categories:
   - Kubernetes
