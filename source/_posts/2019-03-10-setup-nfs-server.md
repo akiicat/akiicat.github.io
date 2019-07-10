@@ -27,7 +27,8 @@ tags:
 sudo apt install -y nfs-kernel-server
 
 # docker container all in one
-mkdir -p -m 777 /tmp/nfs
+mkdir -p /tmp/nfs
+sudo chown -R nobody:nogroup /tmp/nfs
 docker run -d --privileged --restart=always \
   -v /tmp/nfs:/nfs \
   -e NFS_EXPORT_DIR_1=/nfs \
@@ -35,9 +36,7 @@ docker run -d --privileged --restart=always \
   -e NFS_EXPORT_OPTIONS_1=rw,insecure,no_subtree_check,all_squash \
   -p 111:111 -p 111:111/udp \
   -p 2049:2049 -p 2049:2049/udp \
-  -p 32765:32765 -p 32765:32765/udp \
-  -p 32766:32766 -p 32766:32766/udp \
-  -p 32767:32767 -p 32767:32767/udp \
+  -p 32765-32767:32765-32767 -p 32765-32767:32765-32767/udp \
   fuzzle/docker-nfs-server:latest
 ```
 
