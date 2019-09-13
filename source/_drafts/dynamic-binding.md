@@ -1,0 +1,4 @@
+---
+title: dynamic-binding
+tags:
+---
