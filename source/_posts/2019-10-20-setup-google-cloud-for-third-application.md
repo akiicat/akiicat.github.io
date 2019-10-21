@@ -25,30 +25,30 @@ date: 2019-10-20 23:49:22
 2. 點選「服務帳戶」
 3. 點選「建立服務帳戶」
 
-![gcp-iam-step-1](/Users/akiicat/Google/GitHub/akiicat.github.io/source/images/gcp-iam-step-1.png)
+![GCP IAM STEP 1](/images/gcp-iam-step-1.png)
 
 4. 輸入服務帳戶名稱
 5. 點選「建立」
 
-![gcp-iam-step-2](/Users/akiicat/Google/GitHub/akiicat.github.io/source/images/gcp-iam-step-2.png)
+![GCP IAM STEP 2](/images/gcp-iam-step-2.png)
 
 6. 點選「角色」-> 選擇要部署要應用程式「ＸＸＸ開發人員」（下圖以 Gloud Functions 為例） -> 點選「建立」
 
-![gcp-iam-step-3](/Users/akiicat/Google/GitHub/akiicat.github.io/source/images/gcp-iam-step-3.png)
+![GCP IAM STEP 3](/images/gcp-iam-step-3.png)
 
 7. 點選「建立金鑰」
 
-![gcp-iam-step-4](/Users/akiicat/Google/GitHub/akiicat.github.io/source/images/gcp-iam-step-4.png)
+![GCP IAM STEP 4](/images/gcp-iam-step-4.png)
 
 8. 選擇金鑰類型「JSON」
 9. 點選「建立」，此時會下載一份金鑰檔，將這份檔案保存好
 10. 點選「完成」
 
-![gcp-iam-step-5](/Users/akiicat/Google/GitHub/akiicat.github.io/source/images/gcp-iam-step-5.png)
+![GCP IAM STEP 5](/images/gcp-iam-step-5.png)
 
 11. 建立完成畫面
 
-![gcp-iam-step-6](/Users/akiicat/Google/GitHub/akiicat.github.io/source/images/gcp-iam-step-6.png)
+![GCP IAM STEP 6](/images/gcp-iam-step-6.png)
 
 ### 賦予服務帳戶權限
 
@@ -74,7 +74,7 @@ gcloud iam service-accounts add-iam-policy-binding $PROJECT_ID@appspot.gservicea
 1. 點選右上角圖示「啟用 Cloud Shell」
 2. 在終端機上輸入賦予帳戶權限的指令
 
-![gcp-iam-step-7](/Users/akiicat/Google/GitHub/akiicat.github.io/source/images/gcp-iam-step-7.png)
+![GCP IAM STEP 7](/images/gcp-iam-step-7.png)
 
 ## 測試
 
