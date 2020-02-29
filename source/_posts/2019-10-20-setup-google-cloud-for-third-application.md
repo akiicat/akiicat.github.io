@@ -1,5 +1,5 @@
 ---
-title: setup-google-cloud-for-third-application
+title: 設定 Google Cloud Platform 第三方服務金鑰
 tags:
   - Google Cloud Platform
   - Google Cloud IAM

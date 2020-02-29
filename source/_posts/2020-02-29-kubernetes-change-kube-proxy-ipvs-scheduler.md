@@ -1,5 +1,5 @@
 ---
-title: kubernetes-change-kube-proxy-ipvs-scheduler
+title: 修改 Kubernetes Kube Proxy IPVS scheduler mode
 tags:
   - Kubernetes
   - Kubectl
