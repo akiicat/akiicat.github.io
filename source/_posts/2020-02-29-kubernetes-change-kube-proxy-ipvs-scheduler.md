@@ -103,6 +103,8 @@ data:
 - sed: shortest expected delay
 - nq: never queue
 
+或參考 [IPVS wiki][2]
+
 刪除原有的 kube-proxy 的 pod，daemonset.apps/kube-proxy 會自動重新建立新的 kube-proxy Pod。
 
 ```shell
@@ -141,6 +143,8 @@ TCP  10.233.90.0:31191 sh
 ## Reference
 
 - [Service: IPVS proxy mode][1]
+- [IPVS: Connection Scheduling Algorithms inside the Kernel][1]
 
 [1]: https://kubernetes.io/docs/concepts/services-networking/service/#proxy-mode-ipvs
+[2]: http://kb.linuxvirtualserver.org/wiki/IPVS
 
