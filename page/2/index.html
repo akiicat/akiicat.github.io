@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<title>
+  
+    Akiicat 學習筆記 - null
+  
+</title>
+
+<meta name="description" content="The Programmer">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Akiicat 學習筆記">
+<meta property="og:url" content="https://www.akiicat.com/page/2/index.html">
+<meta property="og:site_name" content="Akiicat 學習筆記">
+<meta property="og:description" content="The Programmer">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:author" content="Akiicat">
+<meta property="article:tag" content="akiicat">
+<meta name="twitter:card" content="summary">
+
+
+  <link rel="alternative" href="/atom.xml" title="Akiicat 學習筆記" type="application/atom+xml">
+
+
+
+  <link rel="icon" href="/favicon.png">
+
+
+
+<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
+
+
+<link rel="stylesheet" href="/styles/main.css">
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-48754260-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-48754260-2');
+  </script>
+
+
+
+
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+<body
+  
+    class="monochrome"
+  
+  >
+  <div class="mobile-header">
+  <button class="sidebar-toggle" type="button">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <a class="title" href="/">Akiicat 學習筆記</a>
+</div>
+
+  <div class="main-container">
+    <div class="sidebar">
+  <div class="header">
+    <h1 class="title"><a href="/">Akiicat 學習筆記</a></h1>
+    
+    <div class="info">
+      <div class="content">
+        
+          <div class="description">The Programmer</div>
+        
+        
+          <div class="author">Akiicat</div>
+        
+      </div>
+      
+        <div class="avatar">
+          
+            <a href="/about"><img src="https://avatars2.githubusercontent.com/u/7646335?s=460&amp;v=4"></a>
+          
+        </div>
+      
+    </div>
+  </div>
+  <div class="body">
+    
+      
+        <ul class="nav">
+          
+            
+              <li class="category-list-container">
+                <a href="javascript:;">類別</a>
+                <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Database/">Database</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Docker/">Docker</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Google-Cloud-Platform/">Google Cloud Platform</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Kubernetes/">Kubernetes</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mac-OS-X/">Mac OS X</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a><span class="category-list-count">38</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Version-Control/">Version Control</a><span class="category-list-count">1</span></li></ul>
+              </li>
+            
+          
+            
+              <li class="tag-list-container">
+                <a href="javascript:;">標籤</a>
+                <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Abstraction/" rel="tag">Abstraction</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Api/" rel="tag">Api</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bare-Metal/" rel="tag">Bare Metal</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Byebug/" rel="tag">Byebug</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Canvas/" rel="tag">Canvas</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Context/" rel="tag">Context</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cross-Origin/" rel="tag">Cross Origin</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Css/" rel="tag">Css</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DMG/" rel="tag">DMG</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dashboard/" rel="tag">Dashboard</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Database/" rel="tag">Database</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Devise/" rel="tag">Devise</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Disk-Partition/" rel="tag">Disk Partition</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Diskutil/" rel="tag">Diskutil</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/" rel="tag">Docker</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Eager-Loading/" rel="tag">Eager Loading</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Encapsulation/" rel="tag">Encapsulation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Factory-Girl/" rel="tag">Factory Girl</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Friend/" rel="tag">Friend</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/" rel="tag">GitHub</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub-Actions/" rel="tag">GitHub Actions</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Google-Cloud-IAM/" rel="tag">Google Cloud IAM</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Google-Cloud-Platform/" rel="tag">Google Cloud Platform</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Helm/" rel="tag">Helm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ISO/" rel="tag">ISO</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Image/" rel="tag">Image</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Influxdb/" rel="tag">Influxdb</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Inheritance/" rel="tag">Inheritance</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Installation/" rel="tag">Installation</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ipvs/" rel="tag">Ipvs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/" rel="tag">Javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kube-Proxy/" rel="tag">Kube Proxy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kubectl/" rel="tag">Kubectl</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kubernetes/" rel="tag">Kubernetes</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Load-Balance/" rel="tag">Load Balance</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac-OS-X/" rel="tag">Mac OS X</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MetalLB/" rel="tag">MetalLB</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Minikube/" rel="tag">Minikube</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NFS/" rel="tag">NFS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Object-oriented-programming-OOP/" rel="tag">Object-oriented-programming (OOP)</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Polymorphism/" rel="tag">Polymorphism</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PostgreSQL/" rel="tag">PostgreSQL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Rspec/" rel="tag">Rspec</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ruby/" rel="tag">Ruby</a><span class="tag-list-count">28</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ruby-on-Rails/" rel="tag">Ruby on Rails</a><span class="tag-list-count">17</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQL/" rel="tag">SQL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sass/" rel="tag">Sass</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Semantic-Version/" rel="tag">Semantic Version</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/String/" rel="tag">String</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Subdomain/" rel="tag">Subdomain</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Terminal/" rel="tag">Terminal</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tiller/" rel="tag">Tiller</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/USB/" rel="tag">USB</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">3</span></li></ul>
+              </li>
+            
+          
+            
+              <li class="archive-list-container">
+                <a href="javascript:;">彙整</a>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a><span class="archive-list-count">16</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016</a><span class="archive-list-count">29</span></li></ul>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="/" title="Homepage" external="false">Homepage</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/archives" title="By Year" external="false">By Year</a>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="https://github.com/akiicat/akiicat.github.io" title="Blogger" target="_blank" rel="noopener">Blogger</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="https://github.com/akiicat" title="Github" target="_blank" rel="noopener">Github</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/atom.xml" title="RSS" external="false">RSS</a>
+              </li>
+            
+          
+        </ul>
+      
+    
+  </div>
+</div>
+
+    <div class="main-content">
+      
+        <div style="max-width: 1000px">
+      
+          
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2019/04/22/Kubernetes/metallb-with-multi-address-pools-on-kubernetes/" >
+  Kubernetes MetalLB Load Balancer 設定多個 address pool
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2019/04/22/Kubernetes/metallb-with-multi-address-pools-on-kubernetes/"><span class="article-date">
+  2019-04-22
+</span>
+</a>
+        
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Kubernetes/">Kubernetes</a></li></ul>
+	</span>
+
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Kubernetes/" rel="tag">Kubernetes</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Load-Balance/" rel="tag">Load Balance</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MetalLB/" rel="tag">MetalLB</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <h2 id="Before-Start"><a href="#Before-Start" class="headerlink" title="Before Start"></a>Before Start</h2><p>首先你先要安裝好：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://kubernetes.io/docs/setup/independent/install-kubeadm/#installing-kubeadm-kubelet-and-kubectl">Kubernetes 1.9</a> 版以上，以及可以使用 <strong>kubeadm</strong>、<strong>kubectl</strong> 、<strong>kubelet</strong> 指令</li>
+<li><a target="_blank" rel="noopener" href="https://metallb.universe.tf/tutorial/layer2/">MetalLB</a> Layer2 Load Balancer</li>
+</ul>
+<p>由於我們會使用 <strong>bgp</strong> 的 protocol，可以直接在 minikube 上使用，如果你是在 bare metal 上操作的話，必須做額外的設定，可以參考<a target="_blank" rel="noopener" href="https://metallb.universe.tf/configuration/#bgp-configuration">官方文件</a>。</p>
+<h2 id="Configure-Load-Balancer"><a href="#Configure-Load-Balancer" class="headerlink" title="Configure Load Balancer"></a>Configure Load Balancer</h2><p>MetalLB 設定 Load Balancer 需要提供 ConfigMap 裡面包涵我們給定的網段範圍</p>
+<p>會需要分別使用不同的 address pool 是有原因的，有申請過網路的都知道，固定 IP 是很貴的，而且數量有限，只會在有需要的時候才會使用公開固定 IP 網域池，像是產品 production 的網頁。</p>
+<p>至於其他還在測試 staging 的網頁，使用私人網域池即可，最後在設定個 VPN 連線進來看，就能夠減少申請固定 IP 的費用。</p>
+<p>這裡我們建立了兩個網域池，相關的設定如下：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># configmap.yaml</span></span><br><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">ConfigMap</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">namespace:</span> <span class="string">metallb-system</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">config</span></span><br><span class="line"><span class="attr">data:</span></span><br><span class="line">  <span class="attr">config:</span> <span class="string">|</span></span><br><span class="line">    <span class="attr">address-pools:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">production</span></span><br><span class="line">      <span class="attr">protocol:</span> <span class="string">bgp</span></span><br><span class="line">      <span class="attr">auto-assign:</span> <span class="literal">false</span></span><br><span class="line">      <span class="attr">addresses:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">17.95</span><span class="number">.16</span><span class="number">.28</span><span class="number">-17.95</span><span class="number">.16</span><span class="number">.32</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">staging</span></span><br><span class="line">      <span class="attr">protocol:</span> <span class="string">bgp</span></span><br><span class="line">      <span class="attr">avoid-buggy-ips:</span> <span class="literal">true</span></span><br><span class="line">      <span class="attr">addresses:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">192.168</span><span class="number">.144</span><span class="number">.0</span><span class="string">/20</span></span><br></pre></td></tr></table></figure>
+
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>address pool 1</th>
+<th>address pool 2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>名稱</td>
+<td>production</td>
+<td>staging</td>
+</tr>
+<tr>
+<td>協定</td>
+<td>bgp</td>
+<td>bgp</td>
+</tr>
+<tr>
+<td>網段</td>
+<td>17.95.16.28-17.95.16.32</td>
+<td>192.168.144.0/20</td>
+</tr>
+</tbody></table>
+<p>這裡假設我們申請到這個範圍的固定 IP 17.95.16.28-17.95.16.32，可以供 Load Balancer 來分配。</p>
+<p>至於設定 <code>avoid-buggy-ips: true</code> 參數的話， MetalLB 避免 <strong>.0</strong> 跟 <strong>.255</strong> 的 IP。</p>
+<p>如果想要手動指派 IP 的話，可以設定成 <code>auto-assign: false</code>，不設定的話預設是 <code>true</code>。</p>
+<p>寫好設定檔，我們就立即套用它：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl apply -f configmap.yaml</span><br></pre></td></tr></table></figure>
+<h2 id="測試"><a href="#測試" class="headerlink" title="測試"></a>測試</h2><p>現在我們來測試剛剛設定的 Load Balancer 有沒有成功。</p>
+<p>我會執行兩份 deployment，一個會使用 <strong>production</strong> 的網域池，另一個會使用 <strong>staging</strong> 的網域池，兩個設定檔分別是：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># hello-production.yaml</span></span><br><span class="line"><span class="attr">apiVersion:</span> <span class="string">apps/v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Deployment</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">hello-production</span></span><br><span class="line">  <span class="attr">labels:</span></span><br><span class="line">    <span class="attr">run:</span> <span class="string">hello-production</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">replicas:</span> <span class="number">3</span></span><br><span class="line">  <span class="attr">selector:</span></span><br><span class="line">    <span class="attr">matchLabels:</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">hello-production</span></span><br><span class="line">  <span class="attr">template:</span></span><br><span class="line">    <span class="attr">metadata:</span></span><br><span class="line">      <span class="attr">labels:</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">hello-production</span></span><br><span class="line">    <span class="attr">spec:</span></span><br><span class="line">      <span class="attr">containers:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">hello-production</span></span><br><span class="line">        <span class="attr">image:</span> <span class="string">k8s.gcr.io/echoserver:1.10</span></span><br><span class="line">        <span class="attr">ports:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">containerPort:</span> <span class="number">8080</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Service</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">hello-production</span></span><br><span class="line">  <span class="attr">annotations:</span></span><br><span class="line">    <span class="attr">metallb.universe.tf/address-pool:</span> <span class="string">production</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">ports:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">port:</span> <span class="number">8080</span></span><br><span class="line">    <span class="attr">targetPort:</span> <span class="number">8080</span></span><br><span class="line">  <span class="attr">selector:</span></span><br><span class="line">    <span class="attr">run:</span> <span class="string">hello-production</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">LoadBalancer</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># hello-staging.yaml</span></span><br><span class="line"><span class="attr">apiVersion:</span> <span class="string">apps/v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Deployment</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">hello-staging</span></span><br><span class="line">  <span class="attr">labels:</span></span><br><span class="line">    <span class="attr">run:</span> <span class="string">hello-staging</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">replicas:</span> <span class="number">3</span></span><br><span class="line">  <span class="attr">selector:</span></span><br><span class="line">    <span class="attr">matchLabels:</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">hello-staging</span></span><br><span class="line">  <span class="attr">template:</span></span><br><span class="line">    <span class="attr">metadata:</span></span><br><span class="line">      <span class="attr">labels:</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">hello-staging</span></span><br><span class="line">    <span class="attr">spec:</span></span><br><span class="line">      <span class="attr">containers:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">hello-staging</span></span><br><span class="line">        <span class="attr">image:</span> <span class="string">k8s.gcr.io/echoserver:1.10</span></span><br><span class="line">        <span class="attr">ports:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">containerPort:</span> <span class="number">8080</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Service</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">hello-staging</span></span><br><span class="line">  <span class="attr">annotations:</span></span><br><span class="line">    <span class="attr">metallb.universe.tf/address-pool:</span> <span class="string">staging</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">ports:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">port:</span> <span class="number">8080</span></span><br><span class="line">    <span class="attr">targetPort:</span> <span class="number">8080</span></span><br><span class="line">  <span class="attr">selector:</span></span><br><span class="line">    <span class="attr">run:</span> <span class="string">hello-staging</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">LoadBalancer</span></span><br></pre></td></tr></table></figure>
+<p>這裡需要在 <strong>metadata.annotations</strong> 裡面設定 <strong>metallb.universe.tf/address-pool: staging</strong> 參數，後面接值必須跟前面 ConfigMap 裡 address pool 的名稱一樣。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">annotations:</span></span><br><span class="line">    <span class="attr">metallb.universe.tf/address-pool:</span> <span class="string">staging</span></span><br></pre></td></tr></table></figure>
+<p>然後套用設定：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl apply -f hello-production.yaml,hello-staging.yaml</span><br></pre></td></tr></table></figure>
+<p>查看我們現在正在運行的容器與網路設定：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> kubectl get pods</span></span><br><span class="line">NAME                               READY   STATUS    RESTARTS   AGE</span><br><span class="line">hello-production-b58c4488d-fxj7d   1/1     Running   0          19m</span><br><span class="line">hello-production-b58c4488d-kx2nh   1/1     Running   0          19m</span><br><span class="line">hello-production-b58c4488d-tp8f6   1/1     Running   0          19m</span><br><span class="line">hello-staging-c8fc9f69d-4gmfr      1/1     Running   0          19m</span><br><span class="line">hello-staging-c8fc9f69d-rhh7q      1/1     Running   0          19m</span><br><span class="line">hello-staging-c8fc9f69d-vdwt2      1/1     Running   0          19m</span><br><span class="line"><span class="meta">$</span><span class="bash"> kubectl get service</span></span><br><span class="line">NAME               TYPE           CLUSTER-IP       EXTERNAL-IP      PORT(S)          AGE</span><br><span class="line">hello-production   LoadBalancer   10.109.99.105    17.95.16.28      8080:31532/TCP   19m</span><br><span class="line">hello-staging      LoadBalancer   10.110.199.100   192.168.144.1    8080:32603/TCP   19m</span><br></pre></td></tr></table></figure>
+<p>有被分配到外部固定 IP 的 service，就能夠使用透過外面的網路連進來，可以馬上找其他電腦來試試。</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://metallb.universe.tf/usage/example/">MetalLB Usage Full example</a></li>
+</ul>
+
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2019/04/19/Kubernetes/metallb-installation-for-bare-metal/" >
+  MetalLB 在 Kubernetes Bare Metal 上安裝 Layer 2 Load Balancer
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2019/04/19/Kubernetes/metallb-installation-for-bare-metal/"><span class="article-date">
+  2019-04-19
+</span>
+</a>
+        
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Kubernetes/">Kubernetes</a></li></ul>
+	</span>
+
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bare-Metal/" rel="tag">Bare Metal</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Kubernetes/" rel="tag">Kubernetes</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Load-Balance/" rel="tag">Load Balance</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MetalLB/" rel="tag">MetalLB</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <h2 id="準備"><a href="#準備" class="headerlink" title="準備"></a>準備</h2><p>假設你已經先裝好 Kubernetes cluster 了，由於是 bare metal，你必須把 Kubernetes 裝載三台不同電腦上，或是使用三個  Raspberry Pi，然後使用 <code>kubeadm</code> 指令串起來。</p>
+<h2 id="Cluster-Addresses"><a href="#Cluster-Addresses" class="headerlink" title="Cluster Addresses"></a>Cluster Addresses</h2><p>我們現在有三台電腦，它的名稱與 IP 分別是：</p>
+<ul>
+<li><p><strong>Master</strong>：<strong>192.168.1.100</strong></p>
+</li>
+<li><p><strong>Node1</strong>：<strong>192.168.1.101</strong></p>
+</li>
+<li><p><strong>Node2</strong>：<strong>192.168.1.102</strong></p>
+<blockquote>
+<p> 當你在安裝電腦時，名稱與 IP 必須是唯一的，否則在 join 的時候會出現錯誤。</p>
+</blockquote>
+</li>
+</ul>
+<p>這裡使用的 IP 是 DHCP 所分配的 IP，IP 的範圍是 <code>192.168.1.100—192.168.1.150</code>，如果你有足夠的 public IP address，可以分別對每台電腦做設定。</p>
+<blockquote>
+<p>假設我申請了 <code>17.95.16.0-17.95.16.32</code>，就可以把 IP 設定成這樣：</p>
+<ul>
+<li><strong>Master</strong>：<strong>17.95.16.1</strong></li>
+<li><strong>Node1</strong>：<strong>17.95.16.2</strong></li>
+<li><strong>Node2</strong>：<strong>17.95.16.3</strong></li>
+</ul>
+<p>雖然只用了三個，但我們保留剩下的 <code>17.95.16.10-17.95.16.32</code> 讓 Load Balancer 來分配這些網址</p>
+</blockquote>
+<h2 id="Metallb"><a href="#Metallb" class="headerlink" title="Metallb"></a>Metallb</h2><p>安裝 metallb 的步驟非常的簡單：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl apply -f https://raw.githubusercontent.com/google/metallb/v0.7.3/manifests/metallb.yaml</span><br></pre></td></tr></table></figure>
+<p>然後查看目前的狀態，是否有一個 controller 跟多個 speaker：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> kubectl get pods -n metallb-system</span></span><br><span class="line">NAME                         READY   STATUS    RESTARTS   AGE</span><br><span class="line">controller-cd8657667-2znm8   1/1     Running   0          22h</span><br><span class="line">speaker-m95vd                1/1     Running   0          22h</span><br><span class="line">speaker-shq8s                1/1     Running   0          22h</span><br></pre></td></tr></table></figure>
+<p>因為我們還沒有提供 load balance 的網址給他，所以接下來要設定 ConfigMap</p>
+<h2 id="Configure"><a href="#Configure" class="headerlink" title="Configure"></a>Configure</h2><p>架設我們想提供 load balance 的網址是 <code>192.168.1.240-192.168.1.250</code>，看一下我們的設定檔：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">apiVersion: v1</span><br><span class="line">kind: ConfigMap</span><br><span class="line">metadata:</span><br><span class="line">  namespace: metallb-system</span><br><span class="line">  name: config</span><br><span class="line">data:</span><br><span class="line">  config: |</span><br><span class="line">    address-pools:</span><br><span class="line">    - name: my-ip-space</span><br><span class="line">      protocol: layer2</span><br><span class="line">      addresses:</span><br><span class="line">      - 192.168.1.240-192.168.1.250</span><br></pre></td></tr></table></figure>
+<p>我們把 <code>protocol: layer2</code> 套用在 <code>192.168.1.240-192.168.1.250</code> 這個網段上</p>
+<blockquote>
+<p>如果想要使用外網的話，直接把網段的範圍改成外網即可</p>
+</blockquote>
+<p>MetalLB 提供了 <strong>layer2</strong> 跟 <strong>bgp</strong> 兩種 protocol，這裡使用 layer2，如果使用 bgp 的話還需要另外做設定，可以參考<a target="_blank" rel="noopener" href="https://metallb.universe.tf/configuration/#bgp-configuration">官方文件</a>。</p>
+<p>套用上面的 ConfigMap：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl apply -f https://raw.githubusercontent.com/google/metallb/v0.7.3/manifests/example-layer2-config.yaml</span><br></pre></td></tr></table></figure>
+<p>查看 Log：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl logs -l component=speaker -n metallb-system</span><br></pre></td></tr></table></figure>
+<h2 id="測試"><a href="#測試" class="headerlink" title="測試"></a>測試</h2><p>執行一些簡單的容器，然後使用 LoadBalancer 暴露它：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kubectl run hello-world --image=k8s.gcr.io/echoserver:1.10 --port=8080 --replicas=3</span><br><span class="line">kubectl expose deployment hello-world --type=LoadBalancer</span><br></pre></td></tr></table></figure>
+<p>查看 pods 是否有在運行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> kubectl get pods</span></span><br><span class="line">NAME                                 READY   STATUS             RESTARTS   AGE</span><br><span class="line">pod/hello-world-6cdb64fdcd-7bfgq   1/1     Running            0          17s</span><br><span class="line">pod/hello-world-6cdb64fdcd-82mtv   1/1     Running            0          17s</span><br><span class="line">pod/hello-world-6cdb64fdcd-rhxp2   1/1     Running            0          17s</span><br><span class="line"><span class="meta">$</span><span class="bash"> kubectl get service</span></span><br><span class="line">NAME          TYPE           CLUSTER-IP      EXTERNAL-IP      PORT(S)          AGE</span><br><span class="line">hello-world   LoadBalancer   10.106.40.173   192.168.1.240    8080:30700/TCP   11s</span><br></pre></td></tr></table></figure>
+<p>我們現在有外部 IP 了！馬上測試看看能不能連得到：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> curl 192.168.1.240:8080</span></span><br><span class="line">Hostname: hello-world-1-6cdb64fdcd-7bfgq</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>如果有看到跟請求 http 有關的資訊的話，就代表你成功了。</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://metallb.universe.tf/tutorial/layer2">Metallb Layer 2 Mode Tutorial</a></li>
+</ul>
+
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2019/04/18/Kubernetes/kubernetes-installation-on-ubuntu/" >
+  Bare Metal 在 Ubuntu 上安裝 Kubernetes
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2019/04/18/Kubernetes/kubernetes-installation-on-ubuntu/"><span class="article-date">
+  2019-04-18
+</span>
+</a>
+        
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Kubernetes/">Kubernetes</a></li></ul>
+	</span>
+
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bare-Metal/" rel="tag">Bare Metal</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/" rel="tag">Docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Installation/" rel="tag">Installation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Kubernetes/" rel="tag">Kubernetes</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <h2 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h2><p>在安裝 Kubernetes 前要先安裝好 Docker，可以參考這篇：</p>
+<a href="#">Post not found: docker-ce-installation</a>
+
+<h2 id="Kubeadm"><a href="#Kubeadm" class="headerlink" title="Kubeadm"></a>Kubeadm</h2><p>kubeadm 負責管理節點，可以透過方便的指令將電腦加入 cluster，在這裡我們先定義：</p>
+<ul>
+<li>Master：代表主結點，負責控制與分發任務</li>
+<li>Node：代表子結點，負責執行 Master 所分發的任務</li>
+</ul>
+<p><strong>[Master, Node]</strong> 安裝 Kubeadm 需要 root 權限：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo su -</span><br></pre></td></tr></table></figure>
+<p><strong>[Master, Node]</strong> 安裝 kubeadm：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -</span><br><span class="line">echo &quot;deb http://apt.kubernetes.io/ kubernetes-xenial main&quot; &gt; /etc/apt/sources.list.d/kubernetes.list</span><br><span class="line">apt update</span><br><span class="line">apt install -y kubeadm</span><br></pre></td></tr></table></figure>
+<p>apt 安裝 kubeadm 完後會連同 kubelet 跟 kubectl 一起安裝。</p>
+<p><strong>[Master]</strong> 在 <strong>Master</strong> 節點上初始化 Kubernetes：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubeadm init --pod-network-cidr 10.244.0.0/16</span><br></pre></td></tr></table></figure>
+<p>因為我們是使用 flannel，所以必須加上 <code>--pod-network-cidr</code>。</p>
+<blockquote>
+<p>我們這邊選擇 flannel 的是因為 flannel 支援 arm。</p>
+</blockquote>
+<p>如果要透過 WIFI 連接網路的話，需要加上 <code>--apiserver-advertise-address=&lt;wifi-ip-address&gt;</code> 參數到 <code>kubeadm init</code> 指令上。</p>
+<p>執行 <code>kubeadm init</code> 之後會有一行 <code>kubeadm join</code>，如果弄丟的話，可以執行下面指令獲得：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubeadm token create --print-join-command</span><br></pre></td></tr></table></figure>
+<p><strong>[Node]</strong> 然後把其他的 node 加進來：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kubeadm join 192.168.0.11:6443 --token 3c564d.6q2we53btzqmf1ew \</span><br><span class="line">    --discovery-token-ca-cert-hash sha256:a5480dcd68ec2ff27885932ac80d33aaa0390d295d4834032cc1eb554de3d5d2 </span><br></pre></td></tr></table></figure>
+<p><strong>[Master, Node]</strong> 離開 <strong>root</strong>：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exit</span><br></pre></td></tr></table></figure>
+<h2 id="Kubectl"><a href="#Kubectl" class="headerlink" title="Kubectl"></a>Kubectl</h2><p><strong>[Master]</strong> 回到使用者模式後執行：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p $HOME/.kube</span><br><span class="line">sudo cp -f /etc/kubernetes/admin.conf $HOME/.kube/config</span><br><span class="line">sudo chown $(id -u):$(id -g) $HOME/.kube/config</span><br></pre></td></tr></table></figure>
+<p>將 <code>admin.conf</code> 放置到 <code>~/.kube/config</code> 就會自動抓取設定檔。</p>
+<p><strong>[Master]</strong> 安裝 flannel，相關<a target="_blank" rel="noopener" href="https://coreos.com/flannel/docs/latest/kubernetes.html">文件</a>在 CoreOS 上：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/bc79dd1505b0c8681ece4de4c0d86c5cd2643275/Documentation/kube-flannel.yml</span><br></pre></td></tr></table></figure>
+<p><strong>[Master]</strong> 查看目前節點：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> kubectl get nodes</span></span><br><span class="line">NAME            STATUS   ROLES    AGE   VERSION</span><br><span class="line">akiicat         Ready    master   77m   v1.14.1</span><br><span class="line">akiicat-node2   Ready    &lt;none&gt;   51s   v1.14.1</span><br></pre></td></tr></table></figure>
+<h2 id="測試"><a href="#測試" class="headerlink" title="測試"></a>測試</h2><p>執行一些簡單的容器：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl run kuard --image=gcr.io/kuar-demo/kuard-amd64:blue --replicas=3</span><br></pre></td></tr></table></figure>
+<p>查看 pods 是否有在運行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> kubectl get pods</span></span><br><span class="line">NAME                         READY   STATUS             RESTARTS   AGE</span><br><span class="line">kuard-6cdb64fdcd-7bfgq       1/1     Running            0          17s</span><br><span class="line">kuard-6cdb64fdcd-82mtv       1/1     Running            0          17s</span><br><span class="line">kuard-6cdb64fdcd-rhxp2       1/1     Running            0          17s</span><br></pre></td></tr></table></figure>
+<p>使用 LoadBalancer 暴露它：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl expose deployment kuard --type=LoadBalancer --port=80 --target-port=8080</span><br></pre></td></tr></table></figure>
+<p>查看 Service</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> kubectl describe service/kuard</span></span><br><span class="line">Name:                     kuard</span><br><span class="line">...</span><br><span class="line">Type:                     LoadBalancer</span><br><span class="line">IP:                       10.109.141.84</span><br><span class="line">Port:                     &lt;unset&gt;  8080/TCP</span><br><span class="line">TargetPort:               8080/TCP</span><br><span class="line">NodePort:                 &lt;unset&gt;  30034/TCP</span><br><span class="line">Endpoints:                10.244.1.5:8080,10.244.1.6:8080,10.244.1.7:8080</span><br><span class="line">Session Affinity:         None</span><br><span class="line">External Traffic Policy:  Cluster</span><br><span class="line">Events:                   &lt;none&gt;</span><br></pre></td></tr></table></figure>
+<p>使用 curl 連到 pod 的 endpoint：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> curl 10.244.1.5:8080</span></span><br><span class="line">Hostname: kuard-1-6cdb64fdcd-7bfgq</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<h2 id="Trouble-Shooting"><a href="#Trouble-Shooting" class="headerlink" title="Trouble Shooting"></a>Trouble Shooting</h2><h3 id="Swap-Error"><a href="#Swap-Error" class="headerlink" title="Swap Error"></a>Swap Error</h3><p>當你用 root 權限執行 <code>kubeadm init</code> 時，會出現 <strong>ERROR Swap</strong> 的錯誤：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> kubeadm init --pod-network-cidr 10.244.0.0/16</span></span><br><span class="line">[init] Using Kubernetes version: v1.14.1</span><br><span class="line">[preflight] Running pre-flight checks</span><br><span class="line">[preflight] WARNING: Couldn&#x27;t create the interface used for talking to the container runtime: docker is required for container runtime: exec: &quot;docker&quot;: executable file not found in $PATH</span><br><span class="line">error execution phase preflight: [preflight] Some fatal errors occurred:</span><br><span class="line">	[ERROR FileContent--proc-sys-net-bridge-bridge-nf-call-iptables]: /proc/sys/net/bridge/bridge-nf-call-iptables does not exist</span><br><span class="line">	[ERROR FileContent--proc-sys-net-ipv4-ip_forward]: /proc/sys/net/ipv4/ip_forward contents are not set to 1</span><br><span class="line">	[ERROR Swap]: running with swap on is not supported. Please disable swap</span><br><span class="line">[preflight] If you know what you are doing, you can make a check non-fatal with `--ignore-preflight-errors=...`</span><br></pre></td></tr></table></figure>
+<p>如果啟用 swap 的話，當你記憶體不夠用的時候，OS 會先把暫時沒有用的資料存到硬碟裡，又稱作為 swap out。相反，OS 需要用到剛剛存在硬碟裡的資料，則會把資料再載入回記憶體裡面，又稱作為 swap in。</p>
+<p>使用 Kubenetes 的時候需要停用 swap 這個功能：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">swapoff -a</span><br></pre></td></tr></table></figure>
+<p>相關討論在 Github 的 <a target="_blank" rel="noopener" href="https://github.com/kubernetes/kubeadm/issues/610">issue</a> 上。</p>
+<p>上面的設定在重新開機之後就會失效 swap，要將 swap 完全關掉的話，需編輯 <strong>/etc/fstab</strong>  這個檔案，將 mount point 在 / 的項目註解掉：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> /etc/fstab</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> UUID=10e56f7b-7b40-4b10-8029-642badc59ce9  /    ext4    errors=remount-ro 0       1</span></span><br></pre></td></tr></table></figure>
+<h3 id="exec-format-error"><a href="#exec-format-error" class="headerlink" title="exec format error"></a>exec format error</h3><p>由於 CPU 有分 Intel 跟 Arm 的架構，這個問題會發生是因為 Docker image files 是基於某個特定的架構。也就是說，在 Intel 上建立的 Docker file 只能在 Intel 上執行；在 Arm32 上建立的 Docker file 只能在 Arm32 上執行。</p>
+<p>所以當你使用 <code>kubectl logs</code> 查看某個 pod 出現如下的錯誤時：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> kubectl logs pod/kuard-777c5775cd-lg7kc</span></span><br><span class="line">standard_init_linux.go:207: exec user process caused &quot;exec format error&quot;</span><br></pre></td></tr></table></figure>
+<p>確認你的 Docker image 有支援你 CPU 的架構</p>
+<p>Stackoverflow 上的<a target="_blank" rel="noopener" href="https://stackoverflow.com/a/52793714/4777620">討論</a></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://kubernetes.io/docs/setup/cri/#docker">Kubernetes Officall Documentation: Setup Docker</a></li>
+<li><a target="_blank" rel="noopener" href="https://kubernetes.io/docs/setup/independent/install-kubeadm/#installing-kubeadm-kubelet-and-kubectl">Kubernetes Officall Documentation: Installing kubeadm kubelet kubectl</a></li>
+<li><a target="_blank" rel="noopener" href="https://coreos.com/flannel/docs/latest/kubernetes.html">CoreOS Flannel</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/kubernetes/kubeadm/issues/610">Error Swap: running with swap on is not supported. Please disable swap</a></li>
+<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/a/52793714/4777620">Error exec user process caused exec format error</a></li>
+<li><a target="_blank" rel="noopener" href="https://unix.stackexchange.com/a/224348">How to safely turn off swap permanently and reclaim the space?</a></li>
+</ul>
+
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2019/04/17/Kubernetes/metallb-installation-for-minikube/" >
+  在 Kubernetes Minikube 上安裝 Load Balancer MetalLB
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2019/04/17/Kubernetes/metallb-installation-for-minikube/"><span class="article-date">
+  2019-04-17
+</span>
+</a>
+        
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Kubernetes/">Kubernetes</a></li></ul>
+	</span>
+
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Kubernetes/" rel="tag">Kubernetes</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Load-Balance/" rel="tag">Load Balance</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MetalLB/" rel="tag">MetalLB</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Minikube/" rel="tag">Minikube</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <h2 id="MetalLB"><a href="#MetalLB" class="headerlink" title="MetalLB"></a>MetalLB</h2><p>MetalLB 是 Bare metal Kubernetes 的 load balancer，如果原先你使用 <code>--type=LoadBalancer</code> 來暴露你的 port 的話，service 裡的 <code>EXTERNAL-IP</code> 會一直是 pending 的狀態：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> kubectl expose deployment hello-world --<span class="built_in">type</span>=LoadBalancer</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> kubectl get service</span></span><br><span class="line">NAME         TYPE           CLUSTER-IP      EXTERNAL-IP    PORT(S)          AGE</span><br><span class="line">hello-world  LoadBalancer   10.102.80.194   &lt;pending&gt;      3000:31118/TCP   17m</span><br></pre></td></tr></table></figure>
+<p>要解決這個方法其實有很多種，你可以使用現有的雲端平台，像是 GCP、AWS 等等，這些雲端平台上都有提供 Load Balancer 的服務，當然你需要付些費用，如果要免費的話，可以自己安裝 OpenStack。</p>
+<p>但是我們只需要 Kubernetes 的功能，卻要把整個 OpenStack 安裝好，然後只用其中的 Load Balancer 的話，這個作法實在有點殺雞焉用牛刀。</p>
+<p>如同 GitHub 上這篇 <a target="_blank" rel="noopener" href="https://github.com/kubernetes/kubernetes/issues/36220">issue</a> 所說的，為何不單把 Load Balancer 的服務抽出來安裝就好呢，於是 <a target="_blank" rel="noopener" href="https://github.com/google/metallb">MetalLB</a> 就這樣誕生了</p>
+<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><p>首先你必須先安裝好 minikube，minikube 的安裝就自行 google 了，而且還需要對 Kubernetes 的指令有一些基礎。</p>
+<h3 id="BGP-Router-UI"><a href="#BGP-Router-UI" class="headerlink" title="BGP Router UI"></a>BGP Router UI</h3><p>查看 BGP router 狀態，你可以使用網頁查看 BGP router 目前的狀態</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl apply -f https://raw.githubusercontent.com/google/metallb/v0.7.3/manifests/test-bgp-router.yaml</span><br></pre></td></tr></table></figure>
+<p>使用 minikube 開啟網頁：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">minikube service -n metallb-system test-bgp-router-ui</span><br></pre></td></tr></table></figure>
+<h3 id="MetalLB-1"><a href="#MetalLB-1" class="headerlink" title="MetalLB"></a>MetalLB</h3><p>安裝最重要的 Metallb，他會在 <code>metallb-system</code> namespace 底下產生 daemonset <code>speaker</code> 跟 deployment <code>controller</code>。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl apply -f https://raw.githubusercontent.com/google/metallb/v0.7.3/manifests/metallb.yaml</span><br></pre></td></tr></table></figure>
+<p>這時候重新刷新 BGP Router UI 的話，裡面的內容會跟安裝前的不一樣。</p>
+<h3 id="ConfigMap"><a href="#ConfigMap" class="headerlink" title="ConfigMap"></a>ConfigMap</h3><p>MetalLB 的設定檔是透過 Kubernetes 裡面的 config map 下去做設定的，你必須跟他講他能夠分配的 IP 池，跟一些相關設定。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">ConfigMap</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">namespace:</span> <span class="string">metallb-system</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">config</span></span><br><span class="line"><span class="attr">data:</span></span><br><span class="line">  <span class="attr">config:</span> <span class="string">|</span></span><br><span class="line">    <span class="attr">peers:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">my-asn:</span> <span class="number">64500</span></span><br><span class="line">      <span class="attr">peer-asn:</span> <span class="number">64500</span></span><br><span class="line">      <span class="attr">peer-address:</span> <span class="number">10.96</span><span class="number">.0</span><span class="number">.100</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">my-asn:</span> <span class="number">64500</span></span><br><span class="line">      <span class="attr">peer-asn:</span> <span class="number">64500</span></span><br><span class="line">      <span class="attr">peer-address:</span> <span class="number">10.96</span><span class="number">.0</span><span class="number">.101</span></span><br><span class="line">    <span class="attr">address-pools:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">my-ip-space</span></span><br><span class="line">      <span class="attr">protocol:</span> <span class="string">bgp</span></span><br><span class="line">      <span class="attr">avoid-buggy-ips:</span> <span class="literal">true</span></span><br><span class="line">      <span class="attr">addresses:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">198.51</span><span class="number">.100</span><span class="number">.0</span><span class="string">/24</span></span><br></pre></td></tr></table></figure>
+<p>看到後面倒數幾行</p>
+<ul>
+<li><strong>avoid-buggy-ips: true</strong>：代表 Load Balancer 在分配 IP 的時候，會從 <code>.1</code> 開始分配，而不會從 <code>.0</code> 開始</li>
+<li><strong>198.51.100.0/24</strong>：Load Balancer 能分配的 IP 池</li>
+</ul>
+<p>然後我們就套用這些設定吧：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl apply -f https://raw.githubusercontent.com/google/metallb/v0.7.3/manifests/tutorial-3.yaml</span><br></pre></td></tr></table></figure>
+<h2 id="檢查"><a href="#檢查" class="headerlink" title="檢查"></a>檢查</h2><p>來跑一些簡單的容器，然後使用 LoadBalancer 暴露它：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kubectl run hello-world --image=k8s.gcr.io/echoserver:1.10 --port=8080</span><br><span class="line">kubectl expose deployment hello-world --type=LoadBalancer</span><br></pre></td></tr></table></figure>
+<p>使用 <code>kubectl get service</code> 指令查看現在 service 的狀態，可能需要等個幾秒鐘，<code>EXTERNAL-IP</code> 這個欄位就會是 MetalLB 從 IP 池分配給我們的 IP：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> kubectl get service</span></span><br><span class="line">NAME             TYPE           CLUSTER-IP      EXTERNAL-IP    PORT(S)          AGE</span><br><span class="line">hello-world      LoadBalancer   10.103.246.36   198.51.100.1   8080:31504/TCP   11s</span><br></pre></td></tr></table></figure>
+<p>沒有看到 pending 的話，就代表你成功了。</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://metallb.universe.tf/tutorial/minikube/">BGP on Minikube</a></li>
+</ul>
+
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2019/03/09/DevOps/setup-nfs-server/" >
+  在 Ubuntu 上架設 NFS server
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2019/03/09/DevOps/setup-nfs-server/"><span class="article-date">
+  2019-03-10
+</span>
+</a>
+        
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/DevOps/">DevOps</a></li></ul>
+	</span>
+
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/" rel="tag">Docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NFS/" rel="tag">NFS</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Network_File_System">NFS (Network File System)</a> 可以透過網路，讓不同的作業系統，分享個別的檔案。</p>
+<p>而我想要在 Ubuntu 上建立 NFS Server，透過 Mac 上的 NFS Client 連上。目前的環境：</p>
+<ul>
+<li>Ubuntu 18.04: 192.168.0.10</li>
+<li>Mac OS X Mojave: 192.168.0.20</li>
+</ul>
+<h2 id="NFS-Server"><a href="#NFS-Server" class="headerlink" title="NFS Server"></a>NFS Server</h2><h3 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> ubuntu bare metal</span></span><br><span class="line">sudo apt install -y nfs-kernel-server</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> docker container all <span class="keyword">in</span> one</span></span><br><span class="line">mkdir -p /tmp/nfs</span><br><span class="line">sudo chown -R nobody:nogroup /tmp/nfs</span><br><span class="line">docker run -d --privileged --restart=always \</span><br><span class="line">  -v /tmp/nfs:/nfs \</span><br><span class="line">  -e NFS_EXPORT_DIR_1=/nfs \</span><br><span class="line">  -e NFS_EXPORT_DOMAIN_1=\* \</span><br><span class="line">  -e NFS_EXPORT_OPTIONS_1=rw,insecure,no_subtree_check,all_squash \</span><br><span class="line">  -p 111:111 -p 111:111/udp \</span><br><span class="line">  -p 2049:2049 -p 2049:2049/udp \</span><br><span class="line">  -p 32765-32767:32765-32767 -p 32765-32767:32765-32767/udp \</span><br><span class="line">  fuzzle/docker-nfs-server:latest</span><br></pre></td></tr></table></figure>
+<p>安裝好之後，會在 <code>/etc</code> 底下會多一個 <code>exports</code> 的檔案，待會我們可以修改這個檔案，來調整想要分享的檔案。</p>
+<p>至於 docker 的部分是來自於<a target="_blank" rel="noopener" href="https://github.com/f-u-z-z-l-e/docker-nfs-server">這個 repo</a></p>
+<h3 id="建立資料夾"><a href="#建立資料夾" class="headerlink" title="建立資料夾"></a>建立資料夾</h3><p>我想要把 <code>/tmp/nfs</code> 這個資料夾分享出去，所以先建立這個資料夾：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /tmp/nfs</span><br></pre></td></tr></table></figure>
+<h3 id="資料夾權限"><a href="#資料夾權限" class="headerlink" title="資料夾權限"></a>資料夾權限</h3><p>目前 <code>/tmp/nfs</code> 的權限是 <code>root:root</code> ，第一個 root 是 owner 的權限，第二個 root 是 group 的權限：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ls -la /tmp/nfs</span></span><br><span class="line">drwxr-xr-x  3 root root     4096  3月  9 22:26 nfs</span><br></pre></td></tr></table></figure>
+<p>要把檔案分享出去的話，需要修改資料夾的權限為 <code>nobody:nogroup</code>，且加上 <code>-R</code> 的參數把資料夾底下的所有子資料夾都設為 <code>nobody:nogroup</code>：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R nobody:nogroup /tmp/nfs</span><br></pre></td></tr></table></figure>
+<p>如果後來又新增檔案的話，必須再重新執行一次這一行指令。</p>
+<p>否則在之後 mount 的時後會出現 <code>Operation not permitted</code> 的錯誤：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount_nfs: can&#x27;t mount /tmp/nfs from 192.168.0.10 onto ...: Operation not permitted</span><br></pre></td></tr></table></figure>
+<h3 id="設定"><a href="#設定" class="headerlink" title="設定"></a>設定</h3><p>修改 <code>/etc/exports</code>：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/exports</span><br></pre></td></tr></table></figure>
+<p>然後把想要分享的檔案加入：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> /etc/exports</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 格式：</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 在 ubuntu 上想要分享的資料夾    這個 IP 連進來的可以存取這個檔案(選項)</span></span><br><span class="line">/tmp/nfs                       192.168.0.0/24(rw,sync,no_subtree_check,all_squash)</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">                              * 代表任何人都可以連進來</span></span><br><span class="line">/tmp                           *(rw,sync,no_subtree_check,all_squash)</span><br></pre></td></tr></table></figure>
+<p>至於選項是選擇性填寫的，有很多參數可以選：</p>
+<ul>
+<li><code>ro</code>：read only</li>
+<li><code>rw</code>：read and write</li>
+<li><code>async</code>：此選項允許 NFS Server 違反 NFS protocol，允許檔案尚未存回磁碟之前回覆請求。這個選項可以提高性能，但是有可能會讓 server 崩潰，可能會需要重新啟動 server. 或檔案遺失。</li>
+<li><code>sync</code>：只會儲存檔案會磁碟之後才會回覆請求。</li>
+<li><code>no_subtree_check</code>：禁用子樹檢查，會有些微的不安全，但在某些情況下可以提高可靠性。</li>
+<li><code>secure</code>：請求的 port 必須小於 1024，這個選項是預設的。</li>
+<li><code>insecure</code>：請求的 port 不一定要小於 1024。</li>
+</ul>
+<p>User ID Mapping 參數：</p>
+<ul>
+<li><code>root_squash</code>：將 uid 0 的使用者映射到 nobody 匿名使用者，這個選項是預設的。</li>
+<li><code>no_root_squash</code>：關掉 root squash 的選項，這個選項可以使用 root 身份來控制 NFS Server 的檔案。</li>
+<li><code>all_squash</code>：所有登入 NFS 的使用者身份都會被壓縮成為 nobody。</li>
+<li><code>anonuid and anongid</code>：調整匿名使用者的權限，可以讓所有透過 NFS 修改文件，都看起來是同一個使用者。</li>
+</ul>
+<p>更多參數的選項可以參考 <a target="_blank" rel="noopener" href="https://linux.die.net/man/5/exports">LInux exports</a></p>
+<h2 id="重新啟動-Server"><a href="#重新啟動-Server" class="headerlink" title="重新啟動 Server"></a>重新啟動 Server</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl restart nfs-kernel-server</span><br></pre></td></tr></table></figure>
+<h2 id="檢查"><a href="#檢查" class="headerlink" title="檢查"></a>檢查</h2><p>輸入以下的指令，確認使否把檔案加入 NFS Server：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo exportfs</span> </span><br><span class="line">/home/akiicat/share</span><br><span class="line">		192.168.0.20/8</span><br></pre></td></tr></table></figure>
+<p>目前 showmount 的指令會是空的，因為還沒有 NFS Client 連上，如果連上的話，NFS Server 這邊可以使用 showmount 指令查看哪個 Client IP 連過來的：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> showmount</span></span><br><span class="line">x.x.x.x</span><br></pre></td></tr></table></figure>
+<h2 id="NFS-Client"><a href="#NFS-Client" class="headerlink" title="NFS Client"></a>NFS Client</h2><h3 id="安裝-1"><a href="#安裝-1" class="headerlink" title="安裝"></a>安裝</h3><p>這台 Ubuntu 的 IP 是 192.168.0.30</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> ubuntu</span></span><br><span class="line">sudo apt install -y nfs-common</span><br></pre></td></tr></table></figure>
+<h3 id="Mount"><a href="#Mount" class="headerlink" title="Mount"></a>Mount</h3><p>我想要跟 share 資料夾做分享，使用 mount 指令將遠端的資料夾 <code>/tmp/nfs</code> 掛載到本地端的資料夾 <code>share</code>：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> mac</span></span><br><span class="line">mkdir -p /tmp/nfs</span><br><span class="line">sudo mount -t nfs -o rw,resvport 192.168.0.10:/tmp/nfs /tmp/nfs</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> ubuntu</span></span><br><span class="line">mkdir -p /tmp/nfs</span><br><span class="line">sudo mount 192.168.0.10:/tmp/nfs /tmp/nfs</span><br></pre></td></tr></table></figure>
+<p>注意在 mac 上必須加上 <code>-o resvport</code> 的參數，否則會出現 <code>Operation not permitted</code> 的錯誤。</p>
+<h3 id="檢查-1"><a href="#檢查-1" class="headerlink" title="檢查"></a>檢查</h3><p>輸入以下指令檢查是否掛載成功：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> mac, ubuntu</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> df -h</span></span><br><span class="line">...</span><br><span class="line">192.168.0.30:/tmp/nfs  458G  8.3G  426G   2% /tmp/nfs</span><br></pre></td></tr></table></figure>
+<h3 id="測試"><a href="#測試" class="headerlink" title="測試"></a>測試</h3><p>在 <code>/tmp/nfs</code> 資料夾內建立 <code>test</code> 檔案：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> mac, ubuntu</span></span><br><span class="line">echo &quot;Hello World&quot; &gt; /tmp/nfs/test</span><br></pre></td></tr></table></figure>
+<p>是否能成功建立</p>
+<h3 id="Unmount"><a href="#Unmount" class="headerlink" title="Unmount"></a>Unmount</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> mac, ubuntu</span></span><br><span class="line">sudo umount -f 192.168.0.10:/tmp/nfs</span><br></pre></td></tr></table></figure>
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2019/02/28/Mac-OS-X/iso-to-usb-on-mac-osx/" >
+  Mac 將 iso 轉 usb、dmg 轉 usb、iso 轉 dmg
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2019/02/28/Mac-OS-X/iso-to-usb-on-mac-osx/"><span class="article-date">
+  2019-03-01
+</span>
+</a>
+        
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Mac-OS-X/">Mac OS X</a></li></ul>
+	</span>
+
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DMG/" rel="tag">DMG</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Diskutil/" rel="tag">Diskutil</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ISO/" rel="tag">ISO</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mac-OS-X/" rel="tag">Mac OS X</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Terminal/" rel="tag">Terminal</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/USB/" rel="tag">USB</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <h2 id="ISO-to-USB"><a href="#ISO-to-USB" class="headerlink" title="ISO to USB"></a>ISO to USB</h2><h3 id="列出外部磁碟"><a href="#列出外部磁碟" class="headerlink" title="列出外部磁碟"></a>列出外部磁碟</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">diskutil list external</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> diskutil list external</span></span><br><span class="line">/dev/disk2 (external, physical):</span><br><span class="line"><span class="meta">   #</span><span class="bash">:                       TYPE NAME                    SIZE       IDENTIFIER</span></span><br><span class="line">   0:     FDisk_partition_scheme                        *62.0 GB    disk2</span><br><span class="line">   1:               Windows_NTFS Ubuntu1804              4.0 GB     disk2s1</span><br><span class="line">   2:               Windows_NTFS Ubuntu1604              4.0 GB     disk2s2</span><br><span class="line">   3:               Windows_NTFS Ubuntu1404              4.0 GB     disk2s3</span><br><span class="line">   4:               Windows_NTFS Data                    50.0 GB    disk2s5</span><br></pre></td></tr></table></figure>
+          <p>
+            <a href="/2019/02/28/Mac-OS-X/iso-to-usb-on-mac-osx/">
+              閱讀全文
+            </a>
+          </p>
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2019/02/28/Mac-OS-X/diskutil-on-mac-osx/" >
+  使用指令分割磁碟 on Mac
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2019/02/28/Mac-OS-X/diskutil-on-mac-osx/"><span class="article-date">
+  2019-02-28
+</span>
+</a>
+        
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Mac-OS-X/">Mac OS X</a></li></ul>
+	</span>
+
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Disk-Partition/" rel="tag">Disk Partition</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Diskutil/" rel="tag">Diskutil</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mac-OS-X/" rel="tag">Mac OS X</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Terminal/" rel="tag">Terminal</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <h2 id="找出外接硬碟的-ID"><a href="#找出外接硬碟的-ID" class="headerlink" title="找出外接硬碟的 ID"></a>找出外接硬碟的 ID</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">diskutil list external</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> diskutil list external</span></span><br><span class="line">/dev/disk2 (external, physical):</span><br><span class="line"><span class="meta">   #</span><span class="bash">:                       TYPE NAME                    SIZE       IDENTIFIER</span></span><br><span class="line">   0:     FDisk_partition_scheme                        *62.0 GB    disk2</span><br><span class="line">   1:                  Apple_HFS PATRIOT                 61.9 GB    disk2s1</span><br></pre></td></tr></table></figure>
+<p>分別會列出以下的資訊</p>
+<ul>
+<li><code>TYPE</code>：硬碟的格式</li>
+<li><code>NAME</code>：名稱</li>
+<li><code>SIZE</code>：容量</li>
+<li><code>IDENTIFIER</code>：辨識標籤</li>
+</ul>
+          <p>
+            <a href="/2019/02/28/Mac-OS-X/diskutil-on-mac-osx/">
+              閱讀全文
+            </a>
+          </p>
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2017/04/27/Version-Control/semantic-version/" >
+  Semantic Version
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2017/04/27/Version-Control/semantic-version/"><span class="article-date">
+  2017-04-28
+</span>
+</a>
+        
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Version-Control/">Version Control</a></li></ul>
+	</span>
+
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Semantic-Version/" rel="tag">Semantic Version</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <h2 id="相依性"><a href="#相依性" class="headerlink" title="相依性"></a>相依性</h2><p>相依性是指在版本升級的時候，跟前一個版本的相關程度，如果套件的版本相依性過高，在升級的時候就會變得困難。但如果相依性過低，又會造成版本的混亂，就像這個本版相不相容以前的版本…..也就是因為這樣，所以才需要定義一個版本編號的系統來管理版本之間的相依性。</p>
+<h2 id="語意化版本-Semantic-Versioning"><a href="#語意化版本-Semantic-Versioning" class="headerlink" title="語意化版本 Semantic Versioning"></a>語意化版本 Semantic Versioning</h2><p>語意化版本 Semantic Versioning 可以寫成 SemVer，看版本的數字編號就能知道之間的相依性，簡單來說就是使用一致的版本規則來描述相依性：</p>
+<p>MAJOR.MINOR.PATCH</p>
+<ul>
+<li>MAJOR: 無法向下相容</li>
+<li>MINOR: 可以向下相容，增加新功能</li>
+<li>PATCH: 可以向下相容，修正一些小錯誤時</li>
+</ul>
+<p>任何一個版本發佈之後就不能再做修改了。</p>
+          <p>
+            <a href="/2017/04/27/Version-Control/semantic-version/">
+              閱讀全文
+            </a>
+          </p>
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2017/04/04/Programming/css-composition/" >
+  Css 排版歷史
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2017/04/04/Programming/css-composition/"><span class="article-date">
+  2017-04-04
+</span>
+</a>
+        
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Programming/">Programming</a></li></ul>
+	</span>
+
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Css/" rel="tag">Css</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <h2 id="排版歷史"><a href="#排版歷史" class="headerlink" title="排版歷史"></a>排版歷史</h2><p>在 css 的戰國時代裡，大部分在網路上找到的排版方法，大多是 float 跟 inline-block 這兩種，沒聽課的話還真的不知道排版的歷史：</p>
+<ul>
+<li>table</li>
+<li>float</li>
+<li>inline-block</li>
+<li>flex</li>
+<li>grid</li>
+</ul>
+<p>之後會想來玩玩看 flex 跟 grid，反正是自己的部落格，IE8 以下的用戶就不好意思了。用 table 排版已經太舊太久遠就先不管。然而現在最常用的兩種排版方法 float 跟 inline-block ，還是會有一些問題存在：</p>
+          <p>
+            <a href="/2017/04/04/Programming/css-composition/">
+              閱讀全文
+            </a>
+          </p>
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2017/03/05/Programming/ruby-regexp/" >
+  Ruby Regexp MatchData
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2017/03/05/Programming/ruby-regexp/"><span class="article-date">
+  2017-03-06
+</span>
+</a>
+        
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Programming/">Programming</a></li></ul>
+	</span>
+
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ruby/" rel="tag">Ruby</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <h2 id="Operator"><a href="#Operator" class="headerlink" title="=~ Operator"></a>=~ Operator</h2><p>回傳比對的位置到的起始位置，沒有比對到則回傳 nil</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/cat/ =~ <span class="string">&#x27;hiakiicat&#x27;</span>               <span class="comment"># =&gt; 6</span></span><br><span class="line">/tac/ =~ <span class="string">&#x27;hiakiicat&#x27;</span>               <span class="comment"># =&gt; nil</span></span><br></pre></td></tr></table></figure>
+<h2 id="match-method"><a href="#match-method" class="headerlink" title="match method"></a>match method</h2><p>有 match 到會回傳 MatchData，如果沒有 match 到則會回傳 nil。</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">m = <span class="regexp">/akii(.+)$/</span>.match(<span class="string">&#x27;hiakiicat&#x27;</span>)</span><br><span class="line"><span class="comment"># =&gt; #&lt;MatchData &quot;akiicat&quot; 1:&quot;cat&quot;&gt;</span></span><br></pre></td></tr></table></figure>
+<p>括號起來的資料 <code>(...)</code> 才會另外存成一個值。如果不想要另外存成一個值，可以在括號裡面打 <code>(?:...)</code>。</p>
+<p>獲取資料：</p>
+<ul>
+<li><code>m[0]</code> 為 match 到的所有資料。</li>
+<li><code>m[1]</code> 為第一個括號裡面所比對到的資料，以此類推。</li>
+</ul>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">m[<span class="number">0</span>]            <span class="comment"># =&gt; &quot;akiicat&quot;</span></span><br><span class="line">m[<span class="number">1</span>]            <span class="comment"># =&gt; &quot;cat&quot;</span></span><br><span class="line">m[<span class="number">2</span>]            <span class="comment"># =&gt; nil</span></span><br></pre></td></tr></table></figure>
+          <p>
+            <a href="/2017/03/05/Programming/ruby-regexp/">
+              閱讀全文
+            </a>
+          </p>
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+
+
+  <div class="pagination">
+    <a class="extend prev" rel="prev" href="/">上一頁</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/">下一頁</a>
+  </div>
+
+
+
+
+          <div class="main-footer">
+  
+    © 2021 Akiicat 學習筆記 - Powered by <a href="http://hexo.io" target="_blank">Hexo</a> - Theme <a href="https://github.com/denjones/hexo-theme-chan" target="_blank">Chan</a>
+  
+</div>
+
+      
+        </div>
+      
+    </div>
+  </div>
+  
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
+
+  
+<link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
+
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+<script src="/PhotoSwipe/photoswipe.js"></script>
+
+  
+<script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+
+
+
+
+<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
+
+
+<script src="/scripts/main.js"></script>
+
+
+</body>
+</html>

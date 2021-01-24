@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<title>
+  
+    標籤: Ruby on Rails
+  
+</title>
+
+<meta name="description" content="The Programmer">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Akiicat 學習筆記">
+<meta property="og:url" content="https://www.akiicat.com/tags/Ruby-on-Rails/index.html">
+<meta property="og:site_name" content="Akiicat 學習筆記">
+<meta property="og:description" content="The Programmer">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:author" content="Akiicat">
+<meta property="article:tag" content="akiicat">
+<meta name="twitter:card" content="summary">
+
+
+  <link rel="alternative" href="/atom.xml" title="Akiicat 學習筆記" type="application/atom+xml">
+
+
+
+  <link rel="icon" href="/favicon.png">
+
+
+
+<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
+
+
+<link rel="stylesheet" href="/styles/main.css">
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-48754260-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-48754260-2');
+  </script>
+
+
+
+
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+<body
+  
+    class="monochrome"
+  
+  >
+  <div class="mobile-header">
+  <button class="sidebar-toggle" type="button">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <a class="title" href="/">Akiicat 學習筆記</a>
+</div>
+
+  <div class="main-container">
+    <div class="sidebar">
+  <div class="header">
+    <h1 class="title"><a href="/">Akiicat 學習筆記</a></h1>
+    
+    <div class="info">
+      <div class="content">
+        
+          <div class="description">The Programmer</div>
+        
+        
+          <div class="author">Akiicat</div>
+        
+      </div>
+      
+        <div class="avatar">
+          
+            <a href="/about"><img src="https://avatars2.githubusercontent.com/u/7646335?s=460&amp;v=4"></a>
+          
+        </div>
+      
+    </div>
+  </div>
+  <div class="body">
+    
+      
+        <ul class="nav">
+          
+            
+              <li class="category-list-container">
+                <a href="javascript:;">類別</a>
+                <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Database/">Database</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Docker/">Docker</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Google-Cloud-Platform/">Google Cloud Platform</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Kubernetes/">Kubernetes</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mac-OS-X/">Mac OS X</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a><span class="category-list-count">38</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Version-Control/">Version Control</a><span class="category-list-count">1</span></li></ul>
+              </li>
+            
+          
+            
+              <li class="tag-list-container">
+                <a href="javascript:;">標籤</a>
+                <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Abstraction/" rel="tag">Abstraction</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Api/" rel="tag">Api</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bare-Metal/" rel="tag">Bare Metal</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Byebug/" rel="tag">Byebug</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Canvas/" rel="tag">Canvas</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Context/" rel="tag">Context</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cross-Origin/" rel="tag">Cross Origin</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Css/" rel="tag">Css</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DMG/" rel="tag">DMG</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dashboard/" rel="tag">Dashboard</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Database/" rel="tag">Database</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Devise/" rel="tag">Devise</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Disk-Partition/" rel="tag">Disk Partition</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Diskutil/" rel="tag">Diskutil</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/" rel="tag">Docker</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Eager-Loading/" rel="tag">Eager Loading</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Encapsulation/" rel="tag">Encapsulation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Factory-Girl/" rel="tag">Factory Girl</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Friend/" rel="tag">Friend</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/" rel="tag">GitHub</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub-Actions/" rel="tag">GitHub Actions</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Google-Cloud-IAM/" rel="tag">Google Cloud IAM</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Google-Cloud-Platform/" rel="tag">Google Cloud Platform</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Helm/" rel="tag">Helm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ISO/" rel="tag">ISO</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Image/" rel="tag">Image</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Influxdb/" rel="tag">Influxdb</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Inheritance/" rel="tag">Inheritance</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Installation/" rel="tag">Installation</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ipvs/" rel="tag">Ipvs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/" rel="tag">Javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kube-Proxy/" rel="tag">Kube Proxy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kubectl/" rel="tag">Kubectl</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kubernetes/" rel="tag">Kubernetes</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Load-Balance/" rel="tag">Load Balance</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac-OS-X/" rel="tag">Mac OS X</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MetalLB/" rel="tag">MetalLB</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Minikube/" rel="tag">Minikube</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NFS/" rel="tag">NFS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Object-oriented-programming-OOP/" rel="tag">Object-oriented-programming (OOP)</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Polymorphism/" rel="tag">Polymorphism</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PostgreSQL/" rel="tag">PostgreSQL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Rspec/" rel="tag">Rspec</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ruby/" rel="tag">Ruby</a><span class="tag-list-count">28</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ruby-on-Rails/" rel="tag">Ruby on Rails</a><span class="tag-list-count">17</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQL/" rel="tag">SQL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sass/" rel="tag">Sass</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Semantic-Version/" rel="tag">Semantic Version</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/String/" rel="tag">String</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Subdomain/" rel="tag">Subdomain</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Terminal/" rel="tag">Terminal</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tiller/" rel="tag">Tiller</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/USB/" rel="tag">USB</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">3</span></li></ul>
+              </li>
+            
+          
+            
+              <li class="archive-list-container">
+                <a href="javascript:;">彙整</a>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a><span class="archive-list-count">16</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016</a><span class="archive-list-count">29</span></li></ul>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="/" title="Homepage" external="false">Homepage</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/archives" title="By Year" external="false">By Year</a>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="https://github.com/akiicat/akiicat.github.io" title="Blogger" target="_blank" rel="noopener">Blogger</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="https://github.com/akiicat" title="Github" target="_blank" rel="noopener">Github</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/atom.xml" title="RSS" external="false">RSS</a>
+              </li>
+            
+          
+        </ul>
+      
+    
+  </div>
+</div>
+
+    <div class="main-content">
+      
+        <div style="max-width: 1000px">
+      
+          <h1>Ruby on Rails</h1>
+
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2017/02/19/Programming/long-string-id/" >
+  Ruby on Rails long string id
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2017/02/19/Programming/long-string-id/"><span class="article-date">
+  2017-02-19
+</span>
+</a>
+        
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Programming/">Programming</a></li></ul>
+	</span>
+
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ruby/" rel="tag">Ruby</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ruby-on-Rails/" rel="tag">Ruby on Rails</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <p>之前有講到使用 <a href="/blogger/2016/09/01/using-uuid-in-rails">UUID</a> 當作 primary key 的方法，因為 postgresql 有提供 uuid，可以直接拿來使用。</p>
+<p>接下來的這個方法適用於所有的資料庫，在物件儲存之前先給定它的 id，如此一來就能定義我們所想要的內容了。</p>
+<p>先隨便用鷹架產生點東西：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rails g scaffold book title</span><br></pre></td></tr></table></figure>
+<p>加上 <code>id: :string</code> 讓 id 的型態為 string。</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># db/migrate/20170218105724_create_books.rb</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CreateBooks</span> &lt; ActiveRecord::Migration[5.0]</span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">change</span></span></span><br><span class="line">    create_table <span class="symbol">:books</span>, <span class="symbol">id:</span> <span class="symbol">:string</span> <span class="keyword">do</span> <span class="params">|t|</span></span><br><span class="line">      t.string <span class="symbol">:title</span></span><br><span class="line">      t.timestamps</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+          <p>
+            <a href="/2017/02/19/Programming/long-string-id/">
+              閱讀全文
+            </a>
+          </p>
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2017/01/27/Programming/dynamic-subdomains/" >
+  Ruby on Rails 5 dynamic subdomains
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2017/01/27/Programming/dynamic-subdomains/"><span class="article-date">
+  2017-01-27
+</span>
+</a>
+        
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Programming/">Programming</a></li></ul>
+	</span>
+
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ruby/" rel="tag">Ruby</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ruby-on-Rails/" rel="tag">Ruby on Rails</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Subdomain/" rel="tag">Subdomain</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <p>一個使用者有名字 name 還有自己網頁的子網域 subdomain，我們想要的結果是讓每一位使用者有自己的子網域，而且還可以隨時更改。</p>
+<p>假設現在有個使用者是 <code>User.create(name: &quot;akii&quot;, subdomain: &quot;akiicat&quot;)</code>，在 rails 預設 show 頁面會是 <code>http://localhost:3000/users/1</code>，但我們想把網址變成個人的子網域 <code>http://akiicat.localhost:3000</code>。</p>
+<p>接下來會用鷹架建立使用者來做示範：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rails g scaffold user name subdomain</span><br><span class="line">rake db:migrate</span><br></pre></td></tr></table></figure>
+<p>修改 <code>routes.rb</code>，加上首頁，然後把 show 的頁面加上 subdomains 的限制。</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># config/routes.rb</span></span><br><span class="line">Rails.application.routes.draw <span class="keyword">do</span></span><br><span class="line">  resources <span class="symbol">:users</span></span><br><span class="line">  constraints <span class="symbol">subdomains:</span> /.+<span class="regexp">/ do</span></span><br><span class="line"><span class="regexp">    get &#x27;&#x27;, to: &#x27;users#show&#x27;</span></span><br><span class="line"><span class="regexp">  end</span></span><br><span class="line"><span class="regexp">  root to: &#x27;users#index&#x27;</span></span><br><span class="line"><span class="regexp">end</span></span><br></pre></td></tr></table></figure>
+          <p>
+            <a href="/2017/01/27/Programming/dynamic-subdomains/">
+              閱讀全文
+            </a>
+          </p>
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2017/01/21/Programming/api-subdomains/" >
+  Ruby on Rails 5 api subdomain
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2017/01/21/Programming/api-subdomains/"><span class="article-date">
+  2017-01-22
+</span>
+</a>
+        
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Programming/">Programming</a></li></ul>
+	</span>
+
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Api/" rel="tag">Api</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ruby/" rel="tag">Ruby</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ruby-on-Rails/" rel="tag">Ruby on Rails</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <p>為了要 demo api subdomain 的頁面是否能夠運作，這邊用鷹架隨便建立個東西。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rails g scaffold api::v1::books title</span><br><span class="line">rake db:migrate</span><br></pre></td></tr></table></figure>
+<p>使用 constraints 限制 <code>subdomain: &#39;api&#39;</code>。</p>
+<p>然後用 <code>scope module: &#39;api&#39;</code> 加上 app/controllers/api 這個資料夾。</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># config/routes.rb</span></span><br><span class="line">Rails.application.routes.draw <span class="keyword">do</span></span><br><span class="line">  constraints <span class="symbol">subdomain:</span> <span class="string">&#x27;api&#x27;</span> <span class="keyword">do</span></span><br><span class="line">    scope <span class="class"><span class="keyword">module</span>: &#x27;<span class="title">api</span>&#x27; <span class="title">do</span></span></span><br><span class="line">      namespace <span class="symbol">:v1</span> <span class="keyword">do</span></span><br><span class="line">        resources <span class="symbol">:books</span></span><br><span class="line">      <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+          <p>
+            <a href="/2017/01/21/Programming/api-subdomains/">
+              閱讀全文
+            </a>
+          </p>
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2017/01/11/Programming/callback-note/" >
+  Ruby on Rails callback 筆記
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2017/01/11/Programming/callback-note/"><span class="article-date">
+  2017-01-11
+</span>
+</a>
+        
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Programming/">Programming</a></li></ul>
+	</span>
+
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ruby/" rel="tag">Ruby</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ruby-on-Rails/" rel="tag">Ruby on Rails</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <h2 id="可用的-callback"><a href="#可用的-callback" class="headerlink" title="可用的 callback"></a>可用的 callback</h2><p>以下是 Active Record 可用的 callback，依照執行順序排序：</p>
+<h3 id="新建物件"><a href="#新建物件" class="headerlink" title="新建物件"></a>新建物件</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">before_validation</span><br><span class="line">after_validation</span><br><span class="line">before_save</span><br><span class="line">around_save</span><br><span class="line">before_create</span><br><span class="line">around_create</span><br><span class="line">after_create</span><br><span class="line">after_save</span><br><span class="line">after_commit/after_rollback</span><br></pre></td></tr></table></figure>
+<h3 id="更新物件"><a href="#更新物件" class="headerlink" title="更新物件"></a>更新物件</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">before_validation</span><br><span class="line">after_validation</span><br><span class="line">before_save</span><br><span class="line">around_save</span><br><span class="line">before_update</span><br><span class="line">around_update</span><br><span class="line">after_update</span><br><span class="line">after_save</span><br><span class="line">after_commit/after_rollback</span><br></pre></td></tr></table></figure>
+          <p>
+            <a href="/2017/01/11/Programming/callback-note/">
+              閱讀全文
+            </a>
+          </p>
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2017/01/11/Programming/belongs-to-association-required-by-default/" >
+  Ruby on Rails foreign key must exist 的問題
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2017/01/11/Programming/belongs-to-association-required-by-default/"><span class="article-date">
+  2017-01-11
+</span>
+</a>
+        
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Programming/">Programming</a></li></ul>
+	</span>
+
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ruby/" rel="tag">Ruby</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ruby-on-Rails/" rel="tag">Ruby on Rails</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <p>rails 在<a target="_blank" rel="noopener" href="https://github.com/rails/rails/pull/18937">這次</a>的更動之後，如果 belongs_to 的 foreign key 不存在的時，會產生驗證錯誤。</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Author</span> &lt; ActiveRecord::Base</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Book</span> &lt; ActiveRecord::Base</span></span><br><span class="line">  belongs_to <span class="symbol">:author</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">book = Book.create(<span class="symbol">title:</span> <span class="string">&quot;book&quot;</span>)</span><br><span class="line">book.errors.full_messages <span class="comment"># =&gt; [&quot;Author must exist&quot;]</span></span><br></pre></td></tr></table></figure>
+<p>上面的例子可以看到，我們沒辦法建立 Book 的紀錄。</p>
+<h2 id="options"><a href="#options" class="headerlink" title="options"></a>options</h2><ul>
+<li><code>required</code>: 如果設為 <code>true</code> 的話，會驗證關聯是否存在。在 rails 5 預設為 <code>true</code>。</li>
+<li><code>optional</code>: 如果設為 <code>true</code> 的話，不會驗證關聯是否存在。</li>
+</ul>
+<p>上面兩個選項都是驗證關聯本身，不是驗證 foreign key 的 id。</p>
+          <p>
+            <a href="/2017/01/11/Programming/belongs-to-association-required-by-default/">
+              閱讀全文
+            </a>
+          </p>
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2017/01/08/Programming/exploring-the-inverse-of-option/" >
+  Ruby on Rails 探索 inverse_of
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2017/01/08/Programming/exploring-the-inverse-of-option/"><span class="article-date">
+  2017-01-08
+</span>
+</a>
+        
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Programming/">Programming</a></li></ul>
+	</span>
+
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ruby/" rel="tag">Ruby</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ruby-on-Rails/" rel="tag">Ruby on Rails</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <h2 id="inverse-of"><a href="#inverse-of" class="headerlink" title="inverse_of"></a>inverse_of</h2><p>主要功能會去通知對方自己的狀態，可以解決物件不同步的問題。</p>
+<p>在 belongs_to 裡的 :inverse_of 會去找尋所對應的 has_one has_many 上相同的名稱，來通知他們之間的關係。</p>
+<p>在 has_one has_many 裡的 :inverse_of 會去找尋所對應的 belongs_to 上相同的名稱，來通知他們之間的關係。</p>
+<p>如果沒有寫 :inverse_of 這參數，rails 會使用 heuristic algorithm 去猜測名稱，但在如果不是使用標準名稱的話會失效。</p>
+<h2 id="Without-inverse-of"><a href="#Without-inverse-of" class="headerlink" title="Without inverse_of"></a>Without inverse_of</h2><p>沒有 :inverse_of 會發生物件不同步的問題，可以看以下的範例：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Author</span> &lt; ActiveRecord::Base</span></span><br><span class="line">  has_many <span class="symbol">:books</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Book</span> &lt; ActiveRecord::Base</span></span><br><span class="line">  belongs_to <span class="symbol">:author</span>, <span class="symbol">inverse_of:</span> <span class="literal">false</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+          <p>
+            <a href="/2017/01/08/Programming/exploring-the-inverse-of-option/">
+              閱讀全文
+            </a>
+          </p>
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2016/12/22/Programming/multiple-foreign-keys/" >
+  Ruby on Rails Multiple Foreign Keys
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2016/12/22/Programming/multiple-foreign-keys/"><span class="article-date">
+  2016-12-22
+</span>
+</a>
+        
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Programming/">Programming</a></li></ul>
+	</span>
+
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ruby/" rel="tag">Ruby</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ruby-on-Rails/" rel="tag">Ruby on Rails</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <p>這篇主要是在講說，在一個 Table 裡面有多個 Foreign Keys 會指向同一個 table。例子如下，一首歌 Song 會有歌手 (singer_id) 跟作曲者 (composer_id)，都會指向同一個 Singer 的 table。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">┌──────────────────┐                ┌─────────────────────┐</span><br><span class="line">│      Singer      │                │        Song         │</span><br><span class="line">├──────────────────┤                ├─────────────────────┤</span><br><span class="line">│   id:integer     │←───────┐       │ id:integer          │</span><br><span class="line">│   name:string    │        ├───────│ singer_id:integer   │</span><br><span class="line">│                  │        └───────│ composer_id:integer │</span><br><span class="line">│                  │                │ title:string        │</span><br><span class="line">└──────────────────┘                └─────────────────────┘</span><br></pre></td></tr></table></figure>
+          <p>
+            <a href="/2016/12/22/Programming/multiple-foreign-keys/">
+              閱讀全文
+            </a>
+          </p>
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2016/11/20/Programming/speed-up-eager-loading/" >
+  Ruby on Rails Eager Loading 加速：一次拿取所以資料
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2016/11/20/Programming/speed-up-eager-loading/"><span class="article-date">
+  2016-11-21
+</span>
+</a>
+        
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Programming/">Programming</a></li></ul>
+	</span>
+
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Eager-Loading/" rel="tag">Eager Loading</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ruby/" rel="tag">Ruby</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ruby-on-Rails/" rel="tag">Ruby on Rails</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <p>這個在 rails 裡面，資料有關聯的時候，會產生的一些效能上的問題，假設我們的例子如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">┌──────────────────┐                ┌───────────────────┐</span><br><span class="line">│      Author      │                │       Book        │</span><br><span class="line">├──────────────────┤                ├───────────────────┤</span><br><span class="line">│   id:integer     │←───────┐       │ id:integer        │</span><br><span class="line">│   name:string    │        └───────│ author_id:integer │</span><br><span class="line">│                  │                │ title:string      │</span><br><span class="line">└──────────────────┘                └───────────────────┘</span><br></pre></td></tr></table></figure>
+<p>當我們在 books controllers 拿了一群東西，像是有 <strong>all</strong> 或是 <strong>where</strong></p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@books</span> = Book.all</span><br><span class="line"><span class="variable">@books</span> = Book.where(<span class="symbol">author:</span> <span class="variable">@author</span>)</span><br></pre></td></tr></table></figure>
+<p>常常接著又在 view 裡面使用 <strong>each</strong> 抓取了關聯的東西 <strong>author</strong>，這時 <strong>@books</strong> 不知道 <strong>author</strong> 的內容所以又必須呼叫一次 SQL 指令去拿資料，所以當資料量一大的時候，會產生效能上的問題。</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@books</span>.each <span class="keyword">do</span> <span class="params">|book|</span></span><br><span class="line">  book.author</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+          <p>
+            <a href="/2016/11/20/Programming/speed-up-eager-loading/">
+              閱讀全文
+            </a>
+          </p>
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2016/11/15/Programming/reset-database-without-drop/" >
+  Ruby on Rails 重新設置 Database
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2016/11/15/Programming/reset-database-without-drop/"><span class="article-date">
+  2016-11-15
+</span>
+</a>
+        
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Programming/">Programming</a></li></ul>
+	</span>
+
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Database/" rel="tag">Database</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ruby/" rel="tag">Ruby</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ruby-on-Rails/" rel="tag">Ruby on Rails</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <h2 id="重設-Database-的方法"><a href="#重設-Database-的方法" class="headerlink" title="重設 Database 的方法"></a>重設 Database 的方法</h2><h3 id="Status"><a href="#Status" class="headerlink" title="Status"></a>Status</h3><p>在重新設置資料庫前先執行 <code>db:migrate:status</code>，看看現在資料庫的 migrate 的狀態是什麼。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># rake db:migrate:status</span></span><br><span class="line">database: dev</span><br><span class="line"></span><br><span class="line"> Status   Migration ID    Migration Name</span><br><span class="line">--------------------------------------------------</span><br><span class="line">   up     20161114101612  Enable uuid extension</span><br><span class="line">   up     20161115193547  Create singers</span><br><span class="line">   up     20161115193548  Create songs</span><br></pre></td></tr></table></figure>
+<h3 id="Basic"><a href="#Basic" class="headerlink" title="Basic"></a>Basic</h3><p>在重新設置資料庫時，最簡單的方法就是先把資料庫刪除，然後重新建一個，最後在 migrate：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">db:drop db:create db:migrate</span><br><span class="line">rake db:migrate:reset</span><br></pre></td></tr></table></figure>
+          <p>
+            <a href="/2016/11/15/Programming/reset-database-without-drop/">
+              閱讀全文
+            </a>
+          </p>
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+  
+  
+    <div class="post-list">
+  
+
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2016/09/17/Programming/assets-css-js-config/" >
+  Ruby on Rails Assets Pipeline 的使用方式
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2016/09/17/Programming/assets-css-js-config/"><span class="article-date">
+  2016-09-17
+</span>
+</a>
+        
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Programming/">Programming</a></li></ul>
+	</span>
+
+
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ruby/" rel="tag">Ruby</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ruby-on-Rails/" rel="tag">Ruby on Rails</a></li></ul>
+	</span>
+
+
+      </div>
+      <div class="article-entry">
+        
+          <h2 id="Assets-Pipeline"><a href="#Assets-Pipeline" class="headerlink" title="Assets Pipeline"></a>Assets Pipeline</h2><p>在 <code>config/initializers/assets.rb</code> 中把 assets 加入 precompile 的路徑，不建議使用 <code>*.css *.js</code> 加入所有的東西，因為會將一些有的沒的或是不需要的東西一起編譯進去。</p>
+<p>assets pipeline 的主要好處就是把所有的 css 包成一個檔案，漸少 request 的數量，像是 <code>application.css</code> 會載入所有被 <code>require</code> 的檔案，最後只需要傳送一個 css 就行了，同理 javascript 也是如此。</p>
+<h3 id="Layout"><a href="#Layout" class="headerlink" title="Layout"></a>Layout</h3><p>看不懂在說什麼，直接看例子比較快。</p>
+<p>假設現在我們的 layout 裡面有兩個不同的頁面 admin.html.erb 跟 user.html.erb，要分別讓他們使用不同的 css js。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">app</span><br><span class="line">├--assets</span><br><span class="line">│  ├--javascripts</span><br><span class="line">│  │  ├--admin.js</span><br><span class="line">│  │  ├--user.js</span><br><span class="line">│  │  └--...</span><br><span class="line">│  └--stylesheets</span><br><span class="line">│     ├--admin.scss</span><br><span class="line">│     ├--user.scss</span><br><span class="line">│     └--...</span><br><span class="line">└--view</span><br><span class="line">   └--layout</span><br><span class="line">      ├--admin.html.erb</span><br><span class="line">      └--user.html.erb</span><br></pre></td></tr></table></figure>
+<p>但為了減少請求的數量，我們讓一個 layout 只需要一個 css 和一個 js，在 layout 中的話會像這樣：</p>
+<figure class="highlight erb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"># app/views/layouts/admin.html.erb</span></span><br><span class="line"><span class="xml">&lt;%=</span><span class="ruby"> stylesheet_link_tag    <span class="string">&#x27;admin&#x27;</span>, <span class="symbol">media:</span> <span class="string">&#x27;all&#x27;</span> </span><span class="xml">%&gt;</span></span><br><span class="line"><span class="xml">&lt;%=</span><span class="ruby"> javascript_include_tag <span class="string">&#x27;admin&#x27;</span> </span><span class="xml">%&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="xml"># app/views/layouts/user.html.erb</span></span><br><span class="line"><span class="xml">&lt;%=</span><span class="ruby"> stylesheet_link_tag    <span class="string">&#x27;user&#x27;</span>, <span class="symbol">media:</span> <span class="string">&#x27;all&#x27;</span> </span><span class="xml">%&gt;</span></span><br><span class="line"><span class="xml">&lt;%=</span><span class="ruby"> javascript_include_tag <span class="string">&#x27;user&#x27;</span> </span><span class="xml">%&gt;</span></span><br></pre></td></tr></table></figure>
+<p>如果使用 admin 的 layout 就會載入 <code>admin.css</code> <code>admin.js</code>。</p>
+<p>如果使用 user 的 layout 就會載入 <code>user.css</code> <code>user.js</code>。</p>
+          <p>
+            <a href="/2016/09/17/Programming/assets-css-js-config/">
+              閱讀全文
+            </a>
+          </p>
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
+
+
+
+  <div class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/tags/Ruby-on-Rails/page/2/">2</a><a class="extend next" rel="next" href="/tags/Ruby-on-Rails/page/2/">下一頁</a>
+  </div>
+
+
+
+
+          <div class="main-footer">
+  
+    © 2021 Akiicat 學習筆記 - Powered by <a href="http://hexo.io" target="_blank">Hexo</a> - Theme <a href="https://github.com/denjones/hexo-theme-chan" target="_blank">Chan</a>
+  
+</div>
+
+      
+        </div>
+      
+    </div>
+  </div>
+  
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
+
+  
+<link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
+
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+<script src="/PhotoSwipe/photoswipe.js"></script>
+
+  
+<script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+
+
+
+
+<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
+
+
+<script src="/scripts/main.js"></script>
+
+
+</body>
+</html>

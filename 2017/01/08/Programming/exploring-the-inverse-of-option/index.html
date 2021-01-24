@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<title>
+  
+    Ruby on Rails 探索 inverse_of
+  
+</title>
+
+<meta name="description" content="inverse_of主要功能會去通知對方自己的狀態，可以解決物件不同步的問題。 在 belongs_to 裡的 :inverse_of 會去找尋所對應的 has_one has_many 上相同的名稱，來通知他們之間的關係。 在 has_one has_many 裡的 :inverse_of 會去找尋所對應的 belongs_to 上相同的名稱，來通知他們之間的關係。 如果沒有寫 :inverse">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ruby on Rails 探索 inverse_of">
+<meta property="og:url" content="https://www.akiicat.com/2017/01/08/Programming/exploring-the-inverse-of-option/index.html">
+<meta property="og:site_name" content="Akiicat 學習筆記">
+<meta property="og:description" content="inverse_of主要功能會去通知對方自己的狀態，可以解決物件不同步的問題。 在 belongs_to 裡的 :inverse_of 會去找尋所對應的 has_one has_many 上相同的名稱，來通知他們之間的關係。 在 has_one has_many 裡的 :inverse_of 會去找尋所對應的 belongs_to 上相同的名稱，來通知他們之間的關係。 如果沒有寫 :inverse">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2017-01-08T10:55:10.000Z">
+<meta property="article:modified_time" content="2021-01-24T11:40:41.441Z">
+<meta property="article:author" content="Akiicat">
+<meta property="article:tag" content="Ruby">
+<meta property="article:tag" content="Ruby on Rails">
+<meta name="twitter:card" content="summary">
+
+
+  <link rel="alternative" href="/atom.xml" title="Akiicat 學習筆記" type="application/atom+xml">
+
+
+
+  <link rel="icon" href="/favicon.png">
+
+
+
+<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
+
+
+<link rel="stylesheet" href="/styles/main.css">
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-48754260-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-48754260-2');
+  </script>
+
+
+
+
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+<body
+  
+    class="monochrome"
+  
+  >
+  <div class="mobile-header">
+  <button class="sidebar-toggle" type="button">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <a class="title" href="/">Akiicat 學習筆記</a>
+</div>
+
+  <div class="main-container">
+    <div class="sidebar">
+  <div class="header">
+    <h1 class="title"><a href="/">Akiicat 學習筆記</a></h1>
+    
+    <div class="info">
+      <div class="content">
+        
+          <div class="description">The Programmer</div>
+        
+        
+          <div class="author">Akiicat</div>
+        
+      </div>
+      
+        <div class="avatar">
+          
+            <a href="/about"><img src="https://avatars2.githubusercontent.com/u/7646335?s=460&amp;v=4"></a>
+          
+        </div>
+      
+    </div>
+  </div>
+  <div class="body">
+    
+      
+        <ul class="nav">
+          
+            
+              <li class="category-list-container">
+                <a href="javascript:;">類別</a>
+                <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Database/">Database</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Docker/">Docker</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Google-Cloud-Platform/">Google Cloud Platform</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Kubernetes/">Kubernetes</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mac-OS-X/">Mac OS X</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Programming/">Programming</a><span class="category-list-count">38</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Version-Control/">Version Control</a><span class="category-list-count">1</span></li></ul>
+              </li>
+            
+          
+            
+              <li class="tag-list-container">
+                <a href="javascript:;">標籤</a>
+                <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Abstraction/" rel="tag">Abstraction</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Api/" rel="tag">Api</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bare-Metal/" rel="tag">Bare Metal</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Byebug/" rel="tag">Byebug</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Canvas/" rel="tag">Canvas</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Context/" rel="tag">Context</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cross-Origin/" rel="tag">Cross Origin</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Css/" rel="tag">Css</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DMG/" rel="tag">DMG</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dashboard/" rel="tag">Dashboard</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Database/" rel="tag">Database</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Devise/" rel="tag">Devise</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Disk-Partition/" rel="tag">Disk Partition</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Diskutil/" rel="tag">Diskutil</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/" rel="tag">Docker</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Eager-Loading/" rel="tag">Eager Loading</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Encapsulation/" rel="tag">Encapsulation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Factory-Girl/" rel="tag">Factory Girl</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Friend/" rel="tag">Friend</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/" rel="tag">GitHub</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub-Actions/" rel="tag">GitHub Actions</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Google-Cloud-IAM/" rel="tag">Google Cloud IAM</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Google-Cloud-Platform/" rel="tag">Google Cloud Platform</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Helm/" rel="tag">Helm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ISO/" rel="tag">ISO</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Image/" rel="tag">Image</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Influxdb/" rel="tag">Influxdb</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Inheritance/" rel="tag">Inheritance</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Installation/" rel="tag">Installation</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ipvs/" rel="tag">Ipvs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/" rel="tag">Javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kube-Proxy/" rel="tag">Kube Proxy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kubectl/" rel="tag">Kubectl</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kubernetes/" rel="tag">Kubernetes</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Load-Balance/" rel="tag">Load Balance</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac-OS-X/" rel="tag">Mac OS X</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MetalLB/" rel="tag">MetalLB</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Minikube/" rel="tag">Minikube</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NFS/" rel="tag">NFS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Object-oriented-programming-OOP/" rel="tag">Object-oriented-programming (OOP)</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Polymorphism/" rel="tag">Polymorphism</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PostgreSQL/" rel="tag">PostgreSQL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Rspec/" rel="tag">Rspec</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ruby/" rel="tag">Ruby</a><span class="tag-list-count">28</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ruby-on-Rails/" rel="tag">Ruby on Rails</a><span class="tag-list-count">17</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SQL/" rel="tag">SQL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sass/" rel="tag">Sass</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Semantic-Version/" rel="tag">Semantic Version</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/String/" rel="tag">String</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Subdomain/" rel="tag">Subdomain</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Terminal/" rel="tag">Terminal</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tiller/" rel="tag">Tiller</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/USB/" rel="tag">USB</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">3</span></li></ul>
+              </li>
+            
+          
+            
+              <li class="archive-list-container">
+                <a href="javascript:;">彙整</a>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a><span class="archive-list-count">16</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/">2016</a><span class="archive-list-count">29</span></li></ul>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="/" title="Homepage" external="false">Homepage</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/archives" title="By Year" external="false">By Year</a>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="https://github.com/akiicat/akiicat.github.io" title="Blogger" target="_blank" rel="noopener">Blogger</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="https://github.com/akiicat" title="Github" target="_blank" rel="noopener">Github</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/atom.xml" title="RSS" external="false">RSS</a>
+              </li>
+            
+          
+        </ul>
+      
+    
+  </div>
+</div>
+
+    <div class="main-content">
+      
+        <div style="max-width: 1000px">
+      
+          <article id="post-exploring-the-inverse-of-option" class="article article-type-post">
+  
+    <h1 class="article-header">
+      Ruby on Rails 探索 inverse_of
+    </h1>
+  
+  
+
+  <div class="article-info">
+    <span class="article-date">
+  2017-01-08
+</span>
+
+    
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Programming/">Programming</a></li></ul>
+	</span>
+
+
+    
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ruby/" rel="tag">Ruby</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ruby-on-Rails/" rel="tag">Ruby on Rails</a></li></ul>
+	</span>
+
+
+  </div>
+  <div class="article-entry">
+    <h2 id="inverse-of"><a href="#inverse-of" class="headerlink" title="inverse_of"></a>inverse_of</h2><p>主要功能會去通知對方自己的狀態，可以解決物件不同步的問題。</p>
+<p>在 belongs_to 裡的 :inverse_of 會去找尋所對應的 has_one has_many 上相同的名稱，來通知他們之間的關係。</p>
+<p>在 has_one has_many 裡的 :inverse_of 會去找尋所對應的 belongs_to 上相同的名稱，來通知他們之間的關係。</p>
+<p>如果沒有寫 :inverse_of 這參數，rails 會使用 heuristic algorithm 去猜測名稱，但在如果不是使用標準名稱的話會失效。</p>
+<h2 id="Without-inverse-of"><a href="#Without-inverse-of" class="headerlink" title="Without inverse_of"></a>Without inverse_of</h2><p>沒有 :inverse_of 會發生物件不同步的問題，可以看以下的範例：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Author</span> &lt; ActiveRecord::Base</span></span><br><span class="line">  has_many <span class="symbol">:books</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Book</span> &lt; ActiveRecord::Base</span></span><br><span class="line">  belongs_to <span class="symbol">:author</span>, <span class="symbol">inverse_of:</span> <span class="literal">false</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+
+<p>沒有寫上 <code>inverse_of: false</code> 的話，rails 會自動找尋對應的關聯，所以這邊強制把它關掉。</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = Author.first</span><br><span class="line">a.object_id <span class="comment"># =&gt; 70133005189780</span></span><br><span class="line">a.books.first.author.object_id <span class="comment"># =&gt; 70133005096140</span></span><br><span class="line">a.books.first.author.object_id == a.object_id <span class="comment"># =&gt; false</span></span><br></pre></td></tr></table></figure>
+<p>這邊 <code>a</code> 跟 <code>a.books.first.author</code> 應該要是同一個東西，可是他們的 object_id 卻是不同的。</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = Author.first</span><br><span class="line">b = a.books.first</span><br><span class="line">a.name == b.author.name <span class="comment"># =&gt; true</span></span><br><span class="line">a.name = <span class="string">&#x27;Akii&#x27;</span></span><br><span class="line">a.name == b.author.name <span class="comment"># =&gt; false</span></span><br></pre></td></tr></table></figure>
+<p>所以更改了其中一個物件，不會更新到另一個物件，導致物件不同步。</p>
+<h2 id="With-inverse-of"><a href="#With-inverse-of" class="headerlink" title="With inverse_of"></a>With inverse_of</h2><p>用 :inverse_of 來通知他們之間的關係。</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Author</span> &lt; ActiveRecord::Base</span></span><br><span class="line">  has_many <span class="symbol">:books</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Book</span> &lt; ActiveRecord::Base</span></span><br><span class="line">  belongs_to <span class="symbol">:author</span>, <span class="symbol">inverse_of:</span> <span class="symbol">:books</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<p>即使沒有寫 <code>inverse_of: :books</code>，rails 會自動找尋對應的關聯，不會影響這個範例的結果。</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = Author.first</span><br><span class="line">a.object_id <span class="comment"># =&gt; 70133007092660</span></span><br><span class="line">a.books.first.author.object_id <span class="comment"># =&gt; 70133007092660</span></span><br><span class="line">a.books.first.author.object_id == a.object_id <span class="comment"># =&gt; true</span></span><br></pre></td></tr></table></figure>
+<p>這樣只會載入一個物件，避免資料不一致，還能提高程式的效率。</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = Author.first</span><br><span class="line">b = a.books.first</span><br><span class="line">a.name == b.author.name <span class="comment"># =&gt; true</span></span><br><span class="line">a.name = <span class="string">&#x27;Akii&#x27;</span></span><br><span class="line">a.name == b.author.name <span class="comment"># =&gt; true</span></span><br></pre></td></tr></table></figure>
+<h2 id="inverse-of-的限制："><a href="#inverse-of-的限制：" class="headerlink" title="inverse_of 的限制："></a>inverse_of 的限制：</h2><ul>
+<li>不能與 :through 關聯同時使用。</li>
+<li>不能與 :polymorphic 關聯同時使用。</li>
+<li>不能與 :as 選項同時使用。</li>
+<li>對 belongs_to 關聯，會忽略 has_many 所設定的 :inverse_of。</li>
+</ul>
+<p>每種關聯皆會試著自動找到對應的關聯，並根據關聯名稱來合理地設定 :inverse_of 選項。多數使用標準名稱的關聯都會自動設定。但使用了以下選項的關聯，則無法自動設定：</p>
+<ul>
+<li>:conditions (rails 3)</li>
+<li>:through</li>
+<li>:polymorphic</li>
+<li>:foreign_key</li>
+</ul>
+<h2 id="validates-presence-with-inverse-of"><a href="#validates-presence-with-inverse-of" class="headerlink" title="validates presence with inverse_of"></a>validates presence with inverse_of</h2><p>當一張表單想要填入多個 table 的欄位時，model 通常會寫成這樣：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Author</span> &lt; ActiveRecord::Base</span></span><br><span class="line">  has_many <span class="symbol">:books</span></span><br><span class="line">  accepts_nested_attributes_for <span class="symbol">:books</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Book</span> &lt; ActiveRecord::Base</span></span><br><span class="line">  belongs_to <span class="symbol">:author</span></span><br><span class="line">  validates <span class="symbol">:author</span>, <span class="symbol">presence:</span> <span class="literal">true</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<p>想要確保關聯的物件是否存在，可以使用 validates 後面參數加上 <code>presence: true</code>。</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">params = &#123; <span class="symbol">name:</span> <span class="string">&#x27;akii&#x27;</span>, <span class="symbol">books_attributes:</span> [&#123; <span class="symbol">title:</span> <span class="string">&#x27;cat&#x27;</span> &#125;] &#125;</span><br><span class="line">a = Author.create(params)</span><br><span class="line">a.errors.messages <span class="comment"># =&gt; &#123;:&quot;books.author&quot;=&gt;[&quot;must exist&quot;, &quot;can&#x27;t be blank&quot;]&#125;</span></span><br><span class="line">a.valid? <span class="comment"># =&gt; false</span></span><br></pre></td></tr></table></figure>
+<p>當 rails 試著把 books 存入資料庫時，author 還沒有被 commit 到資料庫中，因此缺少一個 id，<code>presence: true</code> 的驗證失敗產生 <code>can&#39;t be blank</code> 的錯誤。<code>must exist</code> 的錯誤可以<a href="/blogger/2017/01/11/belongs-to-association-required-by-default/" title="belongs-to association required by default">選擇關掉</a>，不用 foreign key 就能將資料存入。</p>
+<p>為了讓他能運作，需要在 Author 裡的 <code>has_many :books</code> 加上 <code>inverse_of: :author</code>，讓它能通知正在新增的 book。</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Author</span> &lt; ActiveRecord::Base</span></span><br><span class="line">  has_many <span class="symbol">:books</span>, <span class="symbol">inverse_of:</span> <span class="symbol">:author</span></span><br><span class="line">  accepts_nested_attributes_for <span class="symbol">:books</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Book</span> &lt; ActiveRecord::Base</span></span><br><span class="line">  belongs_to <span class="symbol">:author</span></span><br><span class="line">  validates <span class="symbol">:author</span>, <span class="symbol">presence:</span> <span class="literal">true</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">params = &#123; <span class="symbol">name:</span> <span class="string">&#x27;akii&#x27;</span>, <span class="symbol">books_attributes:</span> [&#123; <span class="symbol">title:</span> <span class="string">&#x27;cat&#x27;</span> &#125;] &#125;</span><br><span class="line">a = Author.create(params)</span><br><span class="line">a.errors.messages <span class="comment"># =&gt; &#123;&#125;</span></span><br><span class="line">a.valid? <span class="comment"># =&gt; true</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html">Ruby on Rails API</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.viget.com/articles/exploring-the-inverse-of-option-on-rails-model-associations">Exploring inverse_of</a></li>
+</ul>
+
+  </div>
+  <footer class="article-footer">
+    
+  <div class="cc">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/deed.z" target="_blank" title="姓名標示-相同方式分享">
+      <img src="/images/cc/cc.png">
+      
+          <img src="/images/cc/by.png">
+        
+          <img src="/images/cc/sa.png">
+      
+      <span>
+        本著作係採用創用 CC 姓名標示-相同方式分享 4.0 國際 授權條款授權.
+      </span>
+    </a>
+  </div>
+
+
+    
+
+  </footer>
+</article>
+
+
+
+
+
+
+
+          <div class="main-footer">
+  
+    © 2021 Akiicat 學習筆記 - Powered by <a href="http://hexo.io" target="_blank">Hexo</a> - Theme <a href="https://github.com/denjones/hexo-theme-chan" target="_blank">Chan</a>
+  
+</div>
+
+      
+        </div>
+      
+    </div>
+  </div>
+  
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
+
+  
+<link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
+
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+<script src="/PhotoSwipe/photoswipe.js"></script>
+
+  
+<script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+
+
+
+
+<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
+
+
+<script src="/scripts/main.js"></script>
+
+
+</body>
+</html>
