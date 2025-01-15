@@ -143,7 +143,7 @@ TCP  10.233.90.0:31191 sh
 ## Reference
 
 - [Service: IPVS proxy mode][1]
-- [IPVS: Connection Scheduling Algorithms inside the Kernel][1]
+- [IPVS: Connection Scheduling Algorithms inside the Kernel][2]
 
 [1]: https://kubernetes.io/docs/concepts/services-networking/service/#proxy-mode-ipvs
 [2]: http://kb.linuxvirtualserver.org/wiki/IPVS
