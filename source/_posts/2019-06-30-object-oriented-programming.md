@@ -65,15 +65,6 @@ date: 2019-06-30 23:55:02
 
 > **Data abstraction** is a mechanism of exposing only the **interfaces** and hiding the **implementation** details from the user.
 
-## Example Code
-
-以下是程式碼範例：
-
-- {% post_link object-oriented-programming-encapsulation '封裝 Encapsulation' %}
-- {% post_link object-oriented-programming-abstraction '抽象 Abstraction' %}
-- {% post_link object-oriented-programming-inheritance '繼承 Inheritance' %}
-- {% post_link object-oriented-programming-polymorphism '多型 Polymorphism' %}
-
 ## Reference
 
 - [object-oriented programming (OOP)](https://searchmicroservices.techtarget.com/definition/object-oriented-programming-OOP)

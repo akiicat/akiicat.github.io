@@ -15,7 +15,7 @@ date: 2019-04-18 11:55:59
 
 在安裝 Kubernetes 前要先安裝好 Docker，可以參考這篇：
 
-{% post_link docker-ce-installation %}
+{% post_link install-docker-ce-on-ubuntu %}
 
 ## Kubeadm
 
