@@ -1,10 +1,11 @@
 ---
-title: 如何在 Windows 11 安裝過程中解決常見問題
+title: 安裝 Windows 11 虛擬機過程與問題
 tags:
-  - ReactJS
-  - Redux
+  - Windows 11
+  - VirtualBox
+  - VMWare
 categories:
-  - ReactJS
+  - VM
 date: 2025-01-18 09:38:14
 ---
 
