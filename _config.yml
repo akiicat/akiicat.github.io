@@ -4,7 +4,7 @@
 
 # Site
 title: Akiicat 學習筆記
-subtitle: 
+subtitle: Program
 description: The Programmer
 keywords: [akiicat]
 author: Akiicat
@@ -13,7 +13,7 @@ timezone: Asia/Taipei
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://www.akiicat.com
+url: https://akiicat.com
 root: /
 permalink: :year/:month/:day/:category/:title/
 permalink_defaults:
