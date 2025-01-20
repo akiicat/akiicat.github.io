@@ -17,6 +17,8 @@ date: 2025-01-18 09:38:14
 
 > Press any key to boot from CD or DVD...
 
+![vm-windows-11-installation-1.png](/images/vm-windows-11-installation-1.png)
+
 此時，一定要按下**鍵盤**上的任意鍵，如果只用滑鼠輸入會失敗。
 
 ## 繞過 TPM 檢查
@@ -32,6 +34,8 @@ date: 2025-01-18 09:38:14
   - `BypassTPMCheck`，值設為 1。
   - `BypassRAMCheck`，值設為 1。
   - `BypassSecureBootCheck`，值設為 1。
+
+![vm-windows-11-installation-2.png](/images/vm-windows-11-installation-2.png)
 
 完成這些設定後，關閉登錄編輯器，繼續安裝，即可成功繞過檢查。
 
