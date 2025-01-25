@@ -27,7 +27,7 @@ Event Loop 的概念不會太複雜，有 Event 進來，執行相對應的 call
 
 ## Library
 
-Node.js 的 Non-blocking I/O Opertaion 是透過 libuv 實現的，libuv 實現 Node.js 的 Event Loop、Non-blocking I/O、網路、磁碟、檔案系統等功能，如下圖左半側：
+Node.js 的 Non-blocking I/O Opertaion 是透過 libuv 實現的，libuv 實現 Node.js 的 Event Loop、Non-blocking I/O、網路、磁碟、檔案系統等功能，位於下圖的左下角：
 
 ![Nodejs Library](images/nodejs-event-loop-2.png)
 
