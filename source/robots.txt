@@ -10,5 +10,5 @@ Disallow: /styles/
 Disallow: /perfect-scrollbar/
 Disallow: /PhotoSwipe/
 
-Sitemap: https://www.akiicat.com/sitemap.xml
+Sitemap: https://akiicat.com/sitemap.xml
 
