@@ -9,11 +9,11 @@ categories:
 date: 2025-04-01 01:04:47
 ---
 
-在現代前端開發中，狀態管理是一個不可或缺的核心概念。React 與 Svelte 作為的 UI 框架，在處理元件內部狀態時採用截然不同的方式。這篇文章將帶你深入了解兩者在開發體驗上的差異，並透過實際範例做對比。
+狀態管理是在處理資料時一個不可或缺的核心：React 採用的是 `useState` Hook，而 Svelte 則是直接使用變數，使用起來更直觀。我們將透過範例來了解兩者在開發體驗上的差異。
 
 ## React 狀態管理：使用 `useState` Hook
 
-在 React 中，狀態更新是透過 `useState` Hook 完成的。這是一個讓元件可以擁有內部狀態的方式。
+React 讓元件可以擁有內部狀態的方式是透過 `useState` Hook 來完成。
 
 ```jsx
 import { useState } from 'react';
@@ -31,21 +31,19 @@ function Counter() {
 export default Counter;
 ```
 
-在上述範例中：
-
 - `useState(0)`：初始化 `count` 為 0。
 - `setCount`：更新 `count` 的函式，每次按鈕點擊讓值加 1。
 - 透過 React 的 Virtual DOM，變化的值會觸發元件重新渲染。
 
 ### 非同步更新注意事項
 
-React 的狀態更新是非同步的，因此如果在同一函式中連續呼叫多次 `setCount(count + 1)`，可能無法即時反映最新的狀態。建議改用函式寫法來避免此問題：
+React 的狀態更新是非同步的，因此如果在同一函式中連續呼叫多次 `setCount(count + 1)`，可能無法即時反映最新的狀態。建議改用以下方式來避免此問題：
 
 ```jsx
 setCount(prevCount => prevCount + 1);
 ```
 
-這樣可以保證更新邏輯永遠是基於最新狀態。
+這樣可以保證邏輯永遠是基於最新狀態更新。
 
 ## Svelte 狀態管理：響應式變數
 
@@ -61,15 +59,13 @@ Svelte 採用一種更直覺的狀態處理方式。它不需要額外的 Hook�
 </button>
 ```
 
-在這個範例中：
-
 - 使用 `let count = 0` 宣告變數。
 - 直接對 `count` 進行操作，例如 `count++`，Svelte 就能自動感知變化並更新 DOM。
 - 這是透過 Svelte 的 編譯時響應式系統 (reactivity system) 實現的，完全不需要 Virtual DOM。
 
 Note: React.js 使用 Virtual DOM 來追蹤是否元件需要被更新；而 Svelte 沒有使用 Virtual DOM 而是直些更新在 DOM 上。
 
-## 結論 React vs Svelte 狀態更新差異
+## React vs Svelte 狀態更新差異
 
 | 功能面向     | React                    | Svelte        |
 |----------|--------------------------|---------------|
