@@ -1,6 +1,5 @@
 ---
 title: React vs Svelte 開發體驗：狀態管理
----
 tags:
   - NodeJS
   - ReactJS

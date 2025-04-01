@@ -1,6 +1,5 @@
 ---
 title: 使用 Node.js 監控資料夾變更，並以 Event Emitter 封裝 File Watcher
----
 tags:
   - NodeJS
   - Event Emitter
