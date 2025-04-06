@@ -1,5 +1,5 @@
 ---
-title: Svelte 比較掛載元件的三個方法：mount vs render vs `hydrate`
+title: 比較 Svelte 渲染元件的三個方法：mount vs render vs hydrate
 tags:
   - NodeJS
   - Svelte
@@ -16,7 +16,7 @@ Svelte Version: 5.25.7
 - `mount()`：在 Client 端上，從空的 DOM 節點建立 Component 的 DOM 附加到 HTML。
 - `hydrate()`：混合 `render()` 與 `mount()`。功能上類似 `mount()`，但不是從空的 DOM 節點開始，而是從 Server 端 `render()` 過的資料開始建立。
 
-![Svelte Render VS Render VS Hydrate](images/svelte-render-vs-render-vs-hydrate.png)
+![Svelte Render VS Render VS Hydrate](images/svelte-render-vs-mount-vs-hydrate.svg)
 
 <!-- 
 https://mermaid.live/edit#pako:eNptkctu00AUhl9ldFYgpZHt2o7jBYjarVhQsUhX1F2M6kkcyZdqsAslipTeVAiVWqkBQYXawAJVqiCoQYAaKA9Dx45XvAITx226YFbznznfufzTgOXAJqBD1Q2eLDuYhmjBtHzEz73FCqGrhKLktPf35yEbnCenL1FllbghQWx783LwbWmcObNoweWv30nnBFHi24Teuo2Szoekc4zuL8w_-NNaNyoVxPbayCHYRsP-zvCkbUFOGzf6sI1-2lpnn3fjV18zFg13-shw68QPR-85YjYmSPymx_Y_su9naXefbT-Pf5zFxwcZe7c5zp6djOes2RSHhM-Xvt1i7e7w_W6ycc57JHsX8bsXyHw4j5JeKx0cXY83N6G9IPJDzrKLo7T7aWxI_PpLcrj1PzB3EU1N3UEzuVGZMPK9M5GbbXKB-CpZbPZGjO-WxeauikIBarRugx7SiBTAI9TDIwmNUYYFoUM8YoHOrzap4sgNLbD8JsdWsP8oCLwrkgZRzQG9it3HXEUrNjfGrOMaxd51dPydxmhv0FV1OisCegOegi4pYlFVNEWWJHlaLiulAqyBrshFTZVFTZQEuSTKQqlZgGdZV6GolRRBEESxLAllSSurzX_vtPZa -->
