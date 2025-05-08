@@ -19,11 +19,11 @@ Flexbox 正式的名稱又稱為 Flexible Box Layout (彈性框排列)，是一�
 
 ## Flexbox 原理
 
-從我們熟悉的 `display` 屬性開始的。當你在一個元素上設置 `display: flex` 時，它就會變成一個「[彈性容器][Flex_Container]」 ([flexbox container][Flex_Container])，而它的直接子元素則會變成「[彈性項目][Flex_Item]」 ([flexbox item][Flex_Item])。預設情況下，這些彈性項目會橫向排列，從左到右排成一行；彈性容器會像 `block` 元素撐滿可用的寬度，不過裡面的彈性項目不一定會填滿整個容器的寬度，另外它們的高度通常一樣，主要由內容的大小決定。
+從我們熟悉的 `display` 屬性開始的。當你在一個元素上設置 `display: flex` 時，它就會變成一個「[彈性容器][Flex_Container]」 ([flexbox container][Flex_Container])，而它的直接子元素則會變成「[彈性項目][Flex_Item]」 ([flexbox item][Flex_Item])。預設情況下，這些彈性項目會橫向排列，從左到右排成一行；彈性容器會像 `block` 區塊元素撐滿可用的寬度，不過裡面的彈性項目不一定會填滿整個容器的寬度，另外它們的高度通常一樣，主要由內容的大小決定。
 
 ![CSS Flexbox Principle](images/css-flexbox-1.svg)
 
-Note: 你也可以使用 `display: inline-flex`，這會讓元素變成一個彈性容器，不過它的行為更像是 `inline-block`，而不是一般的 `block` 元素。它會跟其他內聯 (inline) 在一行上，不會像區塊元素那樣自動拉到 100% 寬度。至於裡面的彈性項目，表現基本上和 `display: flex` 是差不多的。實際上不太常會用到這個設定。
+Note: 你也可以使用 `display: inline-flex`，這會讓元素變成一個彈性容器，不過它的行為更像是 `inline-block`，而不是一般的 `block` 區塊元素。它會跟其他內聯 (inline) 在一行上，不會像區塊元素那樣自動拉到 100% 寬度。至於裡面的彈性項目，表現基本上和 `display: flex` 是差不多的。實際上不太常會用到這個設定。
 
 這些彈性項目會沿著一條叫「[主軸][Main_Axis]」 ([Main Axis][Main_Axis]) 的方向排列，這條軸是從主軸起點 (Main Start) 延伸到主軸終點 (Main End)，方向從左到右。主軸垂直的方向叫做「[交叉軸][Cross_Axis]」([Cross Axis][Cross_Axis])，是從交叉軸起點 (Cross Start)到交叉軸終點 (Cross End)，方向由上到下。Flexbox 屬性一致使用 start 和 end 術語。
 
@@ -43,7 +43,7 @@ Note: 你也可以使用 `display: inline-flex`，這會讓元素變成一個彈
 </ul>
 ```
 
-在建立這個選單時，你需要先想清楚哪個元素要設為彈性容器。注意它的子元素會自動變成彈性項目。我們下方的範例，應該把 `<ul>` 設為彈性容器，而它裡面的 `<li>` 就是彈性項目。整體看起來會像這樣。把瀏覽器預設的清單樣式取消掉，並加上一些顏色設定：
+在建立這個選單時，你需要先想清楚哪個元素要設為彈性容器。注意它的子元素會自動變成彈性項目。我們下方的範例，應該把 `<ul>` 設為彈性容器，而它裡面的 `<li>` 就是彈性項目。把瀏覽器預設的清單樣式取消掉，並加上一些顏色設定：
 
 ```css
 .site-nav {
@@ -94,7 +94,7 @@ Note: 你也可以使用 `display: inline-flex`，這會讓元素變成一個彈
 
 ## 調整彈性項目 Flex item
 
-在調整 Flexbox 元素大小時，雖然你還是可以用我們熟悉的 `width` 和 `height` 屬性，不過 flexbox 提供的調整方式比單靠這兩個屬性還要靈活得多。接下來我們要看看其中一個非常實用的屬性：`flex` ([Link][Flex])。這個屬性能控制彈性項目在主軸方向上的大小（通常是寬度）。
+在調整 Flexbox 元素大小時，雖然你還是可以用我們熟悉的 `width` 和 `height` 屬性，不過 flexbox 提供的調整方式比單靠這兩個屬性還要靈活得多。接下來我們要看看其中一個非常實用的屬性：`flex` ([MDN Flex][Flex])。這個屬性能控制彈性項目在主軸方向上的大小（通常是寬度）。
 
 ```html
 <div class="flexed">
@@ -141,7 +141,7 @@ flex-basis: 0%;
 
 ### Flex basis: 設定項目大小 (主軸方向)
 
-`flex-basis` ([Link][Flex_Basis]) 是用來設定元素沿主軸方向的大小。你可以用任何寬度的單位來設定 `flex-basis`，像是 px、em 或百分比等。
+`flex-basis` ([MDN Flex Basis][Flex_Basis]) 是用來設定元素沿主軸方向的大小。你可以用任何寬度的單位來設定 `flex-basis`，像是 px、em 或百分比等。
 
 `flex-basis` 的[初始值 initial][Initial] 是 `auto`，如果是 `auto` 的話瀏覽器會先看當前元素有沒有設定寬度 `width`。如果有，就使用 `width` 的值；如果沒有，就依照內容自動決定大小。
 
@@ -151,7 +151,7 @@ flex-basis: 0%;
 
 ### Flex grow: 設定項目放大權重
 
-當每個彈性項目有了 `flex-basis` 之後，它們有時還需要放大或縮小，以便適應或填滿彈性容器在主軸上的空間。這時候，就輪到 `flex-grow` ([Link][Flex_Grow]) 和 `flex-shrink` 發揮作用了。
+當每個彈性項目有了 `flex-basis` 之後，它們有時還需要放大或縮小，以便適應或填滿彈性容器在主軸上的空間。這時候，就輪到 `flex-grow` ([MDN Flex Glow][Flex_Grow]) 和 `flex-shrink` 發揮作用了。
 
 當每個彈性項目的 `flex-basis` 被計算出來後，這些項目加上它們之間的 `margin` 或 `padding`，總寬度會達到一個固定值。但這個總寬度不一定剛好填滿整個彈性容器，通常會剩下一些空間。這些多出來的空間，會依照每個彈性項目的 `flex-grow` 值來分配。這些值都是非負整數。如果某個項目的 `flex-grow` 是 0，那它就不會比它原本的 `flex-basis` 更大；但如果某些項目的 `flex-grow` 是非零的，那它們就會開始擴展，直到把所有剩下的空間都填滿為止。這樣一來，彈性項目就能完全撐滿容器的寬度。
 
@@ -167,7 +167,7 @@ flex-basis: 0%;
 
 ### Flex shrink: 設定項目縮小權重
 
-`flex-shrink` ([Link][Flex_Shrink]) 屬性的作用和 `flex-grow` 類似。當彈性項目的 `flex-basis` 確定後，如果這些項目的總寬度超出了彈性容器的可用空間，就可能會出現溢位 (overflow)。
+`flex-shrink` ([MDN Flex Shrink][Flex_Shrink]) 屬性的作用和 `flex-grow` 類似。當彈性項目的 `flex-basis` 確定後，如果這些項目的總寬度超出了彈性容器的可用空間，就可能會出現溢位 (overflow)。
 
 ![CSS Flexbox Shrink](images/css-flexbox-5.svg)
 
@@ -184,7 +184,7 @@ flex-basis: 0%;
 }
 ```
 
-這是一種不同的做法，但一樣能有效地達到和之前相同的效果。(跟使用 `flex-grow` 的方式相比，會有一些微小的差別，左邊欄位會大一點點)
+這是一種不同的做法，但一樣能有效地達到和之前相同的效果。(跟使用 `flex-grow` 的方式相比，會有一些微小的差別，使用 `flex-shrink` 的例子左邊欄位會大一點點)
 
 ### Flex 範例與各種變化
 
@@ -196,7 +196,7 @@ flex-basis: 0%;
 
 ## Flex Direction
 
-Flexbox 裡另一個很重要的功能，就是可以改變排列項目的軸向。你可以透過設定彈性容器的 `flex-direction` 屬性來控制這一點。它的預設值是 `row`，讓項目沿著橫向排列，也就是沿著[內聯方向][Block_and_inline_layout]排列。如果你改成 `flex-direction: column`，那項目就會垂直堆疊，也就是沿著區塊方向排列。Flexbox 同時還支援 `row-reverse`，可以讓項目從右往左排，或是 `column-reverse`，讓項目從下往上排。
+Flexbox 裡另一個很重要的功能，就是可以改變排列項目的軸向。你可以透過設定彈性容器的 `flex-direction` 屬性來控制這一點。它的預設值是 `row`，讓項目沿著橫向排列，也就是沿著[內聯方向][Block_and_inline_layout]排列。如果你改成 `flex-direction: column`，那項目就會垂直堆疊，也就是沿著[區塊方向][Block_and_inline_layout]排列。Flexbox 同時還支援 `row-reverse`，可以讓項目從右往左排，或是 `column-reverse`，讓項目從下往上排。
 
 ![CSS Flexbox Direction](images/css-flexbox-7.svg)
 
@@ -212,7 +212,13 @@ Flex 提供了各式各樣的設定。通常來說，這些步驟可以幫你把
 
 之後如果需要再微調，你可以再加上其他屬性。
 
+**彈性容器參數表格：**
+
 ![CSS Flexbox Cheat Sheet](images/css-flexbox-8.svg)
+
+**彈性項目參數表格：**
+
+![CSS Flexbox Cheat Sheet](images/css-flexbox-9.svg)
 
 ### 彈性容器參數
 
