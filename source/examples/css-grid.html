@@ -1,0 +1,86 @@
+<!-- 
+Online HTML, CSS and JavaScript editor to run code online.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Browser</title>
+  <style>
+/* 1 */
+body {
+  background-color: #eee;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));    
+  grid-auto-rows: 1fr;                
+  grid-gap: 1em;
+}
+.portfolio > figure {
+  margin: 0;         
+}
+.portfolio img {
+  max-inline-size: 100%;
+}
+
+/* 2 */
+.portfolio .featured {
+  grid-row: span 2;        
+  grid-column: span 2;     
+}
+
+/* 3 */
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 1em;
+  grid-auto-flow: dense;   
+}
+ .portfolio .featured {
+  grid-row: span 2;        
+  grid-column: span 2;     
+}
+
+/* 4 */
+.portfolio > figure {
+  display: flex;              
+}
+.portfolio img {
+  flex: 1;              
+  object-fit: cover;     
+}
+  </style>
+</head>
+
+<body>
+
+<div class="portfolio">
+  <figure class="featured">             
+    <img src="https://picsum.photos/seed/a/400/400" alt="random image" />
+  </figure>
+  <figure>             
+    <img src="https://picsum.photos/seed/b/200/200" alt="random image" />
+  </figure>
+  <figure class="featured">             
+    <img src="https://picsum.photos/seed/e/400/400" alt="random image" />
+  </figure>
+  <figure>             
+    <img src="https://picsum.photos/seed/c/200/200" alt="random image" />
+  </figure>
+  <figure>             
+    <img src="https://picsum.photos/seed/d/200/200" alt="random image" />
+  </figure>
+  <figure>             
+    <img src="https://picsum.photos/seed/f/200/200" alt="random image" />
+  </figure>
+</div>
+  <script src="script.js"></script>
+</body>
+
+</html>
